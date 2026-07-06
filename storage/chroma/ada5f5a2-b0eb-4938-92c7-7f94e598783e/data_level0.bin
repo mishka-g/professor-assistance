@@ -1,0 +1,1409 @@
+,"verified":false},{"type":"recall_at_100","value":91.857,"verified":false},{"type":"recall_at_1000","value":97.941,"verified":false},{"type":"recall_at_3","value":49.196,"verified":false},{"type":"recall_at_5","value":59.072,"verified":false}]},{"task":{"type":"Retrieval"},"dataset":{"type":"quora","name":"MTEB QuoraRetrieval","config":"default","split":"test","revision":"None"},"metrics":[{"type":"map_at_1","value":71.22800000000001,"verified":false},{"type":"map_at_10","value":85.115,"verified":false},{"type":"map_at_100","value":85.72,"verified":false},{"type":"map_at_1000","value":85.737,"verified":false},{"type":"map_at_3","value":82.149,"verified":false},{"type":"map_at_5","value":84.029,"verified":false},{"type":"mrr_at_1","value":81.96,"verified":false},{"type":"mrr_at_10","value":88.00200000000001,"verified":false},{"type":"mrr_at_100","value":88.088,"verified":false},{"type":"mrr_at_1000","value":88.089,"verified":false},{"type":"mrr_at_3","value":87.055,"verified":false},{"type":"mrr_at_5","value":87.715,"verified":false},{"type":"ndcg_at_1","value":82.01,"verified":false},{"type":"ndcg_at_10","value":88.78,"verified":false},{"type":"ndcg_at_100","value":89.91,"verified":false},{"type":"ndcg_at_1000","value":90.013,"verified":false},{"type":"ndcg_at_3","value":85.957,"verified":false},{"type":"ndcg_at_5","value":87.56,"verified":false},{"type":"precision_at_1","value":82.01,"verified":false},{"type":"precision_at_10","value":13.462,"verified":false},{"type":"precision_at_100","value":1.528,"verified":false},{"type":"precision_at_1000","value":0.157,"verified":false},{"type":"precision_at_3","value":37.553,"verified":false},{"type":"precision_at_5","value":24.732000000000003,"verified":false},{"type":"recall_at_1","value":71.22800000000001,"verified":false},{"type":"recall_at_10","value":95.69,"verified":false},{"type":"recall_at_100","value":99.531,"verified":false},{"type":"recall_at_1000","value":99.98,"verified":false},{"type":"recall_at_3","value":87.632,"verified":false},{"type":"recall_at_5","value":92.117,"verified":false}]},{"task":{"type":"Clustering"},"dataset":{"type":"mteb/reddit-clustering","name":"MTEB RedditClustering","config":"default","split":"test","revision":"24640382cdbf8abc73003fb0fa6d111a705499eb"},"metrics":[{"type":"v_measure","value":52.31768034366916,"verified":false}]},{"task":{"type":"Clustering"},"dataset":{"type":"mteb/reddit-clustering-p2p","name":"MTEB RedditClusteringP2P","config":"default","split":"test","revision":"282350215ef01743dc01b456c7f5241fa8937f16"},"metrics":[{"type":"v_measure","value":60.640266772723606,"verified":false}]},{"task":{"type":"Retrieval"},"dataset":{"type":"scidocs","name":"MTEB SCIDOCS","config":"default","split":"test","revision":"None"},"metrics":[{"type":"map_at_1","value":4.7780000000000005,"verified":false},{"type":"map_at_10","value":12.299,"verified":false},{"type":"map_at_100","value":14.363000000000001,"verified":false},{"type":"map_at_1000","value":14.71,"verified":false},{"type":"map_at_3","value":8.738999999999999,"verified":false},{"type":"map_at_5","value":10.397,"verified":false},{"type":"mrr_at_1","value":23.599999999999998,"verified":false},{"type":"mrr_at_10","value":34.845,"verified":false},{"type":"mrr_at_100","value":35.916,"verified":false},{"type":"mrr_at_1000","value":35.973,"verified":false},{"type":"mrr_at_3","value":31.7,"verified":false},{"type":"mrr_at_5","value":33.535,"verified":false},{"type":"ndcg_at_1","value":23.599999999999998,"verified":false},{"type":"ndcg_at_10","value":20.522000000000002,"verified":false},{"type":"ndcg_at_100","value":28.737000000000002,"verified":false},{"type":"ndcg_at_1000","value":34.596,"verified":false},{"type":"ndcg_at_3","value":19.542,"verified":false},{"type":"ndcg_at_5","value":16.958000000000002,"verified":false},{"type":"precision_at_1","value":23.599999999999998,"verified":false},{"type":"precision_at_10","value":10.67,"verified":false},{"type":"precision_at_100","value":2.259,"verified":false},{"type":"precision_at_1000","value":0.367,"verified":false},{"type":"precision_at_3","value":18.333,"verified":false},{"type":"precision_at_5","value":14.879999999999999,"verified":false},{"type":"recall_at_1","value":4.7780000000000005,"verified":false},{"type":"recall_at_10","value":21.617,"verified":false},{"type":"recall_at_100","value":45.905,"verified":false},{"type":"recall_at_1000","value":74.42,"verified":false},{"type":"recall_at_3","value":11.148,"verified":false},{"type":"recall_at_5","value":15.082999999999998,"verified":false}]},{"task":{"type":"STS"},"dataset":{"type":"mteb/sickr-sts","name":"MTEB SICK-R","config":"default","split":"test","revision":"a6ea5a8cab320b040a23452cc28066d9beae2cee"},"metrics":[{"type":"cos_sim_pearson","value":83.22372750297885,"verified":false},{"type":"cos_sim_spearman","value":79.40972617119405,"verified":false},{"type":"euclidean_pearson","value":80.6101072020434,"verified":false},{"type":"euclidean_spearman","value":79.53844217225202,"verified":false},{"type":"manhattan_pearson","value":80.57265975286111,"verified":false},{"type":"manhattan_spearman","value":79.46335611792958,"verified":false}]},{"task":{"type":"STS"},"dataset":{"type":"mteb/sts12-sts","name":"MTEB STS12","config":"default","split":"test","revision":"a0d554a64d88156834ff5ae9920b964011b16384"},"metrics":[{"type":"cos_sim_pearson","value":85.43713315520749,"verified":false},{"type":"cos_sim_spearman","value":77.44128693329532,"verified":false},{"type":"euclidean_pearson","value":81.63869928101123,"verified":false},{"type":"euclidean_spearman","value":77.29512977961515,"verified":false},{"type":"manhattan_pearson","value":81.63704185566183,"verified":false},{"type":"manhattan_spearman","value":77.29909412738657,"verified":false}]},{"task":{"type":"STS"},"dataset":{"type":"mteb/sts13-sts","name":"MTEB STS13","config":"default","split":"test","revision":"7e90230a92c190f1bf69ae9002b8cea547a64cca"},"metrics":[{"type":"cos_sim_pearson","value":81.59451537860527,"verified":false},{"type":"cos_sim_spearman","value":82.97994638856723,"verified":false},{"type":"euclidean_pearson","value":82.89478688288412,"verified":false},{"type":"euclidean_spearman","value":83.58740751053104,"verified":false},{"type":"manhattan_pearson","value":82.69140840941608,"verified":false},{"type":"manhattan_spearman","value":83.33665956040555,"verified":false}]},{"task":{"type":"STS"},"dataset":{"type":"mteb/sts14-sts","name":"MTEB STS14","config":"default","split":"test","revision":"6031580fec1f6af667f0bd2da0a551cf4f0b2375"},"metrics":[{"type":"cos_sim_pearson","value":82.00756527711764,"verified":false},{"type":"cos_sim_spearman","value":81.83560996841379,"verified":false},{"type":"euclidean_pearson","value":82.07684151976518,"verified":false},{"type":"euclidean_spearman","value":82.00913052060511,"verified":false},{"type":"manhattan_pearson","value":82.05690778488794,"verified":false},{"type":"manhattan_spearman","value":82.02260252019525,"verified":false}]},{"task":{"type":"STS"},"dataset":{"type":"mteb/sts15-sts","name":"MTEB STS15","config":"default","split":"test","revision":"ae752c7c21bf194d8b67fd573edf7ae58183cbe3"},"metrics":[{"type":"cos_sim_pearson","value":86.13710262895447,"verified":false},{"type":"cos_sim_spearman","value":87.26412811156248,"verified":false},{"type":"euclidean_pearson","value":86.94151453230228,"verified":false},{"type":"euclidean_spearman","value":87.5363796699571,"verified":false},{"type":"manhattan_pearson","value":86.86989424083748,"verified":false},{"type":"manhattan_spearman","value":87.47315940781353,"verified":false}]},{"task":{"type":"STS"},"dataset":{"type":"mteb/sts16-sts","name":"MTEB STS16","config":"default","split":"test","revision":"4d8694f8f0e0100860b497b999b3dbed754a0513"},"metrics":[{"type":"cos_sim_pearson","value":83.0230597603627,"verified":false},{"type":"cos_sim_spearman","value":84.93344499318864,"verified":false},{"type":"euclidean_pearson","value":84.23754743431141,"verified":false},{"type":"euclidean_spearman","value":85.09707376597099,"verified":false},{"type":"manhattan_pearson","value":84.04325160987763,"verified":false},{"type":"manhattan_spearman","value":84.89353071339909,"verified":false}]},{"task":{"type":"STS"},"dataset":{"type":"mteb/sts17-crosslingual-sts","name":"MTEB STS17 (en-en)","config":"en-en","split":"test","revision":"af5e6fb845001ecf41f4c1e033ce921939a2a68d"},"metrics":[{"type":"cos_sim_pearson","value":86.75620824563921,"verified":false},{"type":"cos_sim_spearman","value":87.15065513706398,"verified":false},{"type":"euclidean_pearson","value":88.26281533633521,"verified":false},{"type":"euclidean_spearman","value":87.51963738643983,"verified":false},{"type":"manhattan_pearson","value":88.25599267618065,"verified":false},{"type":"manhattan_spearman","value":87.58048736047483,"verified":false}]},{"task":{"type":"STS"},"dataset":{"type":"mteb/sts22-crosslingual-sts","name":"MTEB STS22 (en)","config":"en","split":"test","revision":"6d1ba47164174a496b7fa5d3569dae26a6813b80"},"metrics":[{"type":"cos_sim_pearson","value":64.74645319195137,"verified":false},{"type":"cos_sim_spearman","value":65.29996325037214,"verified":false},{"type":"euclidean_pearson","value":67.04297794086443,"verified":false},{"type":"euclidean_spearman","value":65.43841726694343,"verified":false},{"type":"manhattan_pearson","value":67.39459955690904,"verified":false},{"type":"manhattan_spearman","value":65.92864704413651,"verified":false}]},{"task":{"type":"STS"},"dataset":{"type":"mteb/stsbenchmark-sts","name":"MTEB STSBenchmark","config":"default","split":"test","revision":"b0fddb56ed78048fa8b90373c8a3cfc37b684831"},"metrics":[{"type":"cos_sim_pearson","value":84.31291020270801,"verified":false},{"type":"cos_sim_spearman","value":85.86473738688068,"verified":false},{"type":"euclidean_pearson","value":85.65537275064152,"verified":false},{"type":"euclidean_spearman","value":86.13087454209642,"verified":false},{"type":"manhattan_pearson","value":85.43946955047609,"verified":false},{"type":"manhattan_spearman","value":85.91568175344916,"verified":false}]},{"task":{"type":"Reranking"},"dataset":{"type":"mteb/scidocs-reranking","name":"MTEB SciDocsRR","config":"default","split":"test","revision":"d3c5e1fc0b855ab6097bf1cda04dd73947d7caab"},"metrics":[{"type":"map","value":85.93798118350695,"verified":false},{"type":"mrr","value":95.93536274908824,"verified":false}]},{"task":{"type":"Retrieval"},"dataset":{"type":"scifact","name":"MTEB SciFact","config":"default","split":"test","revision":"None"},"metrics":[{"type":"map_at_1","value":57.594,"verified":false},{"type":"map_at_10","value":66.81899999999999,"verified":false},{"type":"map_at_100","value":67.368,"verified":false},{"type":"map_at_1000","value":67.4,"verified":false},{"type":"map_at_3","value":64.061,"verified":false},{"type":"map_at_5","value":65.47,"verified":false},{"type":"mrr_at_1","value":60.667,"verified":false},{"type":"mrr_at_10","value":68.219,"verified":false},{"type":"mrr_at_100","value":68.655,"verified":false},{"type":"mrr_at_1000","value":68.684,"verified":false},{"type":"mrr_at_3","value":66.22200000000001,"verified":false},{"type":"mrr_at_5","value":67.289,"verified":false},{"type":"ndcg_at_1","value":60.667,"verified":false},{"type":"ndcg_at_10","value":71.275,"verified":false},{"type":"ndcg_at_100","value":73.642,"verified":false},{"type":"ndcg_at_1000","value":74.373,"verified":false},{"type":"ndcg_at_3","value":66.521,"verified":false},{"type":"ndcg_at_5","value":68.581,"verified":false},{"type":"precision_at_1","value":60.667,"verified":false},{"type":"precision_at_10","value":9.433,"verified":false},{"type":"precision_at_100","value":1.0699999999999998,"verified":false},{"type":"precision_at_1000","value":0.11299999999999999,"verified":false},{"type":"precision_at_3","value":25.556,"verified":false},{"type":"precision_at_5","value":16.8,"verified":false},{"type":"recall_at_1","value":57.594,"verified":false},{"type":"recall_at_10","value":83.622,"verified":false},{"type":"recall_at_100","value":94.167,"verified":false},{"type":"recall_at_1000","value":99.667,"verified":false},{"type":"recall_at_3","value":70.64399999999999,"verified":false},{"type":"recall_at_5","value":75.983,"verified":false}]},{"task":{"type":"PairClassification"},"dataset":{"type":"mteb/sprintduplicatequestions-pairclassification","name":"MTEB SprintDuplicateQuestions","config":"default","split":"test","revision":"d66bd1f72af766a5cc4b0ca5e00c162f89e8cc46"},"metrics":[{"type":"cos_sim_accuracy","value":99.85841584158416,"verified":false},{"type":"cos_sim_ap","value":96.66996142314342,"verified":false},{"type":"cos_sim_f1","value":92.83208020050125,"verified":false},{"type":"cos_sim_precision","value":93.06532663316584,"verified":false},{"type":"cos_sim_recall","value":92.60000000000001,"verified":false},{"type":"dot_accuracy","value":99.85841584158416,"verified":false},{"type":"dot_ap","value":96.6775307676576,"verified":false},{"type":"dot_f1","value":92.69289729177312,"verified":false},{"type":"dot_precision","value":94.77533960292581,"verified":false},{"type":"dot_recall","value":90.7,"verified":false},{"type":"euclidean_accuracy","value":99.86138613861387,"verified":false},{"type":"euclidean_ap","value":96.6338454403108,"verified":false},{"type":"euclidean_f1","value":92.92214357937311,"verified":false},{"type":"euclidean_precision","value":93.96728016359918,"verified":false},{"type":"euclidean_recall","value":91.9,"verified":false},{"type":"manhattan_accuracy","value":99.86237623762376,"verified":false},{"type":"manhattan_ap","value":96.60370449645053,"verified":false},{"type":"manhattan_f1","value":92.91177970423253,"verified":false},{"type":"manhattan_precision","value":94.7970863683663,"verified":false},{"type":"manhattan_recall","value":91.10000000000001,"verified":false},{"type":"max_accuracy","value":99.86237623762376,"verified":false},{"type":"max_ap","value":96.6775307676576,"verified":false},{"type":"max_f1","value":92.92214357937311,"verified":false}]},{"task":{"type":"Clustering"},"dataset":{"type":"mteb/stackexchange-clustering","name":"MTEB StackExchangeClustering","config":"default","split":"test","revision":"6cbc1f7b2bc0622f2e39d2c77fa502909748c259"},"metrics":[{"type":"v_measure","value":60.77977058695198,"verified":false}]},{"task":{"type":"Clustering"},"dataset":{"type":"mteb/stackexchange-clustering-p2p","name":"MTEB StackExchangeClusteringP2P","config":"default","split":"test","revision":"815ca46b2622cec33ccafc3735d572c266efdb44"},"metrics":[{"type":"v_measure","value":35.2725272535638,"verified":false}]},{"task":{"type":"Reranking"},"dataset":{"type":"mteb/stackoverflowdupquestions-reranking","name":"MTEB StackOverflowDupQuestions","config":"default","split":"test","revision":"e185fbe320c72810689fc5848eb6114e1ef5ec69"},"metrics":[{"type":"map","value":53.64052466362125,"verified":false},{"type":"mrr","value":54.533067014684654,"verified":false}]},{"task":{"type":"Summarization"},"dataset":{"type":"mteb/summeval","name":"MTEB SummEval","config":"default","split":"test","revision":"cda12ad7615edc362dbf25a00fdd61d3b1eaf93c"},"metrics":[{"type":"cos_sim_pearson","value":30.677624219206578,"verified":false},{"type":"cos_sim_spearman","value":30.121368518123447,"verified":false},{"type":"dot_pearson","value":30.69870088041608,"verified":false},{"type":"dot_spearman","value":29.61284927093751,"verified":false}]},{"task":{"type":"Retrieval"},"dataset":{"type":"trec-covid","name":"MTEB TRECCOVID","config":"default","split":"test","revision":"None"},"metrics":[{"type":"map_at_1","value":0.22,"verified":false},{"type":"map_at_10","value":1.855,"verified":false},{"type":"map_at_100","value":9.885,"verified":false},{"type":"map_at_1000","value":23.416999999999998,"verified":false},{"type":"map_at_3","value":0.637,"verified":false},{"type":"map_at_5","value":1.024,"verified":false},{"type":"mrr_at_1","value":88,"verified":false},{"type":"mrr_at_10","value":93.067,"verified":false},{"type":"mrr_at_100","value":93.067,"verified":false},{"type":"mrr_at_1000","value":93.067,"verified":false},{"type":"mrr_at_3","value":92.667,"verified":false},{"type":"mrr_at_5","value":93.067,"verified":false},{"type":"ndcg_at_1","value":82,"verified":false},{"type":"ndcg_at_10","value":75.899,"verified":false},{"type":"ndcg_at_100","value":55.115,"verified":false},{"type":"ndcg_at_1000","value":48.368,"verified":false},{"type":"ndcg_at_3","value":79.704,"verified":false},{"type":"ndcg_at_5","value":78.39699999999999,"verified":false},{"type":"precision_at_1","value":88,"verified":false},{"type":"precision_at_10","value":79.60000000000001,"verified":false},{"type":"precision_at_100","value":56.06,"verified":false},{"type":"precision_at_1000","value":21.206,"verified":false},{"type":"precision_at_3","value":84.667,"verified":false},{"type":"precision_at_5","value":83.2,"verified":false},{"type":"recall_at_1","value":0.22,"verified":false},{"type":"recall_at_10","value":2.078,"verified":false},{"type":"recall_at_100","value":13.297,"verified":false},{"type":"recall_at_1000","value":44.979,"verified":false},{"type":"recall_at_3","value":0.6689999999999999,"verified":false},{"type":"recall_at_5","value":1.106,"verified":false}]},{"task":{"type":"Retrieval"},"dataset":{"type":"webis-touche2020","name":"MTEB Touche2020","config":"default","split":"test","revision":"None"},"metrics":[{"type":"map_at_1","value":2.258,"verified":false},{"type":"map_at_10","value":10.439,"verified":false},{"type":"map_at_100","value":16.89,"verified":false},{"type":"map_at_1000","value":18.407999999999998,"verified":false},{"type":"map_at_3","value":5.668,"verified":false},{"type":"map_at_5","value":7.718,"verified":false},{"type":"mrr_at_1","value":32.653,"verified":false},{"type":"mrr_at_10","value":51.159,"verified":false},{"type":"mrr_at_100","value":51.714000000000006,"verified":false},{"type":"mrr_at_1000","value":51.714000000000006,"verified":false},{"type":"mrr_at_3","value":47.959,"verified":false},{"type":"mrr_at_5","value":50.407999999999994,"verified":false},{"type":"ndcg_at_1","value":29.592000000000002,"verified":false},{"type":"ndcg_at_10","value":26.037,"verified":false},{"type":"ndcg_at_100","value":37.924,"verified":false},{"type":"ndcg_at_1000","value":49.126999999999995,"verified":false},{"type":"ndcg_at_3","value":30.631999999999998,"verified":false},{"type":"ndcg_at_5","value":28.571,"verified":false},{"type":"precision_at_1","value":32.653,"verified":false},{"type":"precision_at_10","value":22.857,"verified":false},{"type":"precision_at_100","value":7.754999999999999,"verified":false},{"type":"precision_at_1000","value":1.529,"verified":false},{"type":"precision_at_3","value":34.014,"verified":false},{"type":"precision_at_5","value":29.796,"verified":false},{"type":"recall_at_1","value":2.258,"verified":false},{"type":"recall_at_10","value":16.554,"verified":false},{"type":"recall_at_100","value":48.439,"verified":false},{"type":"recall_at_1000","value":82.80499999999999,"verified":false},{"type":"recall_at_3","value":7.283,"verified":false},{"type":"recall_at_5","value":10.732,"verified":false}]},{"task":{"type":"Classification"},"dataset":{"type":"mteb/toxic_conversations_50k","name":"MTEB ToxicConversationsClassification","config":"default","split":"test","revision":"d7c0de2777da35d6aae2200a62c6e0e5af397c4c"},"metrics":[{"type":"accuracy","value":69.8858,"verified":false},{"type":"ap","value":13.835684144362109,"verified":false},{"type":"f1","value":53.803351693244586,"verified":false}]},{"task":{"type":"Classification"},"dataset":{"type":"mteb/tweet_sentiment_extraction","name":"MTEB TweetSentimentExtractionClassification","config":"default","split":"test","revision":"d604517c81ca91fe16a244d1248fc021f9ecee7a"},"metrics":[{"type":"accuracy","value":60.50650820599886,"verified":false},{"type":"f1","value":60.84357825979259,"verified":false}]},{"task":{"type":"Clustering"},"dataset":{"type":"mteb/twentynewsgroups-clustering","name":"MTEB TwentyNewsgroupsClustering","config":"default","split":"test","revision":"6125ec4e24fa026cec8a478383ee943acfbd5449"},"metrics":[{"type":"v_measure","value":48.52131044852134,"verified":false}]},{"task":{"type":"PairClassification"},"dataset":{"type":"mteb/twittersemeval2015-pairclassification","name":"MTEB TwitterSemEval2015","config":"default","split":"test","revision":"70970daeab8776df92f5ea462b6173c0b46fd2d1"},"metrics":[{"type":"cos_sim_accuracy","value":85.59337187816654,"verified":false},{"type":"cos_sim_ap","value":73.23925826533437,"verified":false},{"type":"cos_sim_f1","value":67.34693877551021,"verified":false},{"type":"cos_sim_precision","value":62.40432237730752,"verified":false},{"type":"cos_sim_recall","value":73.13984168865434,"verified":false},{"type":"dot_accuracy","value":85.31322644096085,"verified":false},{"type":"dot_ap","value":72.30723963807422,"verified":false},{"type":"dot_f1","value":66.47051612112296,"verified":false},{"type":"dot_precision","value":62.0792305930845,"verified":false},{"type":"dot_recall","value":71.53034300791556,"verified":false},{"type":"euclidean_accuracy","value":85.61125350181797,"verified":false},{"type":"euclidean_ap","value":73.32843720487845,"verified":false},{"type":"euclidean_f1","value":67.36549633745895,"verified":false},{"type":"euclidean_precision","value":64.60755813953489,"verified":false},{"type":"euclidean_recall","value":70.36939313984169,"verified":false},{"type":"manhattan_accuracy","value":85.63509566668654,"verified":false},{"type":"manhattan_ap","value":73.16658488311325,"verified":false},{"type":"manhattan_f1","value":67.20597386434349,"verified":false},{"type":"manhattan_precision","value":63.60424028268551,"verified":false},{"type":"manhattan_recall","value":71.2401055408971,"verified":false},{"type":"max_accuracy","value":85.63509566668654,"verified":false},{"type":"max_ap","value":73.32843720487845,"verified":false},{"type":"max_f1","value":67.36549633745895,"verified":false}]},{"task":{"type":"PairClassification"},"dataset":{"type":"mteb/twitterurlcorpus-pairclassification","name":"MTEB TwitterURLCorpus","config":"default","split":"test","revision":"8b6510b0b1fa4e4c4f879467980e9be563ec1cdf"},"metrics":[{"type":"cos_sim_accuracy","value":88.33779640625606,"verified":false},{"type":"cos_sim_ap","value":84.83868375898157,"verified":false},{"type":"cos_sim_f1","value":77.16506154017773,"verified":false},{"type":"cos_sim_precision","value":74.62064005753327,"verified":false},{"type":"cos_sim_recall","value":79.88912842623961,"verified":false},{"type":"dot_accuracy","value":88.02732176815307,"verified":false},{"type":"dot_ap","value":83.95089283763002,"verified":false},{"type":"dot_f1","value":76.29635101196631,"verified":false},{"type":"dot_precision","value":73.31771720613288,"verified":false},{"type":"dot_recall","value":79.52725592854944,"verified":false},{"type":"euclidean_accuracy","value":88.44452206310397,"verified":false},{"type":"euclidean_ap","value":84.98384576824827,"verified":false},{"type":"euclidean_f1","value":77.29311047696697,"verified":false},{"type":"euclidean_precision","value":74.51232583065381,"verified":false},{"type":"euclidean_recall","value":80.28949799815214,"verified":false},{"type":"manhattan_accuracy","value":88.47362906042613,"verified":false},{"type":"manhattan_ap","value":84.91421462218432,"verified":false},{"type":"manhattan_f1","value":77.05107637204792,"verified":false},{"type":"manhattan_precision","value":74.74484256243214,"verified":false},{"type":"manhattan_recall","value":79.50415768401602,"verified":false},{"type":"max_accuracy","value":88.47362906042613,"verified":false},{"type":"max_ap","value":84.98384576824827,"verified":false},{"type":"max_f1","value":77.29311047696697,"verified":false}]}]}],"config":{"architectures":["BertModel"],"model_type":"bert","tokenizer_config":{"cls_token":"[CLS]","mask_token":"[MASK]","pad_token":"[PAD]","sep_token":"[SEP]","unk_token":"[UNK]"}},"cardData":{"tags":["sentence-transformers","feature-extraction","sentence-similarity","transformers","mteb"],"model-index":[{"name":"bge-small-en-v1.5","results":[{"task":{"type":"Classification"},"dataset":{"type":"mteb/amazon_counterfactual","name":"MTEB AmazonCounterfactualClassification (en)","config":"en","split":"test","revision":"e8379541af4e31359cca9fbcf4b00f2671dba205"},"metrics":[{"type":"accuracy","value":73.79104477611939,"verified":false},{"type":"ap","value":37.21923821573361,"verified":false},{"type":"f1","value":68.0914945617093,"verified":false}]},{"task":{"type":"Classification"},"dataset":{"type":"mteb/amazon_polarity","name":"MTEB AmazonPolarityClassification","config":"default","split":"test","revision":"e2d317d38cd51312af73b3d32a06d1a08b442046"},"metrics":[{"type":"accuracy","value":92.75377499999999,"verified":false},{"type":"ap","value":89.46766124546022,"verified":false},{"type":"f1","value":92.73884001331487,"verified":false}]},{"task":{"type":"Classification"},"dataset":{"type":"mteb/amazon_reviews_multi","name":"MTEB AmazonReviewsClassification (en)","config":"en","split":"test","revision":"1399c76144fd37290681b995c656ef9b2e06e26d"},"metrics":[{"type":"accuracy","value":46.986,"verified":false},{"type":"f1","value":46.55936786727896,"verified":false}]},{"task":{"type":"Retrieval"},"dataset":{"type":"arguana","name":"MTEB ArguAna","config":"default","split":"test","revision":"None"},"metrics":[{"type":"map_at_1","value":35.846000000000004,"verified":false},{"type":"map_at_10","value":51.388,"verified":false},{"type":"map_at_100","value":52.132999999999996,"verified":false},{"type":"map_at_1000","value":52.141000000000005,"verified":false},{"type":"map_at_3","value":47.037,"verified":false},{"type":"map_at_5","value":49.579,"verified":false},{"type":"mrr_at_1","value":36.558,"verified":false},{"type":"mrr_at_10","value":51.658,"verified":false},{"type":"mrr_at_100","value":52.402,"verified":false},{"type":"mrr_at_1000","value":52.410000000000004,"verified":false},{"type":"mrr_at_3","value":47.345,"verified":false},{"type":"mrr_at_5","value":49.797999999999995,"verified":false},{"type":"ndcg_at_1","value":35.846000000000004,"verified":false},{"type":"ndcg_at_10","value":59.550000000000004,"verified":false},{"type":"ndcg_at_100","value":62.596,"verified":false},{"type":"ndcg_at_1000","value":62.759,"verified":false},{"type":"ndcg_at_3","value":50.666999999999994,"verified":false},{"type":"ndcg_at_5","value":55.228,"verified":false},{"type":"precision_at_1","value":35.846000000000004,"verified":false},{"type":"precision_at_10","value":8.542,"verified":false},{"type":"precision_at_100","value":0.984,"verified":false},{"type":"precision_at_1000","value":0.1,"verified":false},{"type":"precision_at_3","value":20.389,"verified":false},{"type":"precision_at_5","value":14.438,"verified":false},{"type":"recall_at_1","value":35.846000000000004,"verified":false},{"type":"recall_at_10","value":85.42,"verified":false},{"type":"recall_at_100","value":98.43499999999999,"verified":false},{"type":"recall_at_1000","value":99.644,"verified":false},{"type":"recall_at_3","value":61.166,"verified":false},{"type":"recall_at_5","value":72.191,"verified":false}]},{"task":{"type":"Clustering"},"dataset":{"type":"mteb/arxiv-clustering-p2p","name":"MTEB ArxivClusteringP2P","config":"default","split":"test","revision":"a122ad7f3f0291bf49cc6f4d32aa80929df69d5d"},"metrics":[{"type":"v_measure","value":47.402770198163594,"verified":false}]},{"task":{"type":"Clustering"},"dataset":{"type":"mteb/arxiv-clustering-s2s","name":"MTEB ArxivClusteringS2S","config":"default","split":"test","revision":"f910caf1a6075f7329cdf8c1a6135696f37dbd53"},"metrics":[{"type":"v_measure","value":40.01545436974177,"verified":false}]},{"task":{"type":"Reranking"},"dataset":{"type":"mteb/askubuntudupquestions-reranking","name":"MTEB AskUbuntuDupQuestions","config":"default","split":"test","revision":"2000358ca161889fa9c082cb41daa8dcfb161a54"},"metrics":[{"type":"map","value":62.586465273207196,"verified":false},{"type":"mrr","value":74.42169019038825,"verified":false}]},{"task":{"type":"STS"},"dataset":{"type":"mteb/biosses-sts","name":"MTEB BIOSSES","config":"default","split":"test","revision":"d3fb88f8f02e40887cd149695127462bbcf29b4a"},"metrics":[{"type":"cos_sim_pearson","value":85.1891186537969,"verified":false},{"type":"cos_sim_spearman","value":83.75492046087288,"verified":false},{"type":"euclidean_pearson","value":84.11766204805357,"verified":false},{"type":"euclidean_spearman","value":84.01456493126516,"verified":false},{"type":"manhattan_pearson","value":84.2132950502772,"verified":false},{"type":"manhattan_spearman","value":83.89227298813377,"verified":false}]},{"task":{"type":"Classification"},"dataset":{"type":"mteb/banking77","name":"MTEB Banking77Classification","config":"default","split":"test","revision":"0fd18e25b25c072e09e0d92ab615fda904d66300"},"metrics":[{"type":"accuracy","value":85.74025974025975,"verified":false},{"type":"f1","value":85.71493566466381,"verified":false}]},{"task":{"type":"Clustering"},"dataset":{"type":"mteb/biorxiv-clustering-p2p","name":"MTEB BiorxivClusteringP2P","config":"default","split":"test","revision":"65b79d1d13f80053f67aca9498d9402c2d9f1f40"},"metrics":[{"type":"v_measure","value":38.467181385006434,"verified":false}]},{"task":{"type":"Clustering"},"dataset":{"type":"mteb/biorxiv-clustering-s2s","name":"MTEB BiorxivClusteringS2S","config":"default","split":"test","revision":"258694dd0231531bc1fd9de6ceb52a0853c6d908"},"metrics":[{"type":"v_measure","value":34.719496037339056,"verified":false}]},{"task":{"type":"Retrieval"},"dataset":{"type":"BeIR/cqadupstack","name":"MTEB CQADupstackAndroidRetrieval","config":"default","split":"test","revision":"None"},"metrics":[{"type":"map_at_1","value":29.587000000000003,"verified":false},{"type":"map_at_10","value":41.114,"verified":false},{"type":"map_at_100","value":42.532,"verified":false},{"type":"map_at_1000","value":42.661,"verified":false},{"type":"map_at_3","value":37.483,"verified":false},{"type":"map_at_5","value":39.652,"verified":false},{"type":"mrr_at_1","value":36.338,"verified":false},{"type":"mrr_at_10","value":46.763,"verified":false},{"type":"mrr_at_100","value":47.393,"verified":false},{"type":"mrr_at_1000","value":47.445,"verified":false},{"type":"mrr_at_3","value":43.538,"verified":false},{"type":"mrr_at_5","value":45.556000000000004,"verified":false},{"type":"ndcg_at_1","value":36.338,"verified":false},{"type":"ndcg_at_10","value":47.658,"verified":false},{"type":"ndcg_at_100","value":52.824000000000005,"verified":false},{"type":"ndcg_at_1000","value":54.913999999999994,"verified":false},{"type":"ndcg_at_3","value":41.989,"verified":false},{"type":"ndcg_at_5","value":44.944,"verified":false},{"type":"precision_at_1","value":36.338,"verified":false},{"type":"precision_at_10","value":9.156,"verified":false},{"type":"precision_at_100","value":1.4789999999999999,"verified":false},{"type":"precision_at_1000","value":0.196,"verified":false},{"type":"precision_at_3","value":20.076,"verified":false},{"type":"precision_at_5","value":14.85,"verified":false},{"type":"recall_at_1","value":29.587000000000003,"verified":false},{"type":"recall_at_10","value":60.746,"verified":false},{"type":"recall_at_100","value":82.157,"verified":false},{"type":"recall_at_1000","value":95.645,"verified":false},{"type":"recall_at_3","value":44.821,"verified":false},{"type":"recall_at_5","value":52.819,"verified":false}]},{"task":{"type":"Retrieval"},"dataset":{"type":"BeIR/cqadupstack","name":"MTEB CQADupstackEnglishRetrieval","config":"default","split":"test","revision":"None"},"metrics":[{"type":"map_at_1","value":30.239,"verified":false},{"type":"map_at_10","value":39.989000000000004,"verified":false},{"type":"map_at_100","value":41.196,"verified":false},{"type":"map_at_1000","value":41.325,"verified":false},{"type":"map_at_3","value":37.261,"verified":false},{"type":"map_at_5","value":38.833,"verified":false},{"type":"mrr_at_1","value":37.516,"verified":false},{"type":"mrr_at_10","value":46.177,"verified":false},{"type":"mrr_at_100","value":46.806,"verified":false},{"type":"mrr_at_1000","value":46.849000000000004,"verified":false},{"type":"mrr_at_3","value":44.002,"verified":false},{"type":"mrr_at_5","value":45.34,"verified":false},{"type":"ndcg_at_1","value":37.516,"verified":false},{"type":"ndcg_at_10","value":45.586,"verified":false},{"type":"ndcg_at_100","value":49.897000000000006,"verified":false},{"type":"ndcg_at_1000","value":51.955,"verified":false},{"type":"ndcg_at_3","value":41.684,"verified":false},{"type":"ndcg_at_5","value":43.617,"verified":false},{"type":"precision_at_1","value":37.516,"verified":false},{"type":"precision_at_10","value":8.522,"verified":false},{"type":"precision_at_100","value":1.374,"verified":false},{"type":"precision_at_1000","value":0.184,"verified":false},{"type":"precision_at_3","value":20.105999999999998,"verified":false},{"type":"precision_at_5","value":14.152999999999999,"verified":false},{"type":"recall_at_1","value":30.239,"verified":false},{"type":"recall_at_10","value":55.03,"verified":false},{"type":"recall_at_100","value":73.375,"verified":false},{"type":"recall_at_1000","value":86.29599999999999,"verified":false},{"type":"recall_at_3","value":43.269000000000005,"verified":false},{"type":"recall_at_5","value":48.878,"verified":false}]},{"task":{"type":"Retrieval"},"dataset":{"type":"BeIR/cqadupstack","name":"MTEB CQADupstackGamingRetrieval","config":"default","split":"test","revision":"None"},"metrics":[{"type":"map_at_1","value":38.338,"verified":false},{"type":"map_at_10","value":50.468999999999994,"verified":false},{"type":"map_at_100","value":51.553000000000004,"verified":false},{"type":"map_at_1000","value":51.608,"verified":false},{"type":"map_at_3","value":47.107,"verified":false},{"type":"map_at_5","value":49.101,"verified":false},{"type":"mrr_at_1","value":44.201,"verified":false},{"type":"mrr_at_10","value":54.057,"verified":false},{"type":"mrr_at_100","value":54.764,"verified":false},{"type":"mrr_at_1000","value":54.791000000000004,"verified":false},{"type":"mrr_at_3","value":51.56699999999999,"verified":false},{"type":"mrr_at_5","value":53.05,"verified":false},{"type":"ndcg_at_1","value":44.201,"verified":false},{"type":"ndcg_at_10","value":56.379000000000005,"verified":false},{"type":"ndcg_at_100","value":60.645,"verified":false},{"type":"ndcg_at_1000","value":61.73499999999999,"verified":false},{"type":"ndcg_at_3","value":50.726000000000006,"verified":false},{"type":"ndcg_at_5","value":53.58500000000001,"verified":false},{"type":"precision_at_1","value":44.201,"verified":false},{"type":"precision_at_10","value":9.141,"verified":false},{"type":"precision_at_100","value":1.216,"verified":false},{"type":"precision_at_1000","value":0.135,"verified":false},{"type":"precision_at_3","value":22.654,"verified":false},{"type":"precision_at_5","value":15.723999999999998,"verified":false},{"type":"recall_at_1","value":38.338,"verified":false},{"type":"recall_at_10","value":70.30499999999999,"verified":false},{"type":"recall_at_100","value":88.77199999999999,"verified":false},{"type":"recall_at_1000","value":96.49799999999999,"verified":false},{"type":"recall_at_3","value":55.218,"verified":false},{"type":"recall_at_5","value":62.104000000000006,"verified":false}]},{"task":{"type":"Retrieval"},"dataset":{"type":"BeIR/cqadupstack","name":"MTEB CQADupstackGisRetrieval","config":"default","split":"test","revision":"None"},"metrics":[{"type":"map_at_1","value":25.682,"verified":false},{"type":"map_at_10","value":33.498,"verified":false},{"type":"map_at_100","value":34.461000000000006,"verified":false},{"type":"map_at_1000","value":34.544000000000004,"verified":false},{"type":"map_at_3","value":30.503999999999998,"verified":false},{"type":"map_at_5","value":32.216,"verified":false},{"type":"mrr_at_1","value":27.683999999999997,"verified":false},{"type":"mrr_at_10","value":35.467999999999996,"verified":false},{"type":"mrr_at_100","value":36.32,"verified":false},{"type":"mrr_at_1000","value":36.386,"verified":false},{"type":"mrr_at_3","value":32.618,"verified":false},{"type":"mrr_at_5","value":34.262,"verified":false},{"type":"ndcg_at_1","value":27.683999999999997,"verified":false},{"type":"ndcg_at_10","value":38.378,"verified":false},{"type":"ndcg_at_100","value":43.288,"verified":false},{"type":"ndcg_at_1000","value":45.413,"verified":false},{"type":"ndcg_at_3","value":32.586,"verified":false},{"type":"ndcg_at_5","value":35.499,"verified":false},{"type":"precision_at_1","value":27.683999999999997,"verified":false},{"type":"precision_at_10","value":5.864,"verified":false},{"type":"precision_at_100","value":0.882,"verified":false},{"type":"precision_at_1000","value":0.11,"verified":false},{"type":"precision_at_3","value":13.446,"verified":false},{"type":"precision_at_5","value":9.718,"verified":false},{"type":"recall_at_1","value":25.682,"verified":false},{"type":"recall_at_10","value":51.712,"verified":false},{"type":"recall_at_100","value":74.446,"verified":false},{"type":"recall_at_1000","value":90.472,"verified":false},{"type":"recall_at_3","value":36.236000000000004,"verified":false},{"type":"recall_at_5","value":43.234,"verified":false}]},{"task":{"type":"Retrieval"},"dataset":{"type":"BeIR/cqadupstack","name":"MTEB CQADupstackMathematicaRetrieval","config":"default","split":"test","revision":"None"},"metrics":[{"type":"map_at_1","value":16.073999999999998,"verified":false},{"type":"map_at_10","value":24.352999999999998,"verified":false},{"type":"map_at_100","value":25.438,"verified":false},{"type":"map_at_1000","value":25.545,"verified":false},{"type":"map_at_3","value":21.614,"verified":false},{"type":"map_at_5","value":23.104,"verified":false},{"type":"mrr_at_1","value":19.776,"verified":false},{"type":"mrr_at_10","value":28.837000000000003,"verified":false},{"type":"mrr_at_100","value":29.755,"verified":false},{"type":"mrr_at_1000","value":29.817,"verified":false},{"type":"mrr_at_3","value":26.201999999999998,"verified":false},{"type":"mrr_at_5","value":27.714,"verified":false},{"type":"ndcg_at_1","value":19.776,"verified":false},{"type":"ndcg_at_10","value":29.701,"verified":false},{"type":"ndcg_at_100","value":35.307,"verified":false},{"type":"ndcg_at_1000","value":37.942,"verified":false},{"type":"ndcg_at_3","value":24.764,"verified":false},{"type":"ndcg_at_5","value":27.025,"verified":false},{"type":"precision_at_1","value":19.776,"verified":false},{"type":"precision_at_10","value":5.659,"verified":false},{"type":"precision_at_100","value":0.971,"verified":false},{"type":"precision_at_1000","value":0.133,"verified":false},{"type":"precision_at_3","value":12.065,"verified":false},{"type":"precision_at_5","value":8.905000000000001,"verified":false},{"type":"recall_at_1","value":16.073999999999998,"verified":false},{"type":"recall_at_10","value":41.647,"verified":false},{"type":"recall_at_100","value":66.884,"verified":false},{"type":"recall_at_1000","value":85.91499999999999,"verified":false},{"type":"recall_at_3","value":27.916,"verified":false},{"type":"recall_at_5","value":33.729,"verified":false}]},{"task":{"type":"Retrieval"},"dataset":{"type":"BeIR/cqadupstack","name":"MTEB CQADupstackPhysicsRetrieval","config":"default","split":"test","revision":"None"},"metrics":[{"type":"map_at_1","value":28.444999999999997,"verified":false},{"type":"map_at_10","value":38.218999999999994,"verified":false},{"type":"map_at_100","value":39.595,"verified":false},{"type":"map_at_1000","value":39.709,"verified":false},{"type":"map_at_3","value":35.586,"verified":false},{"type":"map_at_5","value":36.895,"verified":false},{"type":"mrr_at_1","value":34.841,"verified":false},{"type":"mrr_at_10","value":44.106,"verified":false},{"type":"mrr_at_100","value":44.98,"verified":false},{"type":"mrr_at_1000","value":45.03,"verified":false},{"type":"mrr_at_3","value":41.979,"verified":false},{"type":"mrr_at_5","value":43.047999999999995,"verified":false},{"type":"ndcg_at_1","value":34.841,"verified":false},{"type":"ndcg_at_10","value":43.922,"verified":false},{"type":"ndcg_at_100","value":49.504999999999995,"verified":false},{"type":"ndcg_at_1000","value":51.675000000000004,"verified":false},{"type":"ndcg_at_3","value":39.858,"verified":false},{"type":"ndcg_at_5","value":41.408,"verified":false},{"type":"precision_at_1","value":34.841,"verified":false},{"type":"precision_at_10","value":7.872999999999999,"verified":false},{"type":"precision_at_100","value":1.2449999999999999,"verified":false},{"type":"precision_at_1000","value":0.161,"verified":false},{"type":"precision_at_3","value":18.993,"verified":false},{"type":"precision_at_5","value":13.032,"verified":false},{"type":"recall_at_1","value":28.444999999999997,"verified":false},{"type":"recall_at_10","value":54.984,"verified":false},{"type":"recall_at_100","value":78.342,"verified":false},{"type":"recall_at_1000","value":92.77,"verified":false},{"type":"recall_at_3","value":42.842999999999996,"verified":false},{"type":"recall_at_5","value":47.247,"verified":false}]},{"task":{"type":"Retrieval"},"dataset":{"type":"BeIR/cqadupstack","name":"MTEB CQADupstackProgrammersRetrieval","config":"default","split":"test","revision":"None"},"metrics":[{"type":"map_at_1","value":23.072,"verified":false},{"type":"map_at_10","value":32.354,"verified":false},{"type":"map_at_100","value":33.800000000000004,"verified":false},{"type":"map_at_1000","value":33.908,"verified":false},{"type":"map_at_3","value":29.232000000000003,"verified":false},{"type":"map_at_5","value":31.049,"verified":false},{"type":"mrr_at_1","value":29.110000000000003,"verified":false},{"type":"mrr_at_10","value":38.03,"verified":false},{"type":"mrr_at_100","value":39.032,"verified":false},{"type":"mrr_at_1000","value":39.086999999999996,"verified":false},{"type":"mrr_at_3","value":35.407,"verified":false},{"type":"mrr_at_5","value":36.76,"verified":false},{"type":"ndcg_at_1","value":29.110000000000003,"verified":false},{"type":"ndcg_at_10","value":38.231,"verified":false},{"type":"ndcg_at_100","value":44.425,"verified":false},{"type":"ndcg_at_1000","value":46.771,"verified":false},{"type":"ndcg_at_3","value":33.095,"verified":false},{"type":"ndcg_at_5","value":35.459,"verified":false},{"type":"precision_at_1","value":29.110000000000003,"verified":false},{"type":"precision_at_10","value":7.215000000000001,"verified":false},{"type":"precision_at_100","value":1.2109999999999999,"verified":false},{"type":"precision_at_1000","value":0.157,"verified":false},{"type":"precision_at_3","value":16.058,"verified":false},{"type":"precision_at_5","value":11.644,"verified":false},{"type":"recall_at_1","value":23.072,"verified":false},{"type":"recall_at_10","value":50.285999999999994,"verified":false},{"type":"recall_at_100","value":76.596,"verified":false},{"type":"recall_at_1000","value":92.861,"verified":false},{"type":"recall_at_3","value":35.702,"verified":false},{"type":"recall_at_5","value":42.152,"verified":false}]},{"task":{"type":"Retrieval"},"dataset":{"type":"BeIR/cqadupstack","name":"MTEB CQADupstackRetrieval","config":"default","split":"test","revision":"None"},"metrics":[{"type":"map_at_1","value":24.937916666666666,"verified":false},{"type":"map_at_10","value":33.755250000000004,"verified":false},{"type":"map_at_100","value":34.955999999999996,"verified":false},{"type":"map_at_1000","value":35.070499999999996,"verified":false},{"type":"map_at_3","value":30.98708333333333,"verified":false},{"type":"map_at_5","value":32.51491666666666,"verified":false},{"type":"mrr_at_1","value":29.48708333333333,"verified":false},{"type":"mrr_at_10","value":37.92183333333334,"verified":false},{"type":"mrr_at_100","value":38.76583333333333,"verified":false},{"type":"mrr_at_1000","value":38.82466666666667,"verified":false},{"type":"mrr_at_3","value":35.45125,"verified":false},{"type":"mrr_at_5","value":36.827000000000005,"verified":false},{"type":"ndcg_at_1","value":29.48708333333333,"verified":false},{"type":"ndcg_at_10","value":39.05225,"verified":false},{"type":"ndcg_at_100","value":44.25983333333334,"verified":false},{"type":"ndcg_at_1000","value":46.568333333333335,"verified":false},{"type":"ndcg_at_3","value":34.271583333333325,"verified":false},{"type":"ndcg_at_5","value":36.483916666666666,"verified":false},{"type":"precision_at_1","value":29.48708333333333,"verified":false},{"type":"precision_at_10","value":6.865749999999999,"verified":false},{"type":"precision_at_100","value":1.1195833333333332,"verified":false},{"type":"precision_at_1000","value":0.15058333333333335,"verified":false},{"type":"precision_at_3","value":15.742083333333333,"verified":false},{"type":"precision_at_5","value":11.221916666666667,"verified":false},{"type":"recall_at_1","value":24.937916666666666,"verified":false},{"type":"recall_at_10","value":50.650416666666665,"verified":false},{"type":"recall_at_100","value":73.55383333333334,"verified":false},{"type":"recall_at_1000","value":89.61691666666667,"verified":false},{"type":"recall_at_3","value":37.27808333333334,"verified":false},{"type":"recall_at_5","value":42.99475,"verified":false}]},{"task":{"type":"Retrieval"},"dataset":{"type":"BeIR/cqadupstack","name":"MTEB CQADupstackStatsRetrieval","config":"default","split":"test","revision":"None"},"metrics":[{"type":"map_at_1","value":23.947,"verified":false},{"type":"map_at_10","value":30.575000000000003,"verified":false},{"type":"map_at_100","value":31.465,"verified":false},{"type":"map_at_1000","value":31.558000000000003,"verified":false},{"type":"map_at_3","value":28.814,"verified":false},{"type":"map_at_5","value":29.738999999999997,"verified":false},{"type":"mrr_at_1","value":26.994,"verified":false},{"type":"mrr_at_10","value":33.415,"verified":false},{"type":"mrr_at_100","value":34.18,"verified":false},{"type":"mrr_at_1000","value":34.245,"verified":false},{"type":"mrr_at_3","value":31.621,"verified":false},{"type":"mrr_at_5","value":32.549,"verified":false},{"type":"ndcg_at_1","value":26.994,"verified":false},{"type":"ndcg_at_10","value":34.482,"verified":false},{"type":"ndcg_at_100","value":38.915,"verified":false},{"type":"ndcg_at_1000","value":41.355,"verified":false},{"type":"ndcg_at_3","value":31.139,"verified":false},{"type":"ndcg_at_5","value":32.589,"verified":false},{"type":"precision_at_1","value":26.994,"verified":false},{"type":"precision_at_10","value":5.322,"verified":false},{"type":"precision_at_100","value":0.8160000000000001,"verified":false},{"type":"precision_at_1000","value":0.11100000000000002,"verified":false},{"type":"precision_at_3","value":13.344000000000001,"verified":false},{"type":"precision_at_5","value":8.988,"verified":false},{"type":"recall_at_1","value":23.947,"verified":false},{"type":"recall_at_10","value":43.647999999999996,"verified":false},{"type":"recall_at_100","value":63.851,"verified":false},{"type":"recall_at_1000","value":82,"verified":false},{"type":"recall_at_3","value":34.288000000000004,"verified":false},{"type":"recall_at_5","value":38.117000000000004,"verified":false}]},{"task":{"type":"Retrieval"},"dataset":{"type":"BeIR/cqadupstack","name":"MTEB CQADupstackTexRetrieval","config":"default","split":"test","revision":"None"},"metrics":[{"type":"map_at_1","value":16.197,"verified":false},{"type":"map_at_10","value":22.968,"verified":false},{"type":"map_at_100","value":24.095,"verified":false},{"type":"map_at_1000","value":24.217,"verified":false},{"type":"map_at_3","value":20.771,"verified":false},{"type":"map_at_5","value":21.995,"verified":false},{"type":"mrr_at_1","value":19.511,"verified":false},{"type":"mrr_at_10","value":26.55,"verified":false},{"type":"mrr_at_100","value":27.500999999999998,"verified":false},{"type":"mrr_at_1000","value":27.578999999999997,"verified":false},{"type":"mrr_at_3","value":24.421,"verified":false},{"type":"mrr_at_5","value":25.604,"verified":false},{"type":"ndcg_at_1","value":19.511,"verified":false},{"type":"ndcg_at_10","value":27.386,"verified":false},{"type":"ndcg_at_100","value":32.828,"verified":false},{"type":"ndcg_at_1000","value":35.739,"verified":false},{"type":"ndcg_at_3","value":23.405,"verified":false},{"type":"ndcg_at_5","value":25.255,"verified":false},{"type":"precision_at_1","value":19.511,"verified":false},{"type":"precision_at_10","value":5.017,"verified":false},{"type":"precision_at_100","value":0.91,"verified":false},{"type":"precision_at_1000","value":0.133,"verified":false},{"type":"precision_at_3","value":11.023,"verified":false},{"type":"precision_at_5","value":8.025,"verified":false},{"type":"recall_at_1","value":16.197,"verified":false},{"type":"recall_at_10","value":37.09,"verified":false},{"type":"recall_at_100","value":61.778,"verified":false},{"type":"recall_at_1000","value":82.56599999999999,"verified":false},{"type":"recall_at_3","value":26.034000000000002,"verified":false},{"type":"recall_at_5","value":30.762,"verified":false}]},{"task":{"type":"Retrieval"},"dataset":{"type":"BeIR/cqadupstack","name":"MTEB CQADupstackUnixRetrieval","config":"default","split":"test","revision":"None"},"metrics":[{"type":"map_at_1","value":25.41,"verified":false},{"type":"map_at_10","value":33.655,"verified":false},{"type":"map_at_100","value":34.892,"verified":false},{"type":"map_at_1000","value":34.995,"verified":false},{"type":"map_at_3","value":30.94,"verified":false},{"type":"map_at_5","value":32.303,"verified":false},{"type":"mrr_at_1","value":29.477999999999998,"verified":false},{"type":"mrr_at_10","value":37.443,"verified":false},{"type":"mrr_at_100","value":38.383,"verified":false},{"type":"mrr_at_1000","value":38.440000000000005,"verified":false},{"type":"mrr_at_3","value":34.949999999999996,"verified":false},{"type":"mrr_at_5","value":36.228,"verified":false},{"type":"ndcg_at_1","value":29.477999999999998,"verified":false},{"type":"ndcg_at_10","value":38.769,"verified":false},{"type":"ndcg_at_100","value":44.245000000000005,"verified":false},{"type":"ndcg_at_1000","value":46.593,"verified":false},{"type":"ndcg_at_3","value":33.623,"verified":false},{"type":"ndcg_at_5","value":35.766,"verified":false},{"type":"precision_at_1","value":29.477999999999998,"verified":false},{"type":"precision_at_10","value":6.455,"verified":false},{"type":"precision_at_100","value":1.032,"verified":false},{"type":"precision_at_1000","value":0.135,"verified":false},{"type":"precision_at_3","value":14.893999999999998,"verified":false},{"type":"precision_at_5","value":10.485,"verified":false},{"type":"recall_at_1","value":25.41,"verified":false},{"type":"recall_at_10","value":50.669,"verified":false},{"type":"recall_at_100","value":74.084,"verified":false},{"type":"recall_at_1000","value":90.435,"verified":false},{"type":"recall_at_3","value":36.679,"verified":false},{"type":"recall_at_5","value":41.94,"verified":false}]},{"task":{"type":"Retrieval"},"dataset":{"type":"BeIR/cqadupstack","name":"MTEB CQADupstackWebmastersRetrieval","config":"default","split":"test","revision":"None"},"metrics":[{"type":"map_at_1","value":23.339,"verified":false},{"type":"map_at_10","value":31.852000000000004,"verified":false},{"type":"map_at_100","value":33.411,"verified":false},{"type":"map_at_1000","value":33.62,"verified":false},{"type":"map_at_3","value":28.929,"verified":false},{"type":"map_at_5","value":30.542,"verified":false},{"type":"mrr_at_1","value":28.063,"verified":false},{"type":"mrr_at_10","value":36.301,"verified":false},{"type":"mrr_at_100","value":37.288,"verified":false},{"type":"mrr_at_1000","value":37.349,"verified":false},{"type":"mrr_at_3","value":33.663,"verified":false},{"type":"mrr_at_5","value":35.165,"verified":false},{"type":"ndcg_at_1","value":28.063,"verified":false},{"type":"ndcg_at_10","value":37.462,"verified":false},{"type":"ndcg_at_100","value":43.620999999999995,"verified":false},{"type":"ndcg_at_1000","value":46.211,"verified":false},{"type":"ndcg_at_3","value":32.68,"verified":false},{"type":"ndcg_at_5","value":34.981,"verified":false},{"type":"precision_at_1","value":28.063,"verified":false},{"type":"precision_at_10","value":7.1739999999999995,"verified":false},{"type":"precision_at_100","value":1.486,"verified":false},{"type":"precision_at_1000","value":0.23500000000000001,"verified":false},{"type":"precision_at_3","value":15.217,"verified":false},{"type":"precision_at_5","value":11.265,"verified":false},{"type":"recall_at_1","value":23.339,"verified":false},{"type":"recall_at_10","value":48.376999999999995,"verified":false},{"type":"recall_at_100","value":76.053,"verified":false},{"type":"recall_at_1000","value":92.455,"verified":false},{"type":"recall_at_3","value":34.735,"verified":false},{"type":"recall_at_5","value":40.71,"verified":false}]},{"task":{"type":"Retrieval"},"dataset":{"type":"BeIR/cqadupstack","name":"MTEB CQADupstackWordpressRetrieval","config":"default","split":"test","revision":"None"},"metrics":[{"type":"map_at_1","value":18.925,"verified":false},{"type":"map_at_10","value":26.017000000000003,"verified":false},{"type":"map_at_100","value":27.034000000000002,"verified":false},{"type":"map_at_1000","value":27.156000000000002,"verified":false},{"type":"map_at_3","value":23.604,"verified":false},{"type":"map_at_5","value":24.75,"verified":false},{"type":"mrr_at_1","value":20.333000000000002,"verified":false},{"type":"mrr_at_10","value":27.915,"verified":false},{"type":"mrr_at_100","value":28.788000000000004,"verified":false},{"type":"mrr_at_1000","value":28.877999999999997,"verified":false},{"type":"mrr_at_3","value":25.446999999999996,"verified":false},{"type":"mrr_at_5","value":26.648,"verified":false},{"type":"ndcg_at_1","value":20.333000000000002,"verified":false},{"type":"ndcg_at_10","value":30.673000000000002,"verified":false},{"type":"ndcg_at_100","value":35.618,"verified":false},{"type":"ndcg_at_1000","value":38.517,"verified":false},{"type":"ndcg_at_3","value":25.71,"verified":false},{"type":"ndcg_at_5","value":27.679,"verified":false},{"type":"precision_at_1","value":20.333000000000002,"verified":false},{"type":"precision_at_10","value":4.9910000000000005,"verified":false},{"type":"precision_at_100","value":0.8130000000000001,"verified":false},{"type":"precision_at_1000","value":0.117,"verified":false},{"type":"precision_at_3","value":11.029,"verified":false},{"type":"precision_at_5","value":7.8740000000000006,"verified":false},{"type":"recall_at_1","value":18.925,"verified":false},{"type":"recall_at_10","value":43.311,"verified":false},{"type":"recall_at_100","value":66.308,"verified":false},{"type":"recall_at_1000","value":87.49,"verified":false},{"type":"recall_at_3","value":29.596,"verified":false},{"type":"recall_at_5","value":34.245,"verified":false}]},{"task":{"type":"Retrieval"},"dataset":{"type":"climate-fever","name":"MTEB ClimateFEVER","config":"default","split":"test","revision":"None"},"metrics":[{"type":"map_at_1","value":13.714,"verified":false},{"type":"map_at_10","value":23.194,"verified":false},{"type":"map_at_100","value":24.976000000000003,"verified":false},{"type":"map_at_1000","value":25.166,"verified":false},{"type":"map_at_3","value":19.709,"verified":false},{"type":"map_at_5","value":21.523999999999997,"verified":false},{"type":"mrr_at_1","value":30.619000000000003,"verified":false},{"type":"mrr_at_10","value":42.563,"verified":false},{"type":"mrr_at_100","value":43.386,"verified":false},{"type":"mrr_at_1000","value":43.423,"verified":false},{"type":"mrr_at_3","value":39.555,"verified":false},{"type":"mrr_at_5","value":41.268,"verified":false},{"type":"ndcg_at_1","value":30.619000000000003,"verified":false},{"type":"ndcg_at_10","value":31.836,"verified":false},{"type":"ndcg_at_100","value":38.652,"verified":false},{"type":"ndcg_at_1000","value":42.088,"verified":false},{"type":"ndcg_at_3","value":26.733,"verified":false},{"type":"ndcg_at_5","value":28.435,"verified":false},{"type":"precision_at_1","value":30.619000000000003,"verified":false},{"type":"precision_at_10","value":9.751999999999999,"verified":false},{"type":"precision_at_100","value":1.71,"verified":false},{"type":"precision_at_1000","value":0.23500000000000001,"verified":false},{"type":"precision_at_3","value":19.935,"verified":false},{"type":"precision_at_5","value":14.984,"verified":false},{"type":"recall_at_1","value":13.714,"verified":false},{"type":"recall_at_10","value":37.26,"verified":false},{"type":"recall_at_100","value":60.546,"verified":false},{"type":"recall_at_1000","value":79.899,"verified":false},{"type":"recall_at_3","value":24.325,"verified":false},{"type":"recall_at_5","value":29.725,"verified":false}]},{"task":{"type":"Retrieval"},"dataset":{"type":"dbpedia-entity","name":"MTEB DBPedia","config":"default","split":"test","revision":"None"},"metrics":[{"type":"map_at_1","value":8.462,"verified":false},{"type":"map_at_10","value":18.637,"verified":false},{"type":"map_at_100","value":26.131999999999998,"verified":false},{"type":"map_at_1000","value":27.607,"verified":false},{"type":"map_at_3","value":13.333,"verified":false},{"type":"map_at_5","value":15.654000000000002,"verified":false},{"type":"mrr_at_1","value":66.25,"verified":false},{"type":"mrr_at_10","value":74.32600000000001,"verified":false},{"type":"mrr_at_100","value":74.60900000000001,"verified":false},{"type":"mrr_at_1000","value":74.62,"verified":false},{"type":"mrr_at_3","value":72.667,"verified":false},{"type":"mrr_at_5","value":73.817,"verified":false},{"type":"ndcg_at_1","value":53.87499999999999,"verified":false},{"type":"ndcg_at_10","value":40.028999999999996,"verified":false},{"type":"ndcg_at_100","value":44.199,"verified":false},{"type":"ndcg_at_1000","value":51.629999999999995,"verified":false},{"type":"ndcg_at_3","value":44.113,"verified":false},{"type":"ndcg_at_5","value":41.731,"verified":false},{"type":"precision_at_1","value":66.25,"verified":false},{"type":"precision_at_10","value":31.900000000000002,"verified":false},{"type":"precision_at_100","value":10.043000000000001,"verified":false},{"type":"precision_at_1000","value":1.926,"verified":false},{"type":"precision_at_3","value":47.417,"verified":false},{"type":"precision_at_5","value":40.65,"verified":false},{"type":"recall_at_1","value":8.462,"verified":false},{"type":"recall_at_10","value":24.293,"verified":false},{"type":"recall_at_100","value":50.146,"verified":false},{"type":"recall_at_1000","value":74.034,"verified":false},{"type":"recall_at_3","value":14.967,"verified":false},{"type":"recall_at_5","value":18.682000000000002,"verified":false}]},{"task":{"type":"Classification"},"dataset":{"type":"mteb/emotion","name":"MTEB EmotionClassification","config":"default","split":"test","revision":"4f58c6b202a23cf9a4da393831edf4f9183cad37"},"metrics":[{"type":"accuracy","value":47.84499999999999,"verified":false},{"type":"f1","value":42.48106691979349,"verified":false}]},{"task":{"type":"Retrieval"},"dataset":{"type":"fever","name":"MTEB FEVER","config":"default","split":"test","revision":"None"},"metrics":[{"type":"map_at_1","value":74.034,"verified":false},{"type":"map_at_10","value":82.76,"verified":false},{"type":"map_at_100","value":82.968,"verified":false},{"type":"map_at_1000","value":82.98299999999999,"verified":false},{"type":"map_at_3","value":81.768,"verified":false},{"type":"map_at_5","value":82.418,"verified":false},{"type":"mrr_at_1","value":80.048,"verified":false},{"type":"mrr_at_10","value":87.64999999999999,"verified":false},{"type":"mrr_at_100","value":87.712,"verified":false},{"type":"mrr_at_1000","value":87.713,"verified":false},{"type":"mrr_at_3","value":87.01100000000001,"verified":false},{"type":"mrr_at_5","value":87.466,"verified":false},{"type":"ndcg_at_1","value":80.048,"verified":false},{"type":"ndcg_at_10","value":86.643,"verified":false},{"type":"ndcg_at_100","value":87.361,"verified":false},{"type":"ndcg_at_1000","value":87.606,"verified":false},{"type":"ndcg_at_3","value":85.137,"verified":false},{"type":"ndcg_at_5","value":86.016,"verified":false},{"type":"precision_at_1","value":80.048,"verified":false},{"type":"precision_at_10","value":10.372,"verified":false},{"type":"precision_at_100","value":1.093,"verified":false},{"type":"precision_at_1000","value":0.11299999999999999,"verified":false},{"type":"precision_at_3","value":32.638,"verified":false},{"type":"precision_at_5","value":20.177,"verified":false},{"type":"recall_at_1","value":74.034,"verified":false},{"type":"recall_at_10","value":93.769,"verified":false},{"type":"recall_at_100","value":96.569,"verified":false},{"type":"recall_at_1000","value":98.039,"verified":false},{"type":"recall_at_3","value":89.581,"verified":false},{"type":"recall_at_5","value":91.906,"verified":false}]},{"task":{"type":"Retrieval"},"dataset":{"type":"fiqa","name":"MTEB FiQA2018","config":"default","split":"test","revision":"None"},"metrics":[{"type":"map_at_1","value":20.5,"verified":false},{"type":"map_at_10","value":32.857,"verified":false},{"type":"map_at_100","value":34.589,"verified":false},{"type":"map_at_1000","value":34.778,"verified":false},{"type":"map_at_3","value":29.160999999999998,"verified":false},{"type":"map_at_5","value":31.033,"verified":false},{"type":"mrr_at_1","value":40.123,"verified":false},{"type":"mrr_at_10","value":48.776,"verified":false},{"type":"mrr_at_100","value":49.495,"verified":false},{"type":"mrr_at_1000","value":49.539,"verified":false},{"type":"mrr_at_3","value":46.605000000000004,"verified":false},{"type":"mrr_at_5","value":47.654,"verified":false},{"type":"ndcg_at_1","value":40.123,"verified":false},{"type":"ndcg_at_10","value":40.343,"verified":false},{"type":"ndcg_at_100","value":46.56,"verified":false},{"type":"ndcg_at_1000","value":49.777,"verified":false},{"type":"ndcg_at_3","value":37.322,"verified":false},{"type":"ndcg_at_5","value":37.791000000000004,"verified":false},{"type":"precision_at_1","value":40.123,"verified":false},{"type":"precision_at_10","value":11.08,"verified":false},{"type":"precision_at_100","value":1.752,"verified":false},{"type":"precision_at_1000","value":0.232,"verified":false},{"type":"precision_at_3","value":24.897,"verified":false},{"type":"precision_at_5","value":17.809,"verified":false},{"type":"recall_at_1","value":20.5,"verified":false},{"type":"recall_at_10","value":46.388,"verified":false},{"type":"recall_at_100","value":69.552,"verified":false},{"type":"recall_at_1000","value":89.011,"verified":false},{"type":"recall_at_3","value":33.617999999999995,"verified":false},{"type":"recall_at_5","value":38.211,"verified":false}]},{"task":{"type":"Retrieval"},"dataset":{"type":"hotpotqa","name":"MTEB HotpotQA","config":"default","split":"test","revision":"None"},"metrics":[{"type":"map_at_1","value":39.135999999999996,"verified":false},{"type":"map_at_10","value":61.673,"verified":false},{"type":"map_at_100","value":62.562,"verified":false},{"type":"map_at_1000","value":62.62,"verified":false},{"type":"map_at_3","value":58.467999999999996,"verified":false},{"type":"map_at_5","value":60.463,"verified":false},{"type":"mrr_at_1","value":78.271,"verified":false},{"type":"mrr_at_10","value":84.119,"verified":false},{"type":"mrr_at_100","value":84.29299999999999,"verified":false},{"type":"mrr_at_1000","value":84.299,"verified":false},{"type":"mrr_at_3","value":83.18900000000001,"verified":false},{"type":"mrr_at_5","value":83.786,"verified":false},{"type":"ndcg_at_1","value":78.271,"verified":false},{"type":"ndcg_at_10","value":69.935,"verified":false},{"type":"ndcg_at_100","value":73.01299999999999,"verified":false},{"type":"ndcg_at_1000","value":74.126,"verified":false},{"type":"ndcg_at_3","value":65.388,"verified":false},{"type":"ndcg_at_5","value":67.906,"verified":false},{"type":"precision_at_1","value":78.271,"verified":false},{"type":"precision_at_10","value":14.562,"verified":false},{"type":"precision_at_100","value":1.6969999999999998,"verified":false},{"type":"precision_at_1000","value":0.184,"verified":false},{"type":"precision_at_3","value":41.841,"verified":false},{"type":"precision_at_5","value":27.087,"verified":false},{"type":"recall_at_1","value":39.135999999999996,"verified":false},{"type":"recall_at_10","value":72.809,"verified":false},{"type":"recall_at_100","value":84.86200000000001,"verified":false},{"type":"recall_at_1000","value":92.208,"verified":false},{"type":"recall_at_3","value":62.76199999999999,"verified":false},{"type":"recall_at_5","value":67.718,"verified":false}]},{"task":{"type":"Classification"},"dataset":{"type":"mteb/imdb","name":"MTEB ImdbClassification","config":"default","split":"test","revision":"3d86128a09e091d6018b6d26cad27f2739fc2db7"},"metrics":[{"type":"accuracy","value":90.60600000000001,"verified":false},{"type":"ap","value":86.6579587804335,"verified":false},{"type":"f1","value":90.5938853929307,"verified":false}]},{"task":{"type":"Retrieval"},"dataset":{"type":"msmarco","name":"MTEB MSMARCO","config":"default","split":"dev","revision":"None"},"metrics":[{"type":"map_at_1","value":21.852,"verified":false},{"type":"map_at_10","value":33.982,"verified":false},{"type":"map_at_100","value":35.116,"verified":false},{"type":"map_at_1000","value":35.167,"verified":false},{"type":"map_at_3","value":30.134,"verified":false},{"type":"map_at_5","value":32.340999999999994,"verified":false},{"type":"mrr_at_1","value":22.479,"verified":false},{"type":"mrr_at_10","value":34.594,"verified":false},{"type":"mrr_at_100","value":35.672,"verified":false},{"type":"mrr_at_1000","value":35.716,"verified":false},{"type":"mrr_at_3","value":30.84,"verified":false},{"type":"mrr_at_5","value":32.998,"verified":false},{"type":"ndcg_at_1","value":22.493,"verified":false},{"type":"ndcg_at_10","value":40.833000000000006,"verified":false},{"type":"ndcg_at_100","value":46.357,"verified":false},{"type":"ndcg_at_1000","value":47.637,"verified":false},{"type":"ndcg_at_3","value":32.995999999999995,"verified":false},{"type":"ndcg_at_5","value":36.919000000000004,"verified":false},{"type":"precision_at_1","value":22.493,"verified":false},{"type":"precision_at_10","value":6.465999999999999,"verified":false},{"type":"precision_at_100","value":0.9249999999999999,"verified":false},{"type":"precision_at_1000","value":0.104,"verified":false},{"type":"precision_at_3","value":14.030999999999999,"verified":false},{"type":"precision_at_5","value":10.413,"verified":false},{"type":"recall_at_1","value":21.852,"verified":false},{"type":"recall_at_10","value":61.934999999999995,"verified":false},{"type":"recall_at_100","value":87.611,"verified":false},{"type":"recall_at_1000","value":97.441,"verified":false},{"type":"recall_at_3","value":40.583999999999996,"verified":false},{"type":"recall_at_5","value":49.992999999999995,"verified":false}]},{"task":{"type":"Classification"},"dataset":{"type":"mteb/mtop_domain","name":"MTEB MTOPDomainClassification (en)","config":"en","split":"test","revision":"d80d48c1eb48d3562165c59d59d0034df9fff0bf"},"metrics":[{"type":"accuracy","value":93.36069311445507,"verified":false},{"type":"f1","value":93.16456330371453,"verified":false}]},{"task":{"type":"Classification"},"dataset":{"type":"mteb/mtop_intent","name":"MTEB MTOPIntentClassification (en)","config":"en","split":"test","revision":"ae001d0e6b1228650b7bd1c2c65fb50ad11a8aba"},"metrics":[{"type":"accuracy","value":74.74692202462381,"verified":false},{"type":"f1","value":58.17903579421599,"verified":false}]},{"task":{"type":"Classification"},"dataset":{"type":"mteb/amazon_massive_intent","name":"MTEB MassiveIntentClassification (en)","config":"en","split":"test","revision":"31efe3c427b0bae9c22cbb560b8f15491cc6bed7"},"metrics":[{"type":"accuracy","value":74.80833893745796,"verified":false},{"type":"f1","value":72.70786592684664,"verified":false}]},{"task":{"type":"Classification"},"dataset":{"type":"mteb/amazon_massive_scenario","name":"MTEB MassiveScenarioClassification (en)","config":"en","split":"test","revision":"7d571f92784cd94a019292a1f45445077d0ef634"},"metrics":[{"type":"accuracy","value":78.69872225958305,"verified":false},{"type":"f1","value":78.61626934504731,"verified":false}]},{"task":{"type":"Clustering"},"dataset":{"type":"mteb/medrxiv-clustering-p2p","name":"MTEB MedrxivClusteringP2P","config":"default","split":"test","revision":"e7a26af6f3ae46b30dde8737f02c07b1505bcc73"},"metrics":[{"type":"v_measure","value":33.058658628717694,"verified":false}]},{"task":{"type":"Clustering"},"dataset":{"type":"mteb/medrxiv-clustering-s2s","name":"MTEB MedrxivClusteringS2S","config":"default","split":"test","revision":"35191c8c0dca72d8ff3efcd72aa802307d469663"},"metrics":[{"type":"v_measure","value":30.85561739360599,"verified":false}]},{"task":{"type":"Reranking"},"dataset":{"type":"mteb/mind_small","name":"MTEB MindSmallReranking","config":"default","split":"test","revision":"3bdac13927fdc888b903db93b2ffdbd90b295a69"},"metrics":[{"type":"map","value":31.290259910144385,"verified":false},{"type":"mrr","value":32.44223046102856,"verified":false}]},{"task":{"type":"Retrieval"},"dataset":{"type":"nfcorpus","name":"MTEB NFCorpus","config":"default","split":"test","revision":"None"},"metrics":[{"type":"map_at_1","value":5.288,"verified":false},{"type":"map_at_10","value":12.267999999999999,"verified":false},{"type":"map_at_100","value":15.557000000000002,"verified":false},{"type":"map_at_1000","value":16.98,"verified":false},{"type":"map_at_3","value":8.866,"verified":false},{"type":"map_at_5","value":10.418,"verified":false},{"type":"mrr_at_1","value":43.653,"verified":false},{"type":"mrr_at_10","value":52.681,"verified":false},{"type":"mrr_at_100","value":53.315999999999995,"verified":false},{"type":"mrr_at_1000","value":53.357,"verified":false},{"type":"mrr_at_3","value":51.393,"verified":false},{"type":"mrr_at_5","value":51.903999999999996,"verified":false},{"type":"ndcg_at_1","value":42.415000000000006,"verified":false},{"type":"ndcg_at_10","value":34.305,"verified":false},{"type":"ndcg_at_100","value":30.825999999999997,"verified":false},{"type":"ndcg_at_1000","value":39.393,"verified":false},{"type":"ndcg_at_3","value":39.931,"verified":false},{"type":"ndcg_at_5","value":37.519999999999996,"verified":false},{"type":"precision_at_1","value":43.653,"verified":false},{"type":"precision_at_10","value":25.728,"verified":false},{"type":"precision_at_100","value":7.932,"verified":false},{"type":"precision_at_1000","value":2.07,"verified":false},{"type":"precision_at_3","value":38.184000000000005,"verified":false},{"type":"precision_at_5","value":32.879000000000005,"verified":false},{"type":"recall_at_1","value":5.288,"verified":false},{"type":"recall_at_10","value":16.195,"verified":false},{"type":"recall_at_100","value":31.135,"verified":false},{"type":"recall_at_1000","value":61.531000000000006,"verified":false},{"type":"recall_at_3","value":10.313,"verified":false},{"type":"recall_at_5","value":12.754999999999999,"verified":false}]},{"task":{"type":"Retrieval"},"dataset":{"type":"nq","name":"MTEB NQ","config":"default","split":"test","revision":"None"},"metrics":[{"type":"map_at_1","value":28.216,"verified":false},{"type":"map_at_10","value":42.588,"verified":false},{"type":"map_at_100","value":43.702999999999996,"verified":false},{"type":"map_at_1000","value":43.739,"verified":false},{"type":"map_at_3","value":38.177,"verified":false},{"type":"map_at_5","value":40.754000000000005,"verified":false},{"type":"mrr_at_1","value":31.866,"verified":false},{"type":"mrr_at_10","value":45.189,"verified":false},{"type":"mrr_at_100","value":46.056000000000004,"verified":false},{"type":"mrr_at_1000","value":46.081,"verified":false},{"type":"mrr_at_3","value":41.526999999999994,"verified":false},{"type":"mrr_at_5","value":43.704,"verified":false},{"type":"ndcg_at_1","value":31.837,"verified":false},{"type":"ndcg_at_10","value":50.178,"verified":false},{"type":"ndcg_at_100","value":54.98800000000001,"verified":false},{"type":"ndcg_at_1000","value":55.812,"verified":false},{"type":"ndcg_at_3","value":41.853,"verified":false},{"type":"ndcg_at_5","value":46.153,"verified":false},{"type":"precision_at_1","value":31.837,"verified":false},{"type":"precision_at_10","value":8.43,"verified":false},{"type":"precision_at_100","value":1.1119999999999999,"verified":false},{"type":"precision_at_1000","value":0.11900000000000001,"verified":false},{"type":"precision_at_3","value":19.023,"verified":false},{"type":"precision_at_5","value":13.911000000000001,"verified":false},{"type":"recall_at_1","value":28.216,"verified":false},{"type":"recall_at_10","value":70.8,"verified":false},{"type":"recall_at_100","value":91.857,"verified":false},{"type":"recall_at_1000","value":97.941,"verified":false},{"type":"recall_at_3","value":49.196,"verified":false},{"type":"recall_at_5","value":59.072,"verified":false}]},{"task":{"type":"Retrieval"},"dataset":{"type":"quora","name":"MTEB QuoraRetrieval","config":"default","split":"test","revision":"None"},"metrics":[{"type":"map_at_1","value":71.22800000000001,"verified":false},{"type":"map_at_10","value":85.115,"verified":false},{"type":"map_at_100","value":85.72,"verified":false},{"type":"map_at_1000","value":85.737,"verified":false},{"type":"map_at_3","value":82.149,"verified":false},{"type":"map_at_5","value":84.029,"verified":false},{"type":"mrr_at_1","value":81.96,"verified":false},{"type":"mrr_at_10","value":88.00200000000001,"verified":false},{"type":"mrr_at_100","value":88.088,"verified":false},{"type":"mrr_at_1000","value":88.089,"verified":false},{"type":"mrr_at_3","value":87.055,"verified":false},{"type":"mrr_at_5","value":87.715,"verified":false},{"type":"ndcg_at_1","value":82.01,"verified":false},{"type":"ndcg_at_10","value":88.78,"verified":false},{"type":"ndcg_at_100","value":89.91,"verified":false},{"type":"ndcg_at_1000","value":90.013,"verified":false},{"type":"ndcg_at_3","value":85.957,"verified":false},{"type":"ndcg_at_5","value":87.56,"verified":false},{"type":"precision_at_1","value":82.01,"verified":false},{"type":"precision_at_10","value":13.462,"verified":false},{"type":"precision_at_100","value":1.528,"verified":false},{"type":"precision_at_1000","value":0.157,"verified":false},{"type":"precision_at_3","value":37.553,"verified":false},{"type":"precision_at_5","value":24.732000000000003,"verified":false},{"type":"recall_at_1","value":71.22800000000001,"verified":false},{"type":"recall_at_10","value":95.69,"verified":false},{"type":"recall_at_100","value":99.531,"verified":false},{"type":"recall_at_1000","value":99.98,"verified":false},{"type":"recall_at_3","value":87.632,"verified":false},{"type":"recall_at_5","value":92.117,"verified":false}]},{"task":{"type":"Clustering"},"dataset":{"type":"mteb/reddit-clustering","name":"MTEB RedditClustering","config":"default","split":"test","revision":"24640382cdbf8abc73003fb0fa6d111a705499eb"},"metrics":[{"type":"v_measure","value":52.31768034366916,"verified":false}]},{"task":{"type":"Clustering"},"dataset":{"type":"mteb/reddit-clustering-p2p","name":"MTEB RedditClusteringP2P","config":"default","split":"test","revision":"282350215ef01743dc01b456c7f5241fa8937f16"},"metrics":[{"type":"v_measure","value":60.640266772723606,"verified":false}]},{"task":{"type":"Retrieval"},"dataset":{"type":"scidocs","name":"MTEB SCIDOCS","config":"default","split":"test","revision":"None"},"metrics":[{"type":"map_at_1","value":4.7780000000000005,"verified":false},{"type":"map_at_10","value":12.299,"verified":false},{"type":"map_at_100","value":14.363000000000001,"verified":false},{"type":"map_at_1000","value":14.71,"verified":false},{"type":"map_at_3","value":8.738999999999999,"verified":false},{"type":"map_at_5","value":10.397,"verified":false},{"type":"mrr_at_1","value":23.599999999999998,"verified":false},{"type":"mrr_at_10","value":34.845,"verified":false},{"type":"mrr_at_100","value":35.916,"verified":false},{"type":"mrr_at_1000","value":35.973,"verified":false},{"type":"mrr_at_3","value":31.7,"verified":false},{"type":"mrr_at_5","value":33.535,"verified":false},{"type":"ndcg_at_1","value":23.599999999999998,"verified":false},{"type":"ndcg_at_10","value":20.522000000000002,"verified":false},{"type":"ndcg_at_100","value":28.737000000000002,"verified":false},{"type":"ndcg_at_1000","value":34.596,"verified":false},{"type":"ndcg_at_3","value":19.542,"verified":false},{"type":"ndcg_at_5","value":16.958000000000002,"verified":false},{"type":"precision_at_1","value":23.599999999999998,"verified":false},{"type":"precision_at_10","value":10.67,"verified":false},{"type":"precision_at_100","value":2.259,"verified":false},{"type":"precision_at_1000","value":0.367,"verified":false},{"type":"precision_at_3","value":18.333,"verified":false},{"type":"precision_at_5","value":14.879999999999999,"verified":false},{"type":"recall_at_1","value":4.7780000000000005,"verified":false},{"type":"recall_at_10","value":21.617,"verified":false},{"type":"recall_at_100","value":45.905,"verified":false},{"type":"recall_at_1000","value":74.42,"verified":false},{"type":"recall_at_3","value":11.148,"verified":false},{"type":"recall_at_5","value":15.082999999999998,"verified":false}]},{"task":{"type":"STS"},"dataset":{"type":"mteb/sickr-sts","name":"MTEB SICK-R","config":"default","split":"test","revision":"a6ea5a8cab320b040a23452cc28066d9beae2cee"},"metrics":[{"type":"cos_sim_pearson","value":83.22372750297885,"verified":false},{"type":"cos_sim_spearman","value":79.40972617119405,"verified":false},{"type":"euclidean_pearson","value":80.6101072020434,"verified":false},{"type":"euclidean_spearman","value":79.53844217225202,"verified":false},{"type":"manhattan_pearson","value":80.57265975286111,"verified":false},{"type":"manhattan_spearman","value":79.46335611792958,"verified":false}]},{"task":{"type":"STS"},"dataset":{"type":"mteb/sts12-sts","name":"MTEB STS12","config":"default","split":"test","revision":"a0d554a64d88156834ff5ae9920b964011b16384"},"metrics":[{"type":"cos_sim_pearson","value":85.43713315520749,"verified":false},{"type":"cos_sim_spearman","value":77.44128693329532,"verified":false},{"type":"euclidean_pearson","value":81.63869928101123,"verified":false},{"type":"euclidean_spearman","value":77.29512977961515,"verified":false},{"type":"manhattan_pearson","value":81.63704185566183,"verified":false},{"type":"manhattan_spearman","value":77.29909412738657,"verified":false}]},{"task":{"type":"STS"},"dataset":{"type":"mteb/sts13-sts","name":"MTEB STS13","config":"default","split":"test","revision":"7e90230a92c190f1bf69ae9002b8cea547a64cca"},"metrics":[{"type":"cos_sim_pearson","value":81.59451537860527,"verified":false},{"type":"cos_sim_spearman","value":82.97994638856723,"verified":false},{"type":"euclidean_pearson","value":82.89478688288412,"verified":false},{"type":"euclidean_spearman","value":83.58740751053104,"verified":false},{"type":"manhattan_pearson","value":82.69140840941608,"verified":false},{"type":"manhattan_spearman","value":83.33665956040555,"verified":false}]},{"task":{"type":"STS"},"dataset":{"type":"mteb/sts14-sts","name":"MTEB STS14","config":"default","split":"test","revision":"6031580fec1f6af667f0bd2da0a551cf4f0b2375"},"metrics":[{"type":"cos_sim_pearson","value":82.00756527711764,"verified":false},{"type":"cos_sim_spearman","value":81.83560996841379,"verified":false},{"type":"euclidean_pearson","value":82.07684151976518,"verified":false},{"type":"euclidean_spearman","value":82.00913052060511,"verified":false},{"type":"manhattan_pearson","value":82.05690778488794,"verified":false},{"type":"manhattan_spearman","value":82.02260252019525,"verified":false}]},{"task":{"type":"STS"},"dataset":{"type":"mteb/sts15-sts","name":"MTEB STS15","config":"default","split":"test","revision":"ae752c7c21bf194d8b67fd573edf7ae58183cbe3"},"metrics":[{"type":"cos_sim_pearson","value":86.13710262895447,"verified":false},{"type":"cos_sim_spearman","value":87.26412811156248,"verified":false},{"type":"euclidean_pearson","value":86.94151453230228,"verified":false},{"type":"euclidean_spearman","value":87.5363796699571,"verified":false},{"type":"manhattan_pearson","value":86.86989424083748,"verified":false},{"type":"manhattan_spearman","value":87.47315940781353,"verified":false}]},{"task":{"type":"STS"},"dataset":{"type":"mteb/sts16-sts","name":"MTEB STS16","config":"default","split":"test","revision":"4d8694f8f0e0100860b497b999b3dbed754a0513"},"metrics":[{"type":"cos_sim_pearson","value":83.0230597603627,"verified":false},{"type":"cos_sim_spearman","value":84.93344499318864,"verified":false},{"type":"euclidean_pearson","value":84.23754743431141,"verified":false},{"type":"euclidean_spearman","value":85.09707376597099,"verified":false},{"type":"manhattan_pearson","value":84.04325160987763,"verified":false},{"type":"manhattan_spearman","value":84.89353071339909,"verified":false}]},{"task":{"type":"STS"},"dataset":{"type":"mteb/sts17-crosslingual-sts","name":"MTEB STS17 (en-en)","config":"en-en","split":"test","revision":"af5e6fb845001ecf41f4c1e033ce921939a2a68d"},"metrics":[{"type":"cos_sim_pearson","value":86.75620824563921,"verified":false},{"type":"cos_sim_spearman","value":87.15065513706398,"verified":false},{"type":"euclidean_pearson","value":88.26281533633521,"verified":false},{"type":"euclidean_spearman","value":87.51963738643983,"verified":false},{"type":"manhattan_pearson","value":88.25599267618065,"verified":false},{"type":"manhattan_spearman","value":87.58048736047483,"verified":false}]},{"task":{"type":"STS"},"dataset":{"type":"mteb/sts22-crosslingual-sts","name":"MTEB STS22 (en)","config":"en","split":"test","revision":"6d1ba47164174a496b7fa5d3569dae26a6813b80"},"metrics":[{"type":"cos_sim_pearson","value":64.74645319195137,"verified":false},{"type":"cos_sim_spearman","value":65.29996325037214,"verified":false},{"type":"euclidean_pearson","value":67.04297794086443,"verified":false},{"type":"euclidean_spearman","value":65.43841726694343,"verified":false},{"type":"manhattan_pearson","value":67.39459955690904,"verified":false},{"type":"manhattan_spearman","value":65.92864704413651,"verified":false}]},{"task":{"type":"STS"},"dataset":{"type":"mteb/stsbenchmark-sts","name":"MTEB STSBenchmark","config":"default","split":"test","revision":"b0fddb56ed78048fa8b90373c8a3cfc37b684831"},"metrics":[{"type":"cos_sim_pearson","value":84.31291020270801,"verified":false},{"type":"cos_sim_spearman","value":85.86473738688068,"verified":false},{"type":"euclidean_pearson","value":85.65537275064152,"verified":false},{"type":"euclidean_spearman","value":86.13087454209642,"verified":false},{"type":"manhattan_pearson","value":85.43946955047609,"verified":false},{"type":"manhattan_spearman","value":85.91568175344916,"verified":false}]},{"task":{"type":"Reranking"},"dataset":{"type":"mteb/scidocs-reranking","name":"MTEB SciDocsRR","config":"default","split":"test","revision":"d3c5e1fc0b855ab6097bf1cda04dd73947d7caab"},"metrics":[{"type":"map","value":85.93798118350695,"verified":false},{"type":"mrr","value":95.93536274908824,"verified":false}]},{"task":{"type":"Retrieval"},"dataset":{"type":"scifact","name":"MTEB SciFact","config":"default","split":"test","revision":"None"},"metrics":[{"type":"map_at_1","value":57.594,"verified":false},{"type":"map_at_10","value":66.81899999999999,"verified":false},{"type":"map_at_100","value":67.368,"verified":false},{"type":"map_at_1000","value":67.4,"verified":false},{"type":"map_at_3","value":64.061,"verified":false},{"type":"map_at_5","value":65.47,"verified":false},{"type":"mrr_at_1","value":60.667,"verified":false},{"type":"mrr_at_10","value":68.219,"verified":false},{"type":"mrr_at_100","value":68.655,"verified":false},{"type":"mrr_at_1000","value":68.684,"verified":false},{"type":"mrr_at_3","value":66.22200000000001,"verified":false},{"type":"mrr_at_5","value":67.289,"verified":false},{"type":"ndcg_at_1","value":60.667,"verified":false},{"type":"ndcg_at_10","value":71.275,"verified":false},{"type":"ndcg_at_100","value":73.642,"verified":false},{"type":"ndcg_at_1000","value":74.373,"verified":false},{"type":"ndcg_at_3","value":66.521,"verified":false},{"type":"ndcg_at_5","value":68.581,"verified":false},{"type":"precision_at_1","value":60.667,"verified":false},{"type":"precision_at_10","value":9.433,"verified":false},{"type":"precision_at_100","value":1.0699999999999998,"verified":false},{"type":"precision_at_1000","value":0.11299999999999999,"verified":false},{"type":"precision_at_3","value":25.556,"verified":false},{"type":"precision_at_5","value":16.8,"verified":false},{"type":"recall_at_1","value":57.594,"verified":false},{"type":"recall_at_10","value":83.622,"verified":false},{"type":"recall_at_100","value":94.167,"verified":false},{"type":"recall_at_1000","value":99.667,"verified":false},{"type":"recall_at_3","value":70.64399999999999,"verified":false},{"type":"recall_at_5","value":75.983,"verified":false}]},{"task":{"type":"PairClassification"},"dataset":{"type":"mteb/sprintduplicatequestions-pairclassification","name":"MTEB SprintDuplicateQuestions","config":"default","split":"test","revision":"d66bd1f72af766a5cc4b0ca5e00c162f89e8cc46"},"metrics":[{"type":"cos_sim_accuracy","value":99.85841584158416,"verified":false},{"type":"cos_sim_ap","value":96.66996142314342,"verified":false},{"type":"cos_sim_f1","value":92.83208020050125,"verified":false},{"type":"cos_sim_precision","value":93.06532663316584,"verified":false},{"type":"cos_sim_recall","value":92.60000000000001,"verified":false},{"type":"dot_accuracy","value":99.85841584158416,"verified":false},{"type":"dot_ap","value":96.6775307676576,"verified":false},{"type":"dot_f1","value":92.69289729177312,"verified":false},{"type":"dot_precision","value":94.77533960292581,"verified":false},{"type":"dot_recall","value":90.7,"verified":false},{"type":"euclidean_accuracy","value":99.86138613861387,"verified":false},{"type":"euclidean_ap","value":96.6338454403108,"verified":false},{"type":"euclidean_f1","value":92.92214357937311,"verified":false},{"type":"euclidean_precision","value":93.96728016359918,"verified":false},{"type":"euclidean_recall","value":91.9,"verified":false},{"type":"manhattan_accuracy","value":99.86237623762376,"verified":false},{"type":"manhattan_ap","value":96.60370449645053,"verified":false},{"type":"manhattan_f1","value":92.91177970423253,"verified":false},{"type":"manhattan_precision","value":94.7970863683663,"verified":false},{"type":"manhattan_recall","value":91.10000000000001,"verified":false},{"type":"max_accuracy","value":99.86237623762376,"verified":false},{"type":"max_ap","value":96.6775307676576,"verified":false},{"type":"max_f1","value":92.92214357937311,"verified":false}]},{"task":{"type":"Clustering"},"dataset":{"type":"mteb/stackexchange-clustering","name":"MTEB StackExchangeClustering","config":"default","split":"test","revision":"6cbc1f7b2bc0622f2e39d2c77fa502909748c259"},"metrics":[{"type":"v_measure","value":60.77977058695198,"verified":false}]},{"task":{"type":"Clustering"},"dataset":{"type":"mteb/stackexchange-clustering-p2p","name":"MTEB StackExchangeClusteringP2P","config":"default","split":"test","revision":"815ca46b2622cec33ccafc3735d572c266efdb44"},"metrics":[{"type":"v_measure","value":35.2725272535638,"verified":false}]},{"task":{"type":"Reranking"},"dataset":{"type":"mteb/stackoverflowdupquestions-reranking","name":"MTEB StackOverflowDupQuestions","config":"default","split":"test","revision":"e185fbe320c72810689fc5848eb6114e1ef5ec69"},"metrics":[{"type":"map","value":53.64052466362125,"verified":false},{"type":"mrr","value":54.533067014684654,"verified":false}]},{"task":{"type":"Summarization"},"dataset":{"type":"mteb/summeval","name":"MTEB SummEval","config":"default","split":"test","revision":"cda12ad7615edc362dbf25a00fdd61d3b1eaf93c"},"metrics":[{"type":"cos_sim_pearson","value":30.677624219206578,"verified":false},{"type":"cos_sim_spearman","value":30.121368518123447,"verified":false},{"type":"dot_pearson","value":30.69870088041608,"verified":false},{"type":"dot_spearman","value":29.61284927093751,"verified":false}]},{"task":{"type":"Retrieval"},"dataset":{"type":"trec-covid","name":"MTEB TRECCOVID","config":"default","split":"test","revision":"None"},"metrics":[{"type":"map_at_1","value":0.22,"verified":false},{"type":"map_at_10","value":1.855,"verified":false},{"type":"map_at_100","value":9.885,"verified":false},{"type":"map_at_1000","value":23.416999999999998,"verified":false},{"type":"map_at_3","value":0.637,"verified":false},{"type":"map_at_5","value":1.024,"verified":false},{"type":"mrr_at_1","value":88,"verified":false},{"type":"mrr_at_10","value":93.067,"verified":false},{"type":"mrr_at_100","value":93.067,"verified":false},{"type":"mrr_at_1000","value":93.067,"verified":false},{"type":"mrr_at_3","value":92.667,"verified":false},{"type":"mrr_at_5","value":93.067,"verified":false},{"type":"ndcg_at_1","value":82,"verified":false},{"type":"ndcg_at_10","value":75.899,"verified":false},{"type":"ndcg_at_100","value":55.115,"verified":false},{"type":"ndcg_at_1000","value":48.368,"verified":false},{"type":"ndcg_at_3","value":79.704,"verified":false},{"type":"ndcg_at_5","value":78.39699999999999,"verified":false},{"type":"precision_at_1","value":88,"verified":false},{"type":"precision_at_10","value":79.60000000000001,"verified":false},{"type":"precision_at_100","value":56.06,"verified":false},{"type":"precision_at_1000","value":21.206,"verified":false},{"type":"precision_at_3","value":84.667,"verified":false},{"type":"precision_at_5","value":83.2,"verified":false},{"type":"recall_at_1","value":0.22,"verified":false},{"type":"recall_at_10","value":2.078,"verified":false},{"type":"recall_at_100","value":13.297,"verified":false},{"type":"recall_at_1000","value":44.979,"verified":false},{"type":"recall_at_3","value":0.6689999999999999,"verified":false},{"type":"recall_at_5","value":1.106,"verified":false}]},{"task":{"type":"Retrieval"},"dataset":{"type":"webis-touche2020","name":"MTEB Touche2020","config":"default","split":"test","revision":"None"},"metrics":[{"type":"map_at_1","value":2.258,"verified":false},{"type":"map_at_10","value":10.439,"verified":false},{"type":"map_at_100","value":16.89,"verified":false},{"type":"map_at_1000","value":18.407999999999998,"verified":false},{"type":"map_at_3","value":5.668,"verified":false},{"type":"map_at_5","value":7.718,"verified":false},{"type":"mrr_at_1","value":32.653,"verified":false},{"type":"mrr_at_10","value":51.159,"verified":false},{"type":"mrr_at_100","value":51.714000000000006,"verified":false},{"type":"mrr_at_1000","value":51.714000000000006,"verified":false},{"type":"mrr_at_3","value":47.959,"verified":false},{"type":"mrr_at_5","value":50.407999999999994,"verified":false},{"type":"ndcg_at_1","value":29.592000000000002,"verified":false},{"type":"ndcg_at_10","value":26.037,"verified":false},{"type":"ndcg_at_100","value":37.924,"verified":false},{"type":"ndcg_at_1000","value":49.126999999999995,"verified":false},{"type":"ndcg_at_3","value":30.631999999999998,"verified":false},{"type":"ndcg_at_5","value":28.571,"verified":false},{"type":"precision_at_1","value":32.653,"verified":false},{"type":"precision_at_10","value":22.857,"verified":false},{"type":"precision_at_100","value":7.754999999999999,"verified":false},{"type":"precision_at_1000","value":1.529,"verified":false},{"type":"precision_at_3","value":34.014,"verified":false},{"type":"precision_at_5","value":29.796,"verified":false},{"type":"recall_at_1","value":2.258,"verified":false},{"type":"recall_at_10","value":16.554,"verified":false},{"type":"recall_at_100","value":48.439,"verified":false},{"type":"recall_at_1000","value":82.80499999999999,"verified":false},{"type":"recall_at_3","value":7.283,"verified":false},{"type":"recall_at_5","value":10.732,"verified":false}]},{"task":{"type":"Classification"},"dataset":{"type":"mteb/toxic_conversations_50k","name":"MTEB ToxicConversationsClassification","config":"default","split":"test","revision":"d7c0de2777da35d6aae2200a62c6e0e5af397c4c"},"metrics":[{"type":"accuracy","value":69.8858,"verified":false},{"type":"ap","value":13.835684144362109,"verified":false},{"type":"f1","value":53.803351693244586,"verified":false}]},{"task":{"type":"Classification"},"dataset":{"type":"mteb/tweet_sentiment_extraction","name":"MTEB TweetSentimentExtractionClassification","config":"default","split":"test","revision":"d604517c81ca91fe16a244d1248fc021f9ecee7a"},"metrics":[{"type":"accuracy","value":60.50650820599886,"verified":false},{"type":"f1","value":60.84357825979259,"verified":false}]},{"task":{"type":"Clustering"},"dataset":{"type":"mteb/twentynewsgroups-clustering","name":"MTEB TwentyNewsgroupsClustering","config":"default","split":"test","revision":"6125ec4e24fa026cec8a478383ee943acfbd5449"},"metrics":[{"type":"v_measure","value":48.52131044852134,"verified":false}]},{"task":{"type":"PairClassification"},"dataset":{"type":"mteb/twittersemeval2015-pairclassification","name":"MTEB TwitterSemEval2015","config":"default","split":"test","revision":"70970daeab8776df92f5ea462b6173c0b46fd2d1"},"metrics":[{"type":"cos_sim_accuracy","value":85.59337187816654,"verified":false},{"type":"cos_sim_ap","value":73.23925826533437,"verified":false},{"type":"cos_sim_f1","value":67.34693877551021,"verified":false},{"type":"cos_sim_precision","value":62.40432237730752,"verified":false},{"type":"cos_sim_recall","value":73.13984168865434,"verified":false},{"type":"dot_accuracy","value":85.31322644096085,"verified":false},{"type":"dot_ap","value":72.30723963807422,"verified":false},{"type":"dot_f1","value":66.47051612112296,"verified":false},{"type":"dot_precision","value":62.0792305930845,"verified":false},{"type":"dot_recall","value":71.53034300791556,"verified":false},{"type":"euclidean_accuracy","value":85.61125350181797,"verified":false},{"type":"euclidean_ap","value":73.32843720487845,"verified":false},{"type":"euclidean_f1","value":67.36549633745895,"verified":false},{"type":"euclidean_precision","value":64.60755813953489,"verified":false},{"type":"euclidean_recall","value":70.36939313984169,"verified":false},{"type":"manhattan_accuracy","value":85.63509566668654,"verified":false},{"type":"manhattan_ap","value":73.16658488311325,"verified":false},{"type":"manhattan_f1","value":67.20597386434349,"verified":false},{"type":"manhattan_precision","value":63.60424028268551,"verified":false},{"type":"manhattan_recall","value":71.2401055408971,"verified":false},{"type":"max_accuracy","value":85.63509566668654,"verified":false},{"type":"max_ap","value":73.32843720487845,"verified":false},{"type":"max_f1","value":67.36549633745895,"verified":false}]},{"task":{"type":"PairClassification"},"dataset":{"type":"mteb/twitterurlcorpus-pairclassification","name":"MTEB TwitterURLCorpus","config":"default","split":"test","revision":"8b6510b0b1fa4e4c4f879467980e9be563ec1cdf"},"metrics":[{"type":"cos_sim_accuracy","value":88.33779640625606,"verified":false},{"type":"cos_sim_ap","value":84.83868375898157,"verified":false},{"type":"cos_sim_f1","value":77.16506154017773,"verified":false},{"type":"cos_sim_precision","value":74.62064005753327,"verified":false},{"type":"cos_sim_recall","value":79.88912842623961,"verified":false},{"type":"dot_accuracy","value":88.02732176815307,"verified":false},{"type":"dot_ap","value":83.95089283763002,"verified":false},{"type":"dot_f1","value":76.29635101196631,"verified":false},{"type":"dot_precision","value":73.31771720613288,"verified":false},{"type":"dot_recall","value":79.52725592854944,"verified":false},{"type":"euclidean_accuracy","value":88.44452206310397,"verified":false},{"type":"euclidean_ap","value":84.98384576824827,"verified":false},{"type":"euclidean_f1","value":77.29311047696697,"verified":false},{"type":"euclidean_precision","value":74.51232583065381,"verified":false},{"type":"euclidean_recall","value":80.28949799815214,"verified":false},{"type":"manhattan_accuracy","value":88.47362906042613,"verified":false},{"type":"manhattan_ap","value":84.91421462218432,"verified":false},{"type":"manhattan_f1","value":77.05107637204792,"verified":false},{"type":"manhattan_precision","value":74.74484256243214,"verified":false},{"type":"manhattan_recall","value":79.50415768401602,"verified":false},{"type":"max_accuracy","value":88.47362906042613,"verified":false},{"type":"max_ap","value":84.98384576824827,"verified":false},{"type":"max_f1","value":77.29311047696697,"verified":false}]}]}],"license":"mit","language":["en"]},"transformersInfo":{"auto_model":"AutoModel","pipeline_tag":"feature-extraction","processor":"AutoTokenizer"},"siblings":[{"rfilename":".gitattributes"},{"rfilename":"1_Pooling/config.json"},{"rfilename":"README.md"},{"rfilename":"config.json"},{"rfilename":"config_sentence_transformers.json"},{"rfilename":"model.safetensors"},{"rfilename":"modules.json"},{"rfilename":"onnx/model.onnx"},{"rfilename":"pytorch_model.bin"},{"rfilename":"sentence_bert_config.json"},{"rfilename":"special_tokens_map.json"},{"rfilename":"tokenizer.json"},{"rfilename":"tokenizer_config.json"},{"rfilename":"vocab.txt"}],"spaces":["mteb/leaderboard","hakari-bench/leaderboard","loosifer-21/indiaruns","Abhishek292000/Weekly-Pulse","LonelyBuilder/redrob-ranker","anish-shrestha/evoke-demo","Damaru-ai/Damru","vineet88/support-docs-copilot","SameerJugno/pdf-chat-assistant","adee1502/multi-agent-rag-sql-assistant","sarfraj89/self-rag","lordaizen55/agnetic-rag-eval","mteb/leaderboard_legacy","Sarath0x8f/Document-QA-bot","AI-ANK/RAGArch","fau/videoxity","Mr-Vicky-01/chat-with-PDF","lightmate/llm-chatbot","thisisrishi/chat-with-pdf","suriya7/Chatbot-PDF","m-ric/Quotes","lihuigu/SciPIP","Shreyas094/SearXNG-WebSearch-Agent","build-small-hackathon/HearthNet","lingyit1108/ragtest-sakimilo","limcheekin/bge-small-en-v1.5","phucbienvan/AppChat","SmileXing/leaderboard","TeamSAS/UB_VSA","Tarka-AIR/Tarka-Embedding","MCP-1st-Birthday/Shyam-Kathir-mcp-in-action-track-creative","Shivamsinghtomar78/ChatWithPDF","Agents-MCP-Hackathon/AgentPimentBleu","Ab-Romia/Context-Aware-AI","build-small-hackathon/WitGym","monsterapi/RAG-Chat","henry2024/ARIN_7102","SaranyaR/chatbot","aelitta/BioMistral_gradio","olamideba/rag-chatbot","universalsoftware/uchat","datajoi/Domain-Document-Indexing","re-mind/Crawl4AI","Steven10429/apply_lora_and_quantize","anu151105/agentic-browser","koler/Agentic-ai-With-RAG","ipepe/nomic-embeddings","aloshy-ai/deep-job-seek-mini","bSonali/healthcare-ai-assistant","jnalv/embedding-fingerprints","Muqadas-13/complyflow-ai","kbsss/medical-qa-chatbot","kerdosdotio/Custom-LLM-Chat","CGIAR/ifpri-dp-rag","amryassin/embedding-bench","kbsss/healthcare-qa-api","Urvikava/EdgeQuant-Agent","HF-Collab-Center/Searching-For-HuggingFace-Users","LovnishVerma/rag","LovnishVerma/pdf-rag-chatbot","ImtiyazLentra1/VicoXOddyseus","Shive-69/Raggy","build-small-hackathon/WanderLust","build-small-hackathon/Paper2Lab","rajivranjan3961/Rag","legitm0nkey/parakeet-flashcard-guru","agent-dg21/redrob-ranker","Chris4K/rag-tool","ubermenchh/article_chat","junaidiqbalsyed/qa_hr_chatbot","somewheresystems/dataclysm","ManFrag/translatetopic","lakshmivairamani/pdf_chatbot","AI-ANK/AI-Real-Estate-Search-Qdrant-Llamaindex","DayanaGCruz/DayiLlama","whoami02/bot_manuals","yuvaranianandhan24/chat_with_pdf","ayaanzaveri/bge-large-en-v1.5","Dobby091/koko","Nithi123/DataScience_ChatAssistant_Llma3_Chatgroq","dryouviavant/Ilya-Docs_RAG-INFO-Custodian-CHAT_by-lAIl","malvika2003/openvino_notebooks","dixiyao/chatbot-professor","Prat0/ClarifyAI","Sachitksh/Document_bot_by_team_bhumi","Jashu/HeartDiseaseChatbot","gufett0/chatbot-llamaindex","Deddy/Quotes_Terbaik_Dunia","Jashu/diabetesDiseaseBot","Draichi/Formula1-race-debriefing","Wedyan2023/Data_Generation_LabelingCopy","AI-RESEARCHER-2024/Computing-Chatbot","gabrolo/StudyBuddy","sushildhakal/embd","ryadav2/Talk2Docs","efeideo/open-belinostat","kevinhug/ai","zy2582/WithSandra_Chatbot","Aedelon/GAIA_Agent","gm42/esi-hf"],"createdAt":"2023-09-12T05:20:55.000Z","safetensors":{"parameters":{"I64":512,"F32":33360000},"total":33360512},"inference":"warm","usedStorage":834515761}  :   m r r _ a t _ 3 
+             v a l u e :   2 5 . 4 4 6 9 9 9 9 9 9 9 9 9 9 9 6 
+         -   t y p e :   m r r _ a t _ 5 
+             v a l u e :   2 6 . 6 4 8 
+         -   t y p e :   n d c g _ a t _ 1 
+             v a l u e :   2 0 . 3 3 3 0 0 0 0 0 0 0 0 0 0 0 2 
+         -   t y p e :   n d c g _ a t _ 1 0 
+             v a l u e :   3 0 . 6 7 3 0 0 0 0 0 0 0 0 0 0 0 2 
+         -   t y p e :   n d c g _ a t _ 1 0 0 
+             v a l u e :   3 5 . 6 1 8 
+         -   t y p e :   n d c g _ a t _ 1 0 0 0 
+             v a l u e :   3 8 . 5 1 7 
+         -   t y p e :   n d c g _ a t _ 3 
+             v a l u e :   2 5 . 7 1 
+         -   t y p e :   n d c g _ a t _ 5 
+             v a l u e :   2 7 . 6 7 9 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 
+             v a l u e :   2 0 . 3 3 3 0 0 0 0 0 0 0 0 0 0 0 2 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 0 
+             v a l u e :   4 . 9 9 1 0 0 0 0 0 0 0 0 0 0 0 0 5 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 0 0 
+             v a l u e :   0 . 8 1 3 0 0 0 0 0 0 0 0 0 0 0 0 1 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 0 0 0 
+             v a l u e :   0 . 1 1 7 
+         -   t y p e :   p r e c i s i o n _ a t _ 3 
+             v a l u e :   1 1 . 0 2 9 
+         -   t y p e :   p r e c i s i o n _ a t _ 5 
+             v a l u e :   7 . 8 7 4 0 0 0 0 0 0 0 0 0 0 0 0 6 
+         -   t y p e :   r e c a l l _ a t _ 1 
+             v a l u e :   1 8 . 9 2 5 
+         -   t y p e :   r e c a l l _ a t _ 1 0 
+             v a l u e :   4 3 . 3 1 1 
+         -   t y p e :   r e c a l l _ a t _ 1 0 0 
+             v a l u e :   6 6 . 3 0 8 
+         -   t y p e :   r e c a l l _ a t _ 1 0 0 0 
+             v a l u e :   8 7 . 4 9 
+         -   t y p e :   r e c a l l _ a t _ 3 
+             v a l u e :   2 9 . 5 9 6 
+         -   t y p e :   r e c a l l _ a t _ 5 
+             v a l u e :   3 4 . 2 4 5 
+     -   t a s k : 
+             t y p e :   R e t r i e v a l 
+         d a t a s e t : 
+             t y p e :   c l i m a t e - f e v e r 
+             n a m e :   M T E B   C l i m a t e F E V E R 
+             c o n f i g :   d e f a u l t 
+             s p l i t :   t e s t 
+             r e v i s i o n :   N o n e 
+         m e t r i c s : 
+         -   t y p e :   m a p _ a t _ 1 
+             v a l u e :   1 3 . 7 1 4 
+         -   t y p e :   m a p _ a t _ 1 0 
+             v a l u e :   2 3 . 1 9 4 
+         -   t y p e :   m a p _ a t _ 1 0 0 
+             v a l u e :   2 4 . 9 7 6 0 0 0 0 0 0 0 0 0 0 0 3 
+         -   t y p e :   m a p _ a t _ 1 0 0 0 
+             v a l u e :   2 5 . 1 6 6 
+         -   t y p e :   m a p _ a t _ 3 
+             v a l u e :   1 9 . 7 0 9 
+         -   t y p e :   m a p _ a t _ 5 
+             v a l u e :   2 1 . 5 2 3 9 9 9 9 9 9 9 9 9 9 9 7 
+         -   t y p e :   m r r _ a t _ 1 
+             v a l u e :   3 0 . 6 1 9 0 0 0 0 0 0 0 0 0 0 0 3 
+         -   t y p e :   m r r _ a t _ 1 0 
+             v a l u e :   4 2 . 5 6 3 
+         -   t y p e :   m r r _ a t _ 1 0 0 
+             v a l u e :   4 3 . 3 8 6 
+         -   t y p e :   m r r _ a t _ 1 0 0 0 
+             v a l u e :   4 3 . 4 2 3 
+         -   t y p e :   m r r _ a t _ 3 
+             v a l u e :   3 9 . 5 5 5 
+         -   t y p e :   m r r _ a t _ 5 
+             v a l u e :   4 1 . 2 6 8 
+         -   t y p e :   n d c g _ a t _ 1 
+             v a l u e :   3 0 . 6 1 9 0 0 0 0 0 0 0 0 0 0 0 3 
+         -   t y p e :   n d c g _ a t _ 1 0 
+             v a l u e :   3 1 . 8 3 6 
+         -   t y p e :   n d c g _ a t _ 1 0 0 
+             v a l u e :   3 8 . 6 5 2 
+         -   t y p e :   n d c g _ a t _ 1 0 0 0 
+             v a l u e :   4 2 . 0 8 8 
+         -   t y p e :   n d c g _ a t _ 3 
+             v a l u e :   2 6 . 7 3 3 
+         -   t y p e :   n d c g _ a t _ 5 
+             v a l u e :   2 8 . 4 3 5 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 
+             v a l u e :   3 0 . 6 1 9 0 0 0 0 0 0 0 0 0 0 0 3 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 0 
+             v a l u e :   9 . 7 5 1 9 9 9 9 9 9 9 9 9 9 9 9 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 0 0 
+             v a l u e :   1 . 7 1 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 0 0 0 
+             v a l u e :   0 . 2 3 5 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+         -   t y p e :   p r e c i s i o n _ a t _ 3 
+             v a l u e :   1 9 . 9 3 5 
+         -   t y p e :   p r e c i s i o n _ a t _ 5 
+             v a l u e :   1 4 . 9 8 4 
+         -   t y p e :   r e c a l l _ a t _ 1 
+             v a l u e :   1 3 . 7 1 4 
+         -   t y p e :   r e c a l l _ a t _ 1 0 
+             v a l u e :   3 7 . 2 6 
+         -   t y p e :   r e c a l l _ a t _ 1 0 0 
+             v a l u e :   6 0 . 5 4 6 
+         -   t y p e :   r e c a l l _ a t _ 1 0 0 0 
+             v a l u e :   7 9 . 8 9 9 
+         -   t y p e :   r e c a l l _ a t _ 3 
+             v a l u e :   2 4 . 3 2 5 
+         -   t y p e :   r e c a l l _ a t _ 5 
+             v a l u e :   2 9 . 7 2 5 
+     -   t a s k : 
+             t y p e :   R e t r i e v a l 
+         d a t a s e t : 
+             t y p e :   d b p e d i a - e n t i t y 
+             n a m e :   M T E B   D B P e d i a 
+             c o n f i g :   d e f a u l t 
+             s p l i t :   t e s t 
+             r e v i s i o n :   N o n e 
+         m e t r i c s : 
+         -   t y p e :   m a p _ a t _ 1 
+             v a l u e :   8 . 4 6 2 
+         -   t y p e :   m a p _ a t _ 1 0 
+             v a l u e :   1 8 . 6 3 7 
+         -   t y p e :   m a p _ a t _ 1 0 0 
+             v a l u e :   2 6 . 1 3 1 9 9 9 9 9 9 9 9 9 9 9 8 
+         -   t y p e :   m a p _ a t _ 1 0 0 0 
+             v a l u e :   2 7 . 6 0 7 
+         -   t y p e :   m a p _ a t _ 3 
+             v a l u e :   1 3 . 3 3 3 
+         -   t y p e :   m a p _ a t _ 5 
+             v a l u e :   1 5 . 6 5 4 0 0 0 0 0 0 0 0 0 0 0 2 
+         -   t y p e :   m r r _ a t _ 1 
+             v a l u e :   6 6 . 2 5 
+         -   t y p e :   m r r _ a t _ 1 0 
+             v a l u e :   7 4 . 3 2 6 0 0 0 0 0 0 0 0 0 0 1 
+         -   t y p e :   m r r _ a t _ 1 0 0 
+             v a l u e :   7 4 . 6 0 9 0 0 0 0 0 0 0 0 0 0 1 
+         -   t y p e :   m r r _ a t _ 1 0 0 0 
+             v a l u e :   7 4 . 6 2 
+         -   t y p e :   m r r _ a t _ 3 
+             v a l u e :   7 2 . 6 6 7 
+         -   t y p e :   m r r _ a t _ 5 
+             v a l u e :   7 3 . 8 1 7 
+         -   t y p e :   n d c g _ a t _ 1 
+             v a l u e :   5 3 . 8 7 4 9 9 9 9 9 9 9 9 9 9 9 
+         -   t y p e :   n d c g _ a t _ 1 0 
+             v a l u e :   4 0 . 0 2 8 9 9 9 9 9 9 9 9 9 9 9 6 
+         -   t y p e :   n d c g _ a t _ 1 0 0 
+             v a l u e :   4 4 . 1 9 9 
+         -   t y p e :   n d c g _ a t _ 1 0 0 0 
+             v a l u e :   5 1 . 6 2 9 9 9 9 9 9 9 9 9 9 9 9 5 
+         -   t y p e :   n d c g _ a t _ 3 
+             v a l u e :   4 4 . 1 1 3 
+         -   t y p e :   n d c g _ a t _ 5 
+             v a l u e :   4 1 . 7 3 1 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 
+             v a l u e :   6 6 . 2 5 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 0 
+             v a l u e :   3 1 . 9 0 0 0 0 0 0 0 0 0 0 0 0 0 2 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 0 0 
+             v a l u e :   1 0 . 0 4 3 0 0 0 0 0 0 0 0 0 0 0 1 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 0 0 0 
+             v a l u e :   1 . 9 2 6 
+         -   t y p e :   p r e c i s i o n _ a t _ 3 
+             v a l u e :   4 7 . 4 1 7 
+         -   t y p e :   p r e c i s i o n _ a t _ 5 
+             v a l u e :   4 0 . 6 5 
+         -   t y p e :   r e c a l l _ a t _ 1 
+             v a l u e :   8 . 4 6 2 
+         -   t y p e :   r e c a l l _ a t _ 1 0 
+             v a l u e :   2 4 . 2 9 3 
+         -   t y p e :   r e c a l l _ a t _ 1 0 0 
+             v a l u e :   5 0 . 1 4 6 
+         -   t y p e :   r e c a l l _ a t _ 1 0 0 0 
+             v a l u e :   7 4 . 0 3 4 
+         -   t y p e :   r e c a l l _ a t _ 3 
+             v a l u e :   1 4 . 9 6 7 
+         -   t y p e :   r e c a l l _ a t _ 5 
+             v a l u e :   1 8 . 6 8 2 0 0 0 0 0 0 0 0 0 0 0 2 
+     -   t a s k : 
+             t y p e :   C l a s s i f i c a t i o n 
+         d a t a s e t : 
+             t y p e :   m t e b / e m o t i o n 
+             n a m e :   M T E B   E m o t i o n C l a s s i f i c a t i o n 
+             c o n f i g :   d e f a u l t 
+             s p l i t :   t e s t 
+             r e v i s i o n :   4 f 5 8 c 6 b 2 0 2 a 2 3 c f 9 a 4 d a 3 9 3 8 3 1 e d f 4 f 9 1 8 3 c a d 3 7 
+         m e t r i c s : 
+         -   t y p e :   a c c u r a c y 
+             v a l u e :   4 7 . 8 4 4 9 9 9 9 9 9 9 9 9 9 9 
+         -   t y p e :   f 1 
+             v a l u e :   4 2 . 4 8 1 0 6 6 9 1 9 7 9 3 4 9 
+     -   t a s k : 
+             t y p e :   R e t r i e v a l 
+         d a t a s e t : 
+             t y p e :   f e v e r 
+             n a m e :   M T E B   F E V E R 
+             c o n f i g :   d e f a u l t 
+             s p l i t :   t e s t 
+             r e v i s i o n :   N o n e 
+         m e t r i c s : 
+         -   t y p e :   m a p _ a t _ 1 
+             v a l u e :   7 4 . 0 3 4 
+         -   t y p e :   m a p _ a t _ 1 0 
+             v a l u e :   8 2 . 7 6 
+         -   t y p e :   m a p _ a t _ 1 0 0 
+             v a l u e :   8 2 . 9 6 8 
+         -   t y p e :   m a p _ a t _ 1 0 0 0 
+             v a l u e :   8 2 . 9 8 2 9 9 9 9 9 9 9 9 9 9 9 
+         -   t y p e :   m a p _ a t _ 3 
+             v a l u e :   8 1 . 7 6 8 
+         -   t y p e :   m a p _ a t _ 5 
+             v a l u e :   8 2 . 4 1 8 
+         -   t y p e :   m r r _ a t _ 1 
+             v a l u e :   8 0 . 0 4 8 
+         -   t y p e :   m r r _ a t _ 1 0 
+             v a l u e :   8 7 . 6 4 9 9 9 9 9 9 9 9 9 9 9 9 
+         -   t y p e :   m r r _ a t _ 1 0 0 
+             v a l u e :   8 7 . 7 1 2 
+         -   t y p e :   m r r _ a t _ 1 0 0 0 
+             v a l u e :   8 7 . 7 1 3 
+         -   t y p e :   m r r _ a t _ 3 
+             v a l u e :   8 7 . 0 1 1 0 0 0 0 0 0 0 0 0 0 1 
+         -   t y p e :   m r r _ a t _ 5 
+             v a l u e :   8 7 . 4 6 6 
+         -   t y p e :   n d c g _ a t _ 1 
+             v a l u e :   8 0 . 0 4 8 
+         -   t y p e :   n d c g _ a t _ 1 0 
+             v a l u e :   8 6 . 6 4 3 
+         -   t y p e :   n d c g _ a t _ 1 0 0 
+             v a l u e :   8 7 . 3 6 1 
+         -   t y p e :   n d c g _ a t _ 1 0 0 0 
+             v a l u e :   8 7 . 6 0 6 
+         -   t y p e :   n d c g _ a t _ 3 
+             v a l u e :   8 5 . 1 3 7 
+         -   t y p e :   n d c g _ a t _ 5 
+             v a l u e :   8 6 . 0 1 6 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 
+             v a l u e :   8 0 . 0 4 8 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 0 
+             v a l u e :   1 0 . 3 7 2 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 0 0 
+             v a l u e :   1 . 0 9 3 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 0 0 0 
+             v a l u e :   0 . 1 1 2 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+         -   t y p e :   p r e c i s i o n _ a t _ 3 
+             v a l u e :   3 2 . 6 3 8 
+         -   t y p e :   p r e c i s i o n _ a t _ 5 
+             v a l u e :   2 0 . 1 7 7 
+         -   t y p e :   r e c a l l _ a t _ 1 
+             v a l u e :   7 4 . 0 3 4 
+         -   t y p e :   r e c a l l _ a t _ 1 0 
+             v a l u e :   9 3 . 7 6 9 
+         -   t y p e :   r e c a l l _ a t _ 1 0 0 
+             v a l u e :   9 6 . 5 6 9 
+         -   t y p e :   r e c a l l _ a t _ 1 0 0 0 
+             v a l u e :   9 8 . 0 3 9 
+         -   t y p e :   r e c a l l _ a t _ 3 
+             v a l u e :   8 9 . 5 8 1 
+         -   t y p e :   r e c a l l _ a t _ 5 
+             v a l u e :   9 1 . 9 0 6 
+     -   t a s k : 
+             t y p e :   R e t r i e v a l 
+         d a t a s e t : 
+             t y p e :   f i q a 
+             n a m e :   M T E B   F i Q A 2 0 1 8 
+             c o n f i g :   d e f a u l t 
+             s p l i t :   t e s t 
+             r e v i s i o n :   N o n e 
+         m e t r i c s : 
+         -   t y p e :   m a p _ a t _ 1 
+             v a l u e :   2 0 . 5 
+         -   t y p e :   m a p _ a t _ 1 0 
+             v a l u e :   3 2 . 8 5 7 
+         -   t y p e :   m a p _ a t _ 1 0 0 
+             v a l u e :   3 4 . 5 8 9 
+         -   t y p e :   m a p _ a t _ 1 0 0 0 
+             v a l u e :   3 4 . 7 7 8 
+         -   t y p e :   m a p _ a t _ 3 
+             v a l u e :   2 9 . 1 6 0 9 9 9 9 9 9 9 9 9 9 9 8 
+         -   t y p e :   m a p _ a t _ 5 
+             v a l u e :   3 1 . 0 3 3 
+         -   t y p e :   m r r _ a t _ 1 
+             v a l u e :   4 0 . 1 2 3 
+         -   t y p e :   m r r _ a t _ 1 0 
+             v a l u e :   4 8 . 7 7 6 
+         -   t y p e :   m r r _ a t _ 1 0 0 
+             v a l u e :   4 9 . 4 9 5 
+         -   t y p e :   m r r _ a t _ 1 0 0 0 
+             v a l u e :   4 9 . 5 3 9 
+         -   t y p e :   m r r _ a t _ 3 
+             v a l u e :   4 6 . 6 0 5 0 0 0 0 0 0 0 0 0 0 0 4 
+         -   t y p e :   m r r _ a t _ 5 
+             v a l u e :   4 7 . 6 5 4 
+         -   t y p e :   n d c g _ a t _ 1 
+             v a l u e :   4 0 . 1 2 3 
+         -   t y p e :   n d c g _ a t _ 1 0 
+             v a l u e :   4 0 . 3 4 3 
+         -   t y p e :   n d c g _ a t _ 1 0 0 
+             v a l u e :   4 6 . 5 6 
+         -   t y p e :   n d c g _ a t _ 1 0 0 0 
+             v a l u e :   4 9 . 7 7 7 
+         -   t y p e :   n d c g _ a t _ 3 
+             v a l u e :   3 7 . 3 2 2 
+         -   t y p e :   n d c g _ a t _ 5 
+             v a l u e :   3 7 . 7 9 1 0 0 0 0 0 0 0 0 0 0 0 4 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 
+             v a l u e :   4 0 . 1 2 3 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 0 
+             v a l u e :   1 1 . 0 8 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 0 0 
+             v a l u e :   1 . 7 5 2 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 0 0 0 
+             v a l u e :   0 . 2 3 2 
+         -   t y p e :   p r e c i s i o n _ a t _ 3 
+             v a l u e :   2 4 . 8 9 7 
+         -   t y p e :   p r e c i s i o n _ a t _ 5 
+             v a l u e :   1 7 . 8 0 9 
+         -   t y p e :   r e c a l l _ a t _ 1 
+             v a l u e :   2 0 . 5 
+         -   t y p e :   r e c a l l _ a t _ 1 0 
+             v a l u e :   4 6 . 3 8 8 
+         -   t y p e :   r e c a l l _ a t _ 1 0 0 
+             v a l u e :   6 9 . 5 5 2 
+         -   t y p e :   r e c a l l _ a t _ 1 0 0 0 
+             v a l u e :   8 9 . 0 1 1 
+         -   t y p e :   r e c a l l _ a t _ 3 
+             v a l u e :   3 3 . 6 1 7 9 9 9 9 9 9 9 9 9 9 9 5 
+         -   t y p e :   r e c a l l _ a t _ 5 
+             v a l u e :   3 8 . 2 1 1 
+     -   t a s k : 
+             t y p e :   R e t r i e v a l 
+         d a t a s e t : 
+             t y p e :   h o t p o t q a 
+             n a m e :   M T E B   H o t p o t Q A 
+             c o n f i g :   d e f a u l t 
+             s p l i t :   t e s t 
+             r e v i s i o n :   N o n e 
+         m e t r i c s : 
+         -   t y p e :   m a p _ a t _ 1 
+             v a l u e :   3 9 . 1 3 5 9 9 9 9 9 9 9 9 9 9 9 6 
+         -   t y p e :   m a p _ a t _ 1 0 
+             v a l u e :   6 1 . 6 7 3 
+         -   t y p e :   m a p _ a t _ 1 0 0 
+             v a l u e :   6 2 . 5 6 2 
+         -   t y p e :   m a p _ a t _ 1 0 0 0 
+             v a l u e :   6 2 . 6 2 
+         -   t y p e :   m a p _ a t _ 3 
+             v a l u e :   5 8 . 4 6 7 9 9 9 9 9 9 9 9 9 9 9 6 
+         -   t y p e :   m a p _ a t _ 5 
+             v a l u e :   6 0 . 4 6 3 
+         -   t y p e :   m r r _ a t _ 1 
+             v a l u e :   7 8 . 2 7 1 
+         -   t y p e :   m r r _ a t _ 1 0 
+             v a l u e :   8 4 . 1 1 9 
+         -   t y p e :   m r r _ a t _ 1 0 0 
+             v a l u e :   8 4 . 2 9 2 9 9 9 9 9 9 9 9 9 9 9 
+         -   t y p e :   m r r _ a t _ 1 0 0 0 
+             v a l u e :   8 4 . 2 9 9 
+         -   t y p e :   m r r _ a t _ 3 
+             v a l u e :   8 3 . 1 8 9 0 0 0 0 0 0 0 0 0 0 1 
+         -   t y p e :   m r r _ a t _ 5 
+             v a l u e :   8 3 . 7 8 6 
+         -   t y p e :   n d c g _ a t _ 1 
+             v a l u e :   7 8 . 2 7 1 
+         -   t y p e :   n d c g _ a t _ 1 0 
+             v a l u e :   6 9 . 9 3 5 
+         -   t y p e :   n d c g _ a t _ 1 0 0 
+             v a l u e :   7 3 . 0 1 2 9 9 9 9 9 9 9 9 9 9 9 
+         -   t y p e :   n d c g _ a t _ 1 0 0 0 
+             v a l u e :   7 4 . 1 2 6 
+         -   t y p e :   n d c g _ a t _ 3 
+             v a l u e :   6 5 . 3 8 8 
+         -   t y p e :   n d c g _ a t _ 5 
+             v a l u e :   6 7 . 9 0 6 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 
+             v a l u e :   7 8 . 2 7 1 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 0 
+             v a l u e :   1 4 . 5 6 2 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 0 0 
+             v a l u e :   1 . 6 9 6 9 9 9 9 9 9 9 9 9 9 9 9 8 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 0 0 0 
+             v a l u e :   0 . 1 8 4 
+         -   t y p e :   p r e c i s i o n _ a t _ 3 
+             v a l u e :   4 1 . 8 4 1 
+         -   t y p e :   p r e c i s i o n _ a t _ 5 
+             v a l u e :   2 7 . 0 8 7 
+         -   t y p e :   r e c a l l _ a t _ 1 
+             v a l u e :   3 9 . 1 3 5 9 9 9 9 9 9 9 9 9 9 9 6 
+         -   t y p e :   r e c a l l _ a t _ 1 0 
+             v a l u e :   7 2 . 8 0 9 
+         -   t y p e :   r e c a l l _ a t _ 1 0 0 
+             v a l u e :   8 4 . 8 6 2 0 0 0 0 0 0 0 0 0 0 1 
+         -   t y p e :   r e c a l l _ a t _ 1 0 0 0 
+             v a l u e :   9 2 . 2 0 8 
+         -   t y p e :   r e c a l l _ a t _ 3 
+             v a l u e :   6 2 . 7 6 1 9 9 9 9 9 9 9 9 9 9 9 
+         -   t y p e :   r e c a l l _ a t _ 5 
+             v a l u e :   6 7 . 7 1 8 
+     -   t a s k : 
+             t y p e :   C l a s s i f i c a t i o n 
+         d a t a s e t : 
+             t y p e :   m t e b / i m d b 
+             n a m e :   M T E B   I m d b C l a s s i f i c a t i o n 
+             c o n f i g :   d e f a u l t 
+             s p l i t :   t e s t 
+             r e v i s i o n :   3 d 8 6 1 2 8 a 0 9 e 0 9 1 d 6 0 1 8 b 6 d 2 6 c a d 2 7 f 2 7 3 9 f c 2 d b 7 
+         m e t r i c s : 
+         -   t y p e :   a c c u r a c y 
+             v a l u e :   9 0 . 6 0 6 0 0 0 0 0 0 0 0 0 0 1 
+         -   t y p e :   a p 
+             v a l u e :   8 6 . 6 5 7 9 5 8 7 8 0 4 3 3 5 
+         -   t y p e :   f 1 
+             v a l u e :   9 0 . 5 9 3 8 8 5 3 9 2 9 3 0 7 
+     -   t a s k : 
+             t y p e :   R e t r i e v a l 
+         d a t a s e t : 
+             t y p e :   m s m a r c o 
+             n a m e :   M T E B   M S M A R C O 
+             c o n f i g :   d e f a u l t 
+             s p l i t :   d e v 
+             r e v i s i o n :   N o n e 
+         m e t r i c s : 
+         -   t y p e :   m a p _ a t _ 1 
+             v a l u e :   2 1 . 8 5 2 
+         -   t y p e :   m a p _ a t _ 1 0 
+             v a l u e :   3 3 . 9 8 2 
+         -   t y p e :   m a p _ a t _ 1 0 0 
+             v a l u e :   3 5 . 1 1 6 
+         -   t y p e :   m a p _ a t _ 1 0 0 0 
+             v a l u e :   3 5 . 1 6 7 
+         -   t y p e :   m a p _ a t _ 3 
+             v a l u e :   3 0 . 1 3 4 
+         -   t y p e :   m a p _ a t _ 5 
+             v a l u e :   3 2 . 3 4 0 9 9 9 9 9 9 9 9 9 9 9 4 
+         -   t y p e :   m r r _ a t _ 1 
+             v a l u e :   2 2 . 4 7 9 
+         -   t y p e :   m r r _ a t _ 1 0 
+             v a l u e :   3 4 . 5 9 4 
+         -   t y p e :   m r r _ a t _ 1 0 0 
+             v a l u e :   3 5 . 6 7 2 
+         -   t y p e :   m r r _ a t _ 1 0 0 0 
+             v a l u e :   3 5 . 7 1 6 
+         -   t y p e :   m r r _ a t _ 3 
+             v a l u e :   3 0 . 8 4 
+         -   t y p e :   m r r _ a t _ 5 
+             v a l u e :   3 2 . 9 9 8 
+         -   t y p e :   n d c g _ a t _ 1 
+             v a l u e :   2 2 . 4 9 3 
+         -   t y p e :   n d c g _ a t _ 1 0 
+             v a l u e :   4 0 . 8 3 3 0 0 0 0 0 0 0 0 0 0 0 6 
+         -   t y p e :   n d c g _ a t _ 1 0 0 
+             v a l u e :   4 6 . 3 5 7 
+         -   t y p e :   n d c g _ a t _ 1 0 0 0 
+             v a l u e :   4 7 . 6 3 7 
+         -   t y p e :   n d c g _ a t _ 3 
+             v a l u e :   3 2 . 9 9 5 9 9 9 9 9 9 9 9 9 9 9 5 
+         -   t y p e :   n d c g _ a t _ 5 
+             v a l u e :   3 6 . 9 1 9 0 0 0 0 0 0 0 0 0 0 0 4 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 
+             v a l u e :   2 2 . 4 9 3 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 0 
+             v a l u e :   6 . 4 6 5 9 9 9 9 9 9 9 9 9 9 9 9 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 0 0 
+             v a l u e :   0 . 9 2 4 9 9 9 9 9 9 9 9 9 9 9 9 9 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 0 0 0 
+             v a l u e :   0 . 1 0 4 
+         -   t y p e :   p r e c i s i o n _ a t _ 3 
+             v a l u e :   1 4 . 0 3 0 9 9 9 9 9 9 9 9 9 9 9 9 
+         -   t y p e :   p r e c i s i o n _ a t _ 5 
+             v a l u e :   1 0 . 4 1 3 
+         -   t y p e :   r e c a l l _ a t _ 1 
+             v a l u e :   2 1 . 8 5 2 
+         -   t y p e :   r e c a l l _ a t _ 1 0 
+             v a l u e :   6 1 . 9 3 4 9 9 9 9 9 9 9 9 9 9 9 5 
+         -   t y p e :   r e c a l l _ a t _ 1 0 0 
+             v a l u e :   8 7 . 6 1 1 
+         -   t y p e :   r e c a l l _ a t _ 1 0 0 0 
+             v a l u e :   9 7 . 4 4 1 
+         -   t y p e :   r e c a l l _ a t _ 3 
+             v a l u e :   4 0 . 5 8 3 9 9 9 9 9 9 9 9 9 9 9 6 
+         -   t y p e :   r e c a l l _ a t _ 5 
+             v a l u e :   4 9 . 9 9 2 9 9 9 9 9 9 9 9 9 9 9 5 
+     -   t a s k : 
+             t y p e :   C l a s s i f i c a t i o n 
+         d a t a s e t : 
+             t y p e :   m t e b / m t o p _ d o m a i n 
+             n a m e :   M T E B   M T O P D o m a i n C l a s s i f i c a t i o n   ( e n ) 
+             c o n f i g :   e n 
+             s p l i t :   t e s t 
+             r e v i s i o n :   d 8 0 d 4 8 c 1 e b 4 8 d 3 5 6 2 1 6 5 c 5 9 d 5 9 d 0 0 3 4 d f 9 f f f 0 b f 
+         m e t r i c s : 
+         -   t y p e :   a c c u r a c y 
+             v a l u e :   9 3 . 3 6 0 6 9 3 1 1 4 4 5 5 0 7 
+         -   t y p e :   f 1 
+             v a l u e :   9 3 . 1 6 4 5 6 3 3 0 3 7 1 4 5 3 
+     -   t a s k : 
+             t y p e :   C l a s s i f i c a t i o n 
+         d a t a s e t : 
+             t y p e :   m t e b / m t o p _ i n t e n t 
+             n a m e :   M T E B   M T O P I n t e n t C l a s s i f i c a t i o n   ( e n ) 
+             c o n f i g :   e n 
+             s p l i t :   t e s t 
+             r e v i s i o n :   a e 0 0 1 d 0 e 6 b 1 2 2 8 6 5 0 b 7 b d 1 c 2 c 6 5 f b 5 0 a d 1 1 a 8 a b a 
+         m e t r i c s : 
+         -   t y p e :   a c c u r a c y 
+             v a l u e :   7 4 . 7 4 6 9 2 2 0 2 4 6 2 3 8 1 
+         -   t y p e :   f 1 
+             v a l u e :   5 8 . 1 7 9 0 3 5 7 9 4 2 1 5 9 9 
+     -   t a s k : 
+             t y p e :   C l a s s i f i c a t i o n 
+         d a t a s e t : 
+             t y p e :   m t e b / a m a z o n _ m a s s i v e _ i n t e n t 
+             n a m e :   M T E B   M a s s i v e I n t e n t C l a s s i f i c a t i o n   ( e n ) 
+             c o n f i g :   e n 
+             s p l i t :   t e s t 
+             r e v i s i o n :   3 1 e f e 3 c 4 2 7 b 0 b a e 9 c 2 2 c b b 5 6 0 b 8 f 1 5 4 9 1 c c 6 b e d 7 
+         m e t r i c s : 
+         -   t y p e :   a c c u r a c y 
+             v a l u e :   7 4 . 8 0 8 3 3 8 9 3 7 4 5 7 9 6 
+         -   t y p e :   f 1 
+             v a l u e :   7 2 . 7 0 7 8 6 5 9 2 6 8 4 6 6 4 
+     -   t a s k : 
+             t y p e :   C l a s s i f i c a t i o n 
+         d a t a s e t : 
+             t y p e :   m t e b / a m a z o n _ m a s s i v e _ s c e n a r i o 
+             n a m e :   M T E B   M a s s i v e S c e n a r i o C l a s s i f i c a t i o n   ( e n ) 
+             c o n f i g :   e n 
+             s p l i t :   t e s t 
+             r e v i s i o n :   7 d 5 7 1 f 9 2 7 8 4 c d 9 4 a 0 1 9 2 9 2 a 1 f 4 5 4 4 5 0 7 7 d 0 e f 6 3 4 
+         m e t r i c s : 
+         -   t y p e :   a c c u r a c y 
+             v a l u e :   7 8 . 6 9 8 7 2 2 2 5 9 5 8 3 0 5 
+         -   t y p e :   f 1 
+             v a l u e :   7 8 . 6 1 6 2 6 9 3 4 5 0 4 7 3 1 
+     -   t a s k : 
+             t y p e :   C l u s t e r i n g 
+         d a t a s e t : 
+             t y p e :   m t e b / m e d r x i v - c l u s t e r i n g - p 2 p 
+             n a m e :   M T E B   M e d r x i v C l u s t e r i n g P 2 P 
+             c o n f i g :   d e f a u l t 
+             s p l i t :   t e s t 
+             r e v i s i o n :   e 7 a 2 6 a f 6 f 3 a e 4 6 b 3 0 d d e 8 7 3 7 f 0 2 c 0 7 b 1 5 0 5 b c c 7 3 
+         m e t r i c s : 
+         -   t y p e :   v _ m e a s u r e 
+             v a l u e :   3 3 . 0 5 8 6 5 8 6 2 8 7 1 7 6 9 4 
+     -   t a s k : 
+             t y p e :   C l u s t e r i n g 
+         d a t a s e t : 
+             t y p e :   m t e b / m e d r x i v - c l u s t e r i n g - s 2 s 
+             n a m e :   M T E B   M e d r x i v C l u s t e r i n g S 2 S 
+             c o n f i g :   d e f a u l t 
+             s p l i t :   t e s t 
+             r e v i s i o n :   3 5 1 9 1 c 8 c 0 d c a 7 2 d 8 f f 3 e f c d 7 2 a a 8 0 2 3 0 7 d 4 6 9 6 6 3 
+         m e t r i c s : 
+         -   t y p e :   v _ m e a s u r e 
+             v a l u e :   3 0 . 8 5 5 6 1 7 3 9 3 6 0 5 9 9 
+     -   t a s k : 
+             t y p e :   R e r a n k i n g 
+         d a t a s e t : 
+             t y p e :   m t e b / m i n d _ s m a l l 
+             n a m e :   M T E B   M i n d S m a l l R e r a n k i n g 
+             c o n f i g :   d e f a u l t 
+             s p l i t :   t e s t 
+             r e v i s i o n :   3 b d a c 1 3 9 2 7 f d c 8 8 8 b 9 0 3 d b 9 3 b 2 f f d b d 9 0 b 2 9 5 a 6 9 
+         m e t r i c s : 
+         -   t y p e :   m a p 
+             v a l u e :   3 1 . 2 9 0 2 5 9 9 1 0 1 4 4 3 8 5 
+         -   t y p e :   m r r 
+             v a l u e :   3 2 . 4 4 2 2 3 0 4 6 1 0 2 8 5 6 
+     -   t a s k : 
+             t y p e :   R e t r i e v a l 
+         d a t a s e t : 
+             t y p e :   n f c o r p u s 
+             n a m e :   M T E B   N F C o r p u s 
+             c o n f i g :   d e f a u l t 
+             s p l i t :   t e s t 
+             r e v i s i o n :   N o n e 
+         m e t r i c s : 
+         -   t y p e :   m a p _ a t _ 1 
+             v a l u e :   5 . 2 8 8 
+         -   t y p e :   m a p _ a t _ 1 0 
+             v a l u e :   1 2 . 2 6 7 9 9 9 9 9 9 9 9 9 9 9 9 
+         -   t y p e :   m a p _ a t _ 1 0 0 
+             v a l u e :   1 5 . 5 5 7 0 0 0 0 0 0 0 0 0 0 0 2 
+         -   t y p e :   m a p _ a t _ 1 0 0 0 
+             v a l u e :   1 6 . 9 8 
+         -   t y p e :   m a p _ a t _ 3 
+             v a l u e :   8 . 8 6 6 
+         -   t y p e :   m a p _ a t _ 5 
+             v a l u e :   1 0 . 4 1 8 
+         -   t y p e :   m r r _ a t _ 1 
+             v a l u e :   4 3 . 6 5 3 
+         -   t y p e :   m r r _ a t _ 1 0 
+             v a l u e :   5 2 . 6 8 1 
+         -   t y p e :   m r r _ a t _ 1 0 0 
+             v a l u e :   5 3 . 3 1 5 9 9 9 9 9 9 9 9 9 9 9 5 
+         -   t y p e :   m r r _ a t _ 1 0 0 0 
+             v a l u e :   5 3 . 3 5 7 
+         -   t y p e :   m r r _ a t _ 3 
+             v a l u e :   5 1 . 3 9 3 
+         -   t y p e :   m r r _ a t _ 5 
+             v a l u e :   5 1 . 9 0 3 9 9 9 9 9 9 9 9 9 9 9 6 
+         -   t y p e :   n d c g _ a t _ 1 
+             v a l u e :   4 2 . 4 1 5 0 0 0 0 0 0 0 0 0 0 0 6 
+         -   t y p e :   n d c g _ a t _ 1 0 
+             v a l u e :   3 4 . 3 0 5 
+         -   t y p e :   n d c g _ a t _ 1 0 0 
+             v a l u e :   3 0 . 8 2 5 9 9 9 9 9 9 9 9 9 9 9 7 
+         -   t y p e :   n d c g _ a t _ 1 0 0 0 
+             v a l u e :   3 9 . 3 9 3 
+         -   t y p e :   n d c g _ a t _ 3 
+             v a l u e :   3 9 . 9 3 1 
+         -   t y p e :   n d c g _ a t _ 5 
+             v a l u e :   3 7 . 5 1 9 9 9 9 9 9 9 9 9 9 9 9 6 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 
+             v a l u e :   4 3 . 6 5 3 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 0 
+             v a l u e :   2 5 . 7 2 8 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 0 0 
+             v a l u e :   7 . 9 3 2 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 0 0 0 
+             v a l u e :   2 . 0 7 
+         -   t y p e :   p r e c i s i o n _ a t _ 3 
+             v a l u e :   3 8 . 1 8 4 0 0 0 0 0 0 0 0 0 0 0 5 
+         -   t y p e :   p r e c i s i o n _ a t _ 5 
+             v a l u e :   3 2 . 8 7 9 0 0 0 0 0 0 0 0 0 0 0 5 
+         -   t y p e :   r e c a l l _ a t _ 1 
+             v a l u e :   5 . 2 8 8 
+         -   t y p e :   r e c a l l _ a t _ 1 0 
+             v a l u e :   1 6 . 1 9 5 
+         -   t y p e :   r e c a l l _ a t _ 1 0 0 
+             v a l u e :   3 1 . 1 3 5 
+         -   t y p e :   r e c a l l _ a t _ 1 0 0 0 
+             v a l u e :   6 1 . 5 3 1 0 0 0 0 0 0 0 0 0 0 0 6 
+         -   t y p e :   r e c a l l _ a t _ 3 
+             v a l u e :   1 0 . 3 1 3 
+         -   t y p e :   r e c a l l _ a t _ 5 
+             v a l u e :   1 2 . 7 5 4 9 9 9 9 9 9 9 9 9 9 9 9 
+     -   t a s k : 
+             t y p e :   R e t r i e v a l 
+         d a t a s e t : 
+             t y p e :   n q 
+             n a m e :   M T E B   N Q 
+             c o n f i g :   d e f a u l t 
+             s p l i t :   t e s t 
+             r e v i s i o n :   N o n e 
+         m e t r i c s : 
+         -   t y p e :   m a p _ a t _ 1 
+             v a l u e :   2 8 . 2 1 6 
+         -   t y p e :   m a p _ a t _ 1 0 
+             v a l u e :   4 2 . 5 8 8 
+         -   t y p e :   m a p _ a t _ 1 0 0 
+             v a l u e :   4 3 . 7 0 2 9 9 9 9 9 9 9 9 9 9 9 6 
+         -   t y p e :   m a p _ a t _ 1 0 0 0 
+             v a l u e :   4 3 . 7 3 9 
+         -   t y p e :   m a p _ a t _ 3 
+             v a l u e :   3 8 . 1 7 7 
+         -   t y p e :   m a p _ a t _ 5 
+             v a l u e :   4 0 . 7 5 4 0 0 0 0 0 0 0 0 0 0 0 5 
+         -   t y p e :   m r r _ a t _ 1 
+             v a l u e :   3 1 . 8 6 6 
+         -   t y p e :   m r r _ a t _ 1 0 
+             v a l u e :   4 5 . 1 8 9 
+         -   t y p e :   m r r _ a t _ 1 0 0 
+             v a l u e :   4 6 . 0 5 6 0 0 0 0 0 0 0 0 0 0 0 4 
+         -   t y p e :   m r r _ a t _ 1 0 0 0 
+             v a l u e :   4 6 . 0 8 1 
+         -   t y p e :   m r r _ a t _ 3 
+             v a l u e :   4 1 . 5 2 6 9 9 9 9 9 9 9 9 9 9 9 4 
+         -   t y p e :   m r r _ a t _ 5 
+             v a l u e :   4 3 . 7 0 4 
+         -   t y p e :   n d c g _ a t _ 1 
+             v a l u e :   3 1 . 8 3 7 
+         -   t y p e :   n d c g _ a t _ 1 0 
+             v a l u e :   5 0 . 1 7 8 
+         -   t y p e :   n d c g _ a t _ 1 0 0 
+             v a l u e :   5 4 . 9 8 8 0 0 0 0 0 0 0 0 0 0 1 
+         -   t y p e :   n d c g _ a t _ 1 0 0 0 
+             v a l u e :   5 5 . 8 1 2 
+         -   t y p e :   n d c g _ a t _ 3 
+             v a l u e :   4 1 . 8 5 3 
+         -   t y p e :   n d c g _ a t _ 5 
+             v a l u e :   4 6 . 1 5 3 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 
+             v a l u e :   3 1 . 8 3 7 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 0 
+             v a l u e :   8 . 4 3 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 0 0 
+             v a l u e :   1 . 1 1 1 9 9 9 9 9 9 9 9 9 9 9 9 9 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 0 0 0 
+             v a l u e :   0 . 1 1 9 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+         -   t y p e :   p r e c i s i o n _ a t _ 3 
+             v a l u e :   1 9 . 0 2 3 
+         -   t y p e :   p r e c i s i o n _ a t _ 5 
+             v a l u e :   1 3 . 9 1 1 0 0 0 0 0 0 0 0 0 0 0 1 
+         -   t y p e :   r e c a l l _ a t _ 1 
+             v a l u e :   2 8 . 2 1 6 
+         -   t y p e :   r e c a l l _ a t _ 1 0 
+             v a l u e :   7 0 . 8 
+         -   t y p e :   r e c a l l _ a t _ 1 0 0 
+             v a l u e :   9 1 . 8 5 7 
+         -   t y p e :   r e c a l l _ a t _ 1 0 0 0 
+             v a l u e :   9 7 . 9 4 1 
+         -   t y p e :   r e c a l l _ a t _ 3 
+             v a l u e :   4 9 . 1 9 6 
+         -   t y p e :   r e c a l l _ a t _ 5 
+             v a l u e :   5 9 . 0 7 2 
+     -   t a s k : 
+             t y p e :   R e t r i e v a l 
+         d a t a s e t : 
+             t y p e :   q u o r a 
+             n a m e :   M T E B   Q u o r a R e t r i e v a l 
+             c o n f i g :   d e f a u l t 
+             s p l i t :   t e s t 
+             r e v i s i o n :   N o n e 
+         m e t r i c s : 
+         -   t y p e :   m a p _ a t _ 1 
+             v a l u e :   7 1 . 2 2 8 0 0 0 0 0 0 0 0 0 0 1 
+         -   t y p e :   m a p _ a t _ 1 0 
+             v a l u e :   8 5 . 1 1 5 
+         -   t y p e :   m a p _ a t _ 1 0 0 
+             v a l u e :   8 5 . 7 2 
+         -   t y p e :   m a p _ a t _ 1 0 0 0 
+             v a l u e :   8 5 . 7 3 7 
+         -   t y p e :   m a p _ a t _ 3 
+             v a l u e :   8 2 . 1 4 9 
+         -   t y p e :   m a p _ a t _ 5 
+             v a l u e :   8 4 . 0 2 9 
+         -   t y p e :   m r r _ a t _ 1 
+             v a l u e :   8 1 . 9 6 
+         -   t y p e :   m r r _ a t _ 1 0 
+             v a l u e :   8 8 . 0 0 2 0 0 0 0 0 0 0 0 0 0 1 
+         -   t y p e :   m r r _ a t _ 1 0 0 
+             v a l u e :   8 8 . 0 8 8 
+         -   t y p e :   m r r _ a t _ 1 0 0 0 
+             v a l u e :   8 8 . 0 8 9 
+         -   t y p e :   m r r _ a t _ 3 
+             v a l u e :   8 7 . 0 5 5 
+         -   t y p e :   m r r _ a t _ 5 
+             v a l u e :   8 7 . 7 1 5 
+         -   t y p e :   n d c g _ a t _ 1 
+             v a l u e :   8 2 . 0 1 
+         -   t y p e :   n d c g _ a t _ 1 0 
+             v a l u e :   8 8 . 7 8 
+         -   t y p e :   n d c g _ a t _ 1 0 0 
+             v a l u e :   8 9 . 9 1 
+         -   t y p e :   n d c g _ a t _ 1 0 0 0 
+             v a l u e :   9 0 . 0 1 3 
+         -   t y p e :   n d c g _ a t _ 3 
+             v a l u e :   8 5 . 9 5 7 
+         -   t y p e :   n d c g _ a t _ 5 
+             v a l u e :   8 7 . 5 6 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 
+             v a l u e :   8 2 . 0 1 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 0 
+             v a l u e :   1 3 . 4 6 2 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 0 0 
+             v a l u e :   1 . 5 2 8 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 0 0 0 
+             v a l u e :   0 . 1 5 7 
+         -   t y p e :   p r e c i s i o n _ a t _ 3 
+             v a l u e :   3 7 . 5 5 3 
+         -   t y p e :   p r e c i s i o n _ a t _ 5 
+             v a l u e :   2 4 . 7 3 2 0 0 0 0 0 0 0 0 0 0 0 3 
+         -   t y p e :   r e c a l l _ a t _ 1 
+             v a l u e :   7 1 . 2 2 8 0 0 0 0 0 0 0 0 0 0 1 
+         -   t y p e :   r e c a l l _ a t _ 1 0 
+             v a l u e :   9 5 . 6 9 
+         -   t y p e :   r e c a l l _ a t _ 1 0 0 
+             v a l u e :   9 9 . 5 3 1 
+         -   t y p e :   r e c a l l _ a t _ 1 0 0 0 
+             v a l u e :   9 9 . 9 8 
+         -   t y p e :   r e c a l l _ a t _ 3 
+             v a l u e :   8 7 . 6 3 2 
+         -   t y p e :   r e c a l l _ a t _ 5 
+             v a l u e :   9 2 . 1 1 7 
+     -   t a s k : 
+             t y p e :   C l u s t e r i n g 
+         d a t a s e t : 
+             t y p e :   m t e b / r e d d i t - c l u s t e r i n g 
+             n a m e :   M T E B   R e d d i t C l u s t e r i n g 
+             c o n f i g :   d e f a u l t 
+             s p l i t :   t e s t 
+             r e v i s i o n :   2 4 6 4 0 3 8 2 c d b f 8 a b c 7 3 0 0 3 f b 0 f a 6 d 1 1 1 a 7 0 5 4 9 9 e b 
+         m e t r i c s : 
+         -   t y p e :   v _ m e a s u r e 
+             v a l u e :   5 2 . 3 1 7 6 8 0 3 4 3 6 6 9 1 6 
+     -   t a s k : 
+             t y p e :   C l u s t e r i n g 
+         d a t a s e t : 
+             t y p e :   m t e b / r e d d i t - c l u s t e r i n g - p 2 p 
+             n a m e :   M T E B   R e d d i t C l u s t e r i n g P 2 P 
+             c o n f i g :   d e f a u l t 
+             s p l i t :   t e s t 
+             r e v i s i o n :   2 8 2 3 5 0 2 1 5 e f 0 1 7 4 3 d c 0 1 b 4 5 6 c 7 f 5 2 4 1 f a 8 9 3 7 f 1 6 
+         m e t r i c s : 
+         -   t y p e :   v _ m e a s u r e 
+             v a l u e :   6 0 . 6 4 0 2 6 6 7 7 2 7 2 3 6 0 6 
+     -   t a s k : 
+             t y p e :   R e t r i e v a l 
+         d a t a s e t : 
+             t y p e :   s c i d o c s 
+             n a m e :   M T E B   S C I D O C S 
+             c o n f i g :   d e f a u l t 
+             s p l i t :   t e s t 
+             r e v i s i o n :   N o n e 
+         m e t r i c s : 
+         -   t y p e :   m a p _ a t _ 1 
+             v a l u e :   4 . 7 7 8 0 0 0 0 0 0 0 0 0 0 0 0 5 
+         -   t y p e :   m a p _ a t _ 1 0 
+             v a l u e :   1 2 . 2 9 9 
+         -   t y p e :   m a p _ a t _ 1 0 0 
+             v a l u e :   1 4 . 3 6 3 0 0 0 0 0 0 0 0 0 0 0 1 
+         -   t y p e :   m a p _ a t _ 1 0 0 0 
+             v a l u e :   1 4 . 7 1 
+         -   t y p e :   m a p _ a t _ 3 
+             v a l u e :   8 . 7 3 8 9 9 9 9 9 9 9 9 9 9 9 9 
+         -   t y p e :   m a p _ a t _ 5 
+             v a l u e :   1 0 . 3 9 7 
+         -   t y p e :   m r r _ a t _ 1 
+             v a l u e :   2 3 . 5 9 9 9 9 9 9 9 9 9 9 9 9 9 8 
+         -   t y p e :   m r r _ a t _ 1 0 
+             v a l u e :   3 4 . 8 4 5 
+         -   t y p e :   m r r _ a t _ 1 0 0 
+             v a l u e :   3 5 . 9 1 6 
+         -   t y p e :   m r r _ a t _ 1 0 0 0 
+             v a l u e :   3 5 . 9 7 3 
+         -   t y p e :   m r r _ a t _ 3 
+             v a l u e :   3 1 . 7 
+         -   t y p e :   m r r _ a t _ 5 
+             v a l u e :   3 3 . 5 3 5 
+         -   t y p e :   n d c g _ a t _ 1 
+             v a l u e :   2 3 . 5 9 9 9 9 9 9 9 9 9 9 9 9 9 8 
+         -   t y p e :   n d c g _ a t _ 1 0 
+             v a l u e :   2 0 . 5 2 2 0 0 0 0 0 0 0 0 0 0 0 2 
+         -   t y p e :   n d c g _ a t _ 1 0 0 
+             v a l u e :   2 8 . 7 3 7 0 0 0 0 0 0 0 0 0 0 0 2 
+         -   t y p e :   n d c g _ a t _ 1 0 0 0 
+             v a l u e :   3 4 . 5 9 6 
+         -   t y p e :   n d c g _ a t _ 3 
+             v a l u e :   1 9 . 5 4 2 
+         -   t y p e :   n d c g _ a t _ 5 
+             v a l u e :   1 6 . 9 5 8 0 0 0 0 0 0 0 0 0 0 0 2 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 
+             v a l u e :   2 3 . 5 9 9 9 9 9 9 9 9 9 9 9 9 9 8 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 0 
+             v a l u e :   1 0 . 6 7 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 0 0 
+             v a l u e :   2 . 2 5 9 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 0 0 0 
+             v a l u e :   0 . 3 6 7 
+         -   t y p e :   p r e c i s i o n _ a t _ 3 
+             v a l u e :   1 8 . 3 3 3 
+         -   t y p e :   p r e c i s i o n _ a t _ 5 
+             v a l u e :   1 4 . 8 7 9 9 9 9 9 9 9 9 9 9 9 9 9 
+         -   t y p e :   r e c a l l _ a t _ 1 
+             v a l u e :   4 . 7 7 8 0 0 0 0 0 0 0 0 0 0 0 0 5 
+         -   t y p e :   r e c a l l _ a t _ 1 0 
+             v a l u e :   2 1 . 6 1 7 
+         -   t y p e :   r e c a l l _ a t _ 1 0 0 
+             v a l u e :   4 5 . 9 0 5 
+         -   t y p e :   r e c a l l _ a t _ 1 0 0 0 
+             v a l u e :   7 4 . 4 2 
+         -   t y p e :   r e c a l l _ a t _ 3 
+             v a l u e :   1 1 . 1 4 8 
+         -   t y p e :   r e c a l l _ a t _ 5 
+             v a l u e :   1 5 . 0 8 2 9 9 9 9 9 9 9 9 9 9 9 8 
+     -   t a s k : 
+             t y p e :   S T S 
+         d a t a s e t : 
+             t y p e :   m t e b / s i c k r - s t s 
+             n a m e :   M T E B   S I C K - R 
+             c o n f i g :   d e f a u l t 
+             s p l i t :   t e s t 
+             r e v i s i o n :   a 6 e a 5 a 8 c a b 3 2 0 b 0 4 0 a 2 3 4 5 2 c c 2 8 0 6 6 d 9 b e a e 2 c e e 
+         m e t r i c s : 
+         -   t y p e :   c o s _ s i m _ p e a r s o n 
+             v a l u e :   8 3 . 2 2 3 7 2 7 5 0 2 9 7 8 8 5 
+         -   t y p e :   c o s _ s i m _ s p e a r m a n 
+             v a l u e :   7 9 . 4 0 9 7 2 6 1 7 1 1 9 4 0 5 
+         -   t y p e :   e u c l i d e a n _ p e a r s o n 
+             v a l u e :   8 0 . 6 1 0 1 0 7 2 0 2 0 4 3 4 
+         -   t y p e :   e u c l i d e a n _ s p e a r m a n 
+             v a l u e :   7 9 . 5 3 8 4 4 2 1 7 2 2 5 2 0 2 
+         -   t y p e :   m a n h a t t a n _ p e a r s o n 
+             v a l u e :   8 0 . 5 7 2 6 5 9 7 5 2 8 6 1 1 1 
+         -   t y p e :   m a n h a t t a n _ s p e a r m a n 
+             v a l u e :   7 9 . 4 6 3 3 5 6 1 1 7 9 2 9 5 8 
+     -   t a s k : 
+             t y p e :   S T S 
+         d a t a s e t : 
+             t y p e :   m t e b / s t s 1 2 - s t s 
+             n a m e :   M T E B   S T S 1 2 
+             c o n f i g :   d e f a u l t 
+             s p l i t :   t e s t 
+             r e v i s i o n :   a 0 d 5 5 4 a 6 4 d 8 8 1 5 6 8 3 4 f f 5 a e 9 9 2 0 b 9 6 4 0 1 1 b 1 6 3 8 4 
+         m e t r i c s : 
+         -   t y p e :   c o s _ s i m _ p e a r s o n 
+             v a l u e :   8 5 . 4 3 7 1 3 3 1 5 5 2 0 7 4 9 
+         -   t y p e :   c o s _ s i m _ s p e a r m a n 
+             v a l u e :   7 7 . 4 4 1 2 8 6 9 3 3 2 9 5 3 2 
+         -   t y p e :   e u c l i d e a n _ p e a r s o n 
+             v a l u e :   8 1 . 6 3 8 6 9 9 2 8 1 0 1 1 2 3 
+         -   t y p e :   e u c l i d e a n _ s p e a r m a n 
+             v a l u e :   7 7 . 2 9 5 1 2 9 7 7 9 6 1 5 1 5 
+         -   t y p e :   m a n h a t t a n _ p e a r s o n 
+             v a l u e :   8 1 . 6 3 7 0 4 1 8 5 5 6 6 1 8 3 
+         -   t y p e :   m a n h a t t a n _ s p e a r m a n 
+             v a l u e :   7 7 . 2 9 9 0 9 4 1 2 7 3 8 6 5 7 
+     -   t a s k : 
+             t y p e :   S T S 
+         d a t a s e t : 
+             t y p e :   m t e b / s t s 1 3 - s t s 
+             n a m e :   M T E B   S T S 1 3 
+             c o n f i g :   d e f a u l t 
+             s p l i t :   t e s t 
+             r e v i s i o n :   7 e 9 0 2 3 0 a 9 2 c 1 9 0 f 1 b f 6 9 a e 9 0 0 2 b 8 c e a 5 4 7 a 6 4 c c a 
+         m e t r i c s : 
+         -   t y p e :   c o s _ s i m _ p e a r s o n 
+             v a l u e :   8 1 . 5 9 4 5 1 5 3 7 8 6 0 5 2 7 
+         -   t y p e :   c o s _ s i m _ s p e a r m a n 
+             v a l u e :   8 2 . 9 7 9 9 4 6 3 8 8 5 6 7 2 3 
+         -   t y p e :   e u c l i d e a n _ p e a r s o n 
+             v a l u e :   8 2 . 8 9 4 7 8 6 8 8 2 8 8 4 1 2 
+         -   t y p e :   e u c l i d e a n _ s p e a r m a n 
+             v a l u e :   8 3 . 5 8 7 4 0 7 5 1 0 5 3 1 0 4 
+         -   t y p e :   m a n h a t t a n _ p e a r s o n 
+             v a l u e :   8 2 . 6 9 1 4 0 8 4 0 9 4 1 6 0 8 
+         -   t y p e :   m a n h a t t a n _ s p e a r m a n 
+             v a l u e :   8 3 . 3 3 6 6 5 9 5 6 0 4 0 5 5 5 
+     -   t a s k : 
+             t y p e :   S T S 
+         d a t a s e t : 
+             t y p e :   m t e b / s t s 1 4 - s t s 
+             n a m e :   M T E B   S T S 1 4 
+             c o n f i g :   d e f a u l t 
+             s p l i t :   t e s t 
+             r e v i s i o n :   6 0 3 1 5 8 0 f e c 1 f 6 a f 6 6 7 f 0 b d 2 d a 0 a 5 5 1 c f 4 f 0 b 2 3 7 5 
+         m e t r i c s : 
+         -   t y p e :   c o s _ s i m _ p e a r s o n 
+             v a l u e :   8 2 . 0 0 7 5 6 5 2 7 7 1 1 7 6 4 
+         -   t y p e :   c o s _ s i m _ s p e a r m a n 
+             v a l u e :   8 1 . 8 3 5 6 0 9 9 6 8 4 1 3 7 9 
+         -   t y p e :   e u c l i d e a n _ p e a r s o n 
+             v a l u e :   8 2 . 0 7 6 8 4 1 5 1 9 7 6 5 1 8 
+         -   t y p e :   e u c l i d e a n _ s p e a r m a n 
+             v a l u e :   8 2 . 0 0 9 1 3 0 5 2 0 6 0 5 1 1 
+         -   t y p e :   m a n h a t t a n _ p e a r s o n 
+             v a l u e :   8 2 . 0 5 6 9 0 7 7 8 4 8 8 7 9 4 
+         -   t y p e :   m a n h a t t a n _ s p e a r m a n 
+             v a l u e :   8 2 . 0 2 2 6 0 2 5 2 0 1 9 5 2 5 
+     -   t a s k : 
+             t y p e :   S T S 
+         d a t a s e t : 
+             t y p e :   m t e b / s t s 1 5 - s t s 
+             n a m e :   M T E B   S T S 1 5 
+             c o n f i g :   d e f a u l t 
+             s p l i t :   t e s t 
+             r e v i s i o n :   a e 7 5 2 c 7 c 2 1 b f 1 9 4 d 8 b 6 7 f d 5 7 3 e d f 7 a e 5 8 1 8 3 c b e 3 
+         m e t r i c s : 
+         -   t y p e :   c o s _ s i m _ p e a r s o n 
+             v a l u e :   8 6 . 1 3 7 1 0 2 6 2 8 9 5 4 4 7 
+         -   t y p e :   c o s _ s i m _ s p e a r m a n 
+             v a l u e :   8 7 . 2 6 4 1 2 8 1 1 1 5 6 2 4 8 
+         -   t y p e :   e u c l i d e a n _ p e a r s o n 
+             v a l u e :   8 6 . 9 4 1 5 1 4 5 3 2 3 0 2 2 8 
+         -   t y p e :   e u c l i d e a n _ s p e a r m a n 
+             v a l u e :   8 7 . 5 3 6 3 7 9 6 6 9 9 5 7 1 
+         -   t y p e :   m a n h a t t a n _ p e a r s o n 
+             v a l u e :   8 6 . 8 6 9 8 9 4 2 4 0 8 3 7 4 8 
+         -   t y p e :   m a n h a t t a n _ s p e a r m a n 
+             v a l u e :   8 7 . 4 7 3 1 5 9 4 0 7 8 1 3 5 3 
+     -   t a s k : 
+             t y p e :   S T S 
+         d a t a s e t : 
+             t y p e :   m t e b / s t s 1 6 - s t s 
+             n a m e :   M T E B   S T S 1 6 
+             c o n f i g :   d e f a u l t 
+             s p l i t :   t e s t 
+             r e v i s i o n :   4 d 8 6 9 4 f 8 f 0 e 0 1 0 0 8 6 0 b 4 9 7 b 9 9 9 b 3 d b e d 7 5 4 a 0 5 1 3 
+         m e t r i c s : 
+         -   t y p e :   c o s _ s i m _ p e a r s o n 
+             v a l u e :   8 3 . 0 2 3 0 5 9 7 6 0 3 6 2 7 
+         -   t y p e :   c o s _ s i m _ s p e a r m a n 
+             v a l u e :   8 4 . 9 3 3 4 4 4 9 9 3 1 8 8 6 4 
+         -   t y p e :   e u c l i d e a n _ p e a r s o n 
+             v a l u e :   8 4 . 2 3 7 5 4 7 4 3 4 3 1 1 4 1 
+         -   t y p e :   e u c l i d e a n _ s p e a r m a n 
+             v a l u e :   8 5 . 0 9 7 0 7 3 7 6 5 9 7 0 9 9 
+         -   t y p e :   m a n h a t t a n _ p e a r s o n 
+             v a l u e :   8 4 . 0 4 3 2 5 1 6 0 9 8 7 7 6 3 
+         -   t y p e :   m a n h a t t a n _ s p e a r m a n 
+             v a l u e :   8 4 . 8 9 3 5 3 0 7 1 3 3 9 9 0 9 
+     -   t a s k : 
+             t y p e :   S T S 
+         d a t a s e t : 
+             t y p e :   m t e b / s t s 1 7 - c r o s s l i n g u a l - s t s 
+             n a m e :   M T E B   S T S 1 7   ( e n - e n ) 
+             c o n f i g :   e n - e n 
+             s p l i t :   t e s t 
+             r e v i s i o n :   a f 5 e 6 f b 8 4 5 0 0 1 e c f 4 1 f 4 c 1 e 0 3 3 c e 9 2 1 9 3 9 a 2 a 6 8 d 
+         m e t r i c s : 
+         -   t y p e :   c o s _ s i m _ p e a r s o n 
+             v a l u e :   8 6 . 7 5 6 2 0 8 2 4 5 6 3 9 2 1 
+         -   t y p e :   c o s _ s i m _ s p e a r m a n 
+             v a l u e :   8 7 . 1 5 0 6 5 5 1 3 7 0 6 3 9 8 
+         -   t y p e :   e u c l i d e a n _ p e a r s o n 
+             v a l u e :   8 8 . 2 6 2 8 1 5 3 3 6 3 3 5 2 1 
+         -   t y p e :   e u c l i d e a n _ s p e a r m a n 
+             v a l u e :   8 7 . 5 1 9 6 3 7 3 8 6 4 3 9 8 3 
+         -   t y p e :   m a n h a t t a n _ p e a r s o n 
+             v a l u e :   8 8 . 2 5 5 9 9 2 6 7 6 1 8 0 6 5 
+         -   t y p e :   m a n h a t t a n _ s p e a r m a n 
+             v a l u e :   8 7 . 5 8 0 4 8 7 3 6 0 4 7 4 8 3 
+     -   t a s k : 
+             t y p e :   S T S 
+         d a t a s e t : 
+             t y p e :   m t e b / s t s 2 2 - c r o s s l i n g u a l - s t s 
+             n a m e :   M T E B   S T S 2 2   ( e n ) 
+             c o n f i g :   e n 
+             s p l i t :   t e s t 
+             r e v i s i o n :   6 d 1 b a 4 7 1 6 4 1 7 4 a 4 9 6 b 7 f a 5 d 3 5 6 9 d a e 2 6 a 6 8 1 3 b 8 0 
+         m e t r i c s : 
+         -   t y p e :   c o s _ s i m _ p e a r s o n 
+             v a l u e :   6 4 . 7 4 6 4 5 3 1 9 1 9 5 1 3 7 
+         -   t y p e :   c o s _ s i m _ s p e a r m a n 
+             v a l u e :   6 5 . 2 9 9 9 6 3 2 5 0 3 7 2 1 4 
+         -   t y p e :   e u c l i d e a n _ p e a r s o n 
+             v a l u e :   6 7 . 0 4 2 9 7 7 9 4 0 8 6 4 4 3 
+         -   t y p e :   e u c l i d e a n _ s p e a r m a n 
+             v a l u e :   6 5 . 4 3 8 4 1 7 2 6 6 9 4 3 4 3 
+         -   t y p e :   m a n h a t t a n _ p e a r s o n 
+             v a l u e :   6 7 . 3 9 4 5 9 9 5 5 6 9 0 9 0 4 
+         -   t y p e :   m a n h a t t a n _ s p e a r m a n 
+             v a l u e :   6 5 . 9 2 8 6 4 7 0 4 4 1 3 6 5 1 
+     -   t a s k : 
+             t y p e :   S T S 
+         d a t a s e t : 
+             t y p e :   m t e b / s t s b e n c h m a r k - s t s 
+             n a m e :   M T E B   S T S B e n c h m a r k 
+             c o n f i g :   d e f a u l t 
+             s p l i t :   t e s t 
+             r e v i s i o n :   b 0 f d d b 5 6 e d 7 8 0 4 8 f a 8 b 9 0 3 7 3 c 8 a 3 c f c 3 7 b 6 8 4 8 3 1 
+         m e t r i c s : 
+         -   t y p e :   c o s _ s i m _ p e a r s o n 
+             v a l u e :   8 4 . 3 1 2 9 1 0 2 0 2 7 0 8 0 1 
+         -   t y p e :   c o s _ s i m _ s p e a r m a n 
+             v a l u e :   8 5 . 8 6 4 7 3 7 3 8 6 8 8 0 6 8 
+         -   t y p e :   e u c l i d e a n _ p e a r s o n 
+             v a l u e :   8 5 . 6 5 5 3 7 2 7 5 0 6 4 1 5 2 
+         -   t y p e :   e u c l i d e a n _ s p e a r m a n 
+             v a l u e :   8 6 . 1 3 0 8 7 4 5 4 2 0 9 6 4 2 
+         -   t y p e :   m a n h a t t a n _ p e a r s o n 
+             v a l u e :   8 5 . 4 3 9 4 6 9 5 5 0 4 7 6 0 9 
+         -   t y p e :   m a n h a t t a n _ s p e a r m a n 
+             v a l u e :   8 5 . 9 1 5 6 8 1 7 5 3 4 4 9 1 6 
+     -   t a s k : 
+             t y p e :   R e r a n k i n g 
+         d a t a s e t : 
+             t y p e :   m t e b / s c i d o c s - r e r a n k i n g 
+             n a m e :   M T E B   S c i D o c s R R 
+             c o n f i g :   d e f a u l t 
+             s p l i t :   t e s t 
+             r e v i s i o n :   d 3 c 5 e 1 f c 0 b 8 5 5 a b 6 0 9 7 b f 1 c d a 0 4 d d 7 3 9 4 7 d 7 c a a b 
+         m e t r i c s : 
+         -   t y p e :   m a p 
+             v a l u e :   8 5 . 9 3 7 9 8 1 1 8 3 5 0 6 9 5 
+         -   t y p e :   m r r 
+             v a l u e :   9 5 . 9 3 5 3 6 2 7 4 9 0 8 8 2 4 
+     -   t a s k : 
+             t y p e :   R e t r i e v a l 
+         d a t a s e t : 
+             t y p e :   s c i f a c t 
+             n a m e :   M T E B   S c i F a c t 
+             c o n f i g :   d e f a u l t 
+             s p l i t :   t e s t 
+             r e v i s i o n :   N o n e 
+         m e t r i c s : 
+         -   t y p e :   m a p _ a t _ 1 
+             v a l u e :   5 7 . 5 9 4 
+         -   t y p e :   m a p _ a t _ 1 0 
+             v a l u e :   6 6 . 8 1 8 9 9 9 9 9 9 9 9 9 9 9 
+         -   t y p e :   m a p _ a t _ 1 0 0 
+             v a l u e :   6 7 . 3 6 8 
+         -   t y p e :   m a p _ a t _ 1 0 0 0 
+             v a l u e :   6 7 . 4 
+         -   t y p e :   m a p _ a t _ 3 
+             v a l u e :   6 4 . 0 6 1 
+         -   t y p e :   m a p _ a t _ 5 
+             v a l u e :   6 5 . 4 7 
+         -   t y p e :   m r r _ a t _ 1 
+             v a l u e :   6 0 . 6 6 7 
+         -   t y p e :   m r r _ a t _ 1 0 
+             v a l u e :   6 8 . 2 1 9 
+         -   t y p e :   m r r _ a t _ 1 0 0 
+             v a l u e :   6 8 . 6 5 5 
+         -   t y p e :   m r r _ a t _ 1 0 0 0 
+             v a l u e :   6 8 . 6 8 4 
+         -   t y p e :   m r r _ a t _ 3 
+             v a l u e :   6 6 . 2 2 2 0 0 0 0 0 0 0 0 0 0 1 
+         -   t y p e :   m r r _ a t _ 5 
+             v a l u e :   6 7 . 2 8 9 
+         -   t y p e :   n d c g _ a t _ 1 
+             v a l u e :   6 0 . 6 6 7 
+         -   t y p e :   n d c g _ a t _ 1 0 
+             v a l u e :   7 1 . 2 7 5 
+         -   t y p e :   n d c g _ a t _ 1 0 0 
+             v a l u e :   7 3 . 6 4 2 
+         -   t y p e :   n d c g _ a t _ 1 0 0 0 
+             v a l u e :   7 4 . 3 7 3 
+         -   t y p e :   n d c g _ a t _ 3 
+             v a l u e :   6 6 . 5 2 1 
+         -   t y p e :   n d c g _ a t _ 5 
+             v a l u e :   6 8 . 5 8 1 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 
+             v a l u e :   6 0 . 6 6 7 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 0 
+             v a l u e :   9 . 4 3 3 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 0 0 
+             v a l u e :   1 . 0 6 9 9 9 9 9 9 9 9 9 9 9 9 9 8 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 0 0 0 
+             v a l u e :   0 . 1 1 2 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+         -   t y p e :   p r e c i s i o n _ a t _ 3 
+             v a l u e :   2 5 . 5 5 6 
+         -   t y p e :   p r e c i s i o n _ a t _ 5 
+             v a l u e :   1 6 . 8 
+         -   t y p e :   r e c a l l _ a t _ 1 
+             v a l u e :   5 7 . 5 9 4 
+         -   t y p e :   r e c a l l _ a t _ 1 0 
+             v a l u e :   8 3 . 6 2 2 
+         -   t y p e :   r e c a l l _ a t _ 1 0 0 
+             v a l u e :   9 4 . 1 6 7 
+         -   t y p e :   r e c a l l _ a t _ 1 0 0 0 
+             v a l u e :   9 9 . 6 6 7 
+         -   t y p e :   r e c a l l _ a t _ 3 
+             v a l u e :   7 0 . 6 4 3 9 9 9 9 9 9 9 9 9 9 9 
+         -   t y p e :   r e c a l l _ a t _ 5 
+             v a l u e :   7 5 . 9 8 3 
+     -   t a s k : 
+             t y p e :   P a i r C l a s s i f i c a t i o n 
+         d a t a s e t : 
+             t y p e :   m t e b / s p r i n t d u p l i c a t e q u e s t i o n s - p a i r c l a s s i f i c a t i o n 
+             n a m e :   M T E B   S p r i n t D u p l i c a t e Q u e s t i o n s 
+             c o n f i g :   d e f a u l t 
+             s p l i t :   t e s t 
+             r e v i s i o n :   d 6 6 b d 1 f 7 2 a f 7 6 6 a 5 c c 4 b 0 c a 5 e 0 0 c 1 6 2 f 8 9 e 8 c c 4 6 
+         m e t r i c s : 
+         -   t y p e :   c o s _ s i m _ a c c u r a c y 
+             v a l u e :   9 9 . 8 5 8 4 1 5 8 4 1 5 8 4 1 6 
+         -   t y p e :   c o s _ s i m _ a p 
+             v a l u e :   9 6 . 6 6 9 9 6 1 4 2 3 1 4 3 4 2 
+         -   t y p e :   c o s _ s i m _ f 1 
+             v a l u e :   9 2 . 8 3 2 0 8 0 2 0 0 5 0 1 2 5 
+         -   t y p e :   c o s _ s i m _ p r e c i s i o n 
+             v a l u e :   9 3 . 0 6 5 3 2 6 6 3 3 1 6 5 8 4 
+         -   t y p e :   c o s _ s i m _ r e c a l l 
+             v a l u e :   9 2 . 6 0 0 0 0 0 0 0 0 0 0 0 0 1 
+         -   t y p e :   d o t _ a c c u r a c y 
+             v a l u e :   9 9 . 8 5 8 4 1 5 8 4 1 5 8 4 1 6 
+         -   t y p e :   d o t _ a p 
+             v a l u e :   9 6 . 6 7 7 5 3 0 7 6 7 6 5 7 6 
+         -   t y p e :   d o t _ f 1 
+             v a l u e :   9 2 . 6 9 2 8 9 7 2 9 1 7 7 3 1 2 
+         -   t y p e :   d o t _ p r e c i s i o n 
+             v a l u e :   9 4 . 7 7 5 3 3 9 6 0 2 9 2 5 8 1 
+         -   t y p e :   d o t _ r e c a l l 
+             v a l u e :   9 0 . 7 
+         -   t y p e :   e u c l i d e a n _ a c c u r a c y 
+             v a l u e :   9 9 . 8 6 1 3 8 6 1 3 8 6 1 3 8 7 
+         -   t y p e :   e u c l i d e a n _ a p 
+             v a l u e :   9 6 . 6 3 3 8 4 5 4 4 0 3 1 0 8 
+         -   t y p e :   e u c l i d e a n _ f 1 
+             v a l u e :   9 2 . 9 2 2 1 4 3 5 7 9 3 7 3 1 1 
+         -   t y p e :   e u c l i d e a n _ p r e c i s i o n 
+             v a l u e :   9 3 . 9 6 7 2 8 0 1 6 3 5 9 9 1 8 
+         -   t y p e :   e u c l i d e a n _ r e c a l l 
+             v a l u e :   9 1 . 9 
+         -   t y p e :   m a n h a t t a n _ a c c u r a c y 
+             v a l u e :   9 9 . 8 6 2 3 7 6 2 3 7 6 2 3 7 6 
+         -   t y p e :   m a n h a t t a n _ a p 
+             v a l u e :   9 6 . 6 0 3 7 0 4 4 9 6 4 5 0 5 3 
+         -   t y p e :   m a n h a t t a n _ f 1 
+             v a l u e :   9 2 . 9 1 1 7 7 9 7 0 4 2 3 2 5 3 
+         -   t y p e :   m a n h a t t a n _ p r e c i s i o n 
+             v a l u e :   9 4 . 7 9 7 0 8 6 3 6 8 3 6 6 3 
+         -   t y p e :   m a n h a t t a n _ r e c a l l 
+             v a l u e :   9 1 . 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+         -   t y p e :   m a x _ a c c u r a c y 
+             v a l u e :   9 9 . 8 6 2 3 7 6 2 3 7 6 2 3 7 6 
+         -   t y p e :   m a x _ a p 
+             v a l u e :   9 6 . 6 7 7 5 3 0 7 6 7 6 5 7 6 
+         -   t y p e :   m a x _ f 1 
+             v a l u e :   9 2 . 9 2 2 1 4 3 5 7 9 3 7 3 1 1 
+     -   t a s k : 
+             t y p e :   C l u s t e r i n g 
+         d a t a s e t : 
+             t y p e :   m t e b / s t a c k e x c h a n g e - c l u s t e r i n g 
+             n a m e :   M T E B   S t a c k E x c h a n g e C l u s t e r i n g 
+             c o n f i g :   d e f a u l t 
+             s p l i t :   t e s t 
+             r e v i s i o n :   6 c b c 1 f 7 b 2 b c 0 6 2 2 f 2 e 3 9 d 2 c 7 7 f a 5 0 2 9 0 9 7 4 8 c 2 5 9 
+         m e t r i c s : 
+         -   t y p e :   v _ m e a s u r e 
+             v a l u e :   6 0 . 7 7 9 7 7 0 5 8 6 9 5 1 9 8 
+     -   t a s k : 
+             t y p e :   C l u s t e r i n g 
+         d a t a s e t : 
+             t y p e :   m t e b / s t a c k e x c h a n g e - c l u s t e r i n g - p 2 p 
+             n a m e :   M T E B   S t a c k E x c h a n g e C l u s t e r i n g P 2 P 
+             c o n f i g :   d e f a u l t 
+             s p l i t :   t e s t 
+             r e v i s i o n :   8 1 5 c a 4 6 b 2 6 2 2 c e c 3 3 c c a f c 3 7 3 5 d 5 7 2 c 2 6 6 e f d b 4 4 
+         m e t r i c s : 
+         -   t y p e :   v _ m e a s u r e 
+             v a l u e :   3 5 . 2 7 2 5 2 7 2 5 3 5 6 3 8 
+     -   t a s k : 
+             t y p e :   R e r a n k i n g 
+         d a t a s e t : 
+             t y p e :   m t e b / s t a c k o v e r f l o w d u p q u e s t i o n s - r e r a n k i n g 
+             n a m e :   M T E B   S t a c k O v e r f l o w D u p Q u e s t i o n s 
+             c o n f i g :   d e f a u l t 
+             s p l i t :   t e s t 
+             r e v i s i o n :   e 1 8 5 f b e 3 2 0 c 7 2 8 1 0 6 8 9 f c 5 8 4 8 e b 6 1 1 4 e 1 e f 5 e c 6 9 
+         m e t r i c s : 
+         -   t y p e :   m a p 
+             v a l u e :   5 3 . 6 4 0 5 2 4 6 6 3 6 2 1 2 5 
+         -   t y p e :   m r r 
+             v a l u e :   5 4 . 5 3 3 0 6 7 0 1 4 6 8 4 6 5 4 
+     -   t a s k : 
+             t y p e :   S u m m a r i z a t i o n 
+         d a t a s e t : 
+             t y p e :   m t e b / s u m m e v a l 
+             n a m e :   M T E B   S u m m E v a l 
+             c o n f i g :   d e f a u l t 
+             s p l i t :   t e s t 
+             r e v i s i o n :   c d a 1 2 a d 7 6 1 5 e d c 3 6 2 d b f 2 5 a 0 0 f d d 6 1 d 3 b 1 e a f 9 3 c 
+         m e t r i c s : 
+         -   t y p e :   c o s _ s i m _ p e a r s o n 
+             v a l u e :   3 0 . 6 7 7 6 2 4 2 1 9 2 0 6 5 7 8 
+         -   t y p e :   c o s _ s i m _ s p e a r m a n 
+             v a l u e :   3 0 . 1 2 1 3 6 8 5 1 8 1 2 3 4 4 7 
+         -   t y p e :   d o t _ p e a r s o n 
+             v a l u e :   3 0 . 6 9 8 7 0 0 8 8 0 4 1 6 0 8 
+         -   t y p e :   d o t _ s p e a r m a n 
+             v a l u e :   2 9 . 6 1 2 8 4 9 2 7 0 9 3 7 5 1 
+     -   t a s k : 
+             t y p e :   R e t r i e v a l 
+         d a t a s e t : 
+             t y p e :   t r e c - c o v i d 
+             n a m e :   M T E B   T R E C C O V I D 
+             c o n f i g :   d e f a u l t 
+             s p l i t :   t e s t 
+             r e v i s i o n :   N o n e 
+         m e t r i c s : 
+         -   t y p e :   m a p _ a t _ 1 
+             v a l u e :   0 . 2 2 
+         -   t y p e :   m a p _ a t _ 1 0 
+             v a l u e :   1 . 8 5 5 
+         -   t y p e :   m a p _ a t _ 1 0 0 
+             v a l u e :   9 . 8 8 5 
+         -   t y p e :   m a p _ a t _ 1 0 0 0 
+             v a l u e :   2 3 . 4 1 6 9 9 9 9 9 9 9 9 9 9 9 8 
+         -   t y p e :   m a p _ a t _ 3 
+             v a l u e :   0 . 6 3 7 
+         -   t y p e :   m a p _ a t _ 5 
+             v a l u e :   1 . 0 2 4 
+         -   t y p e :   m r r _ a t _ 1 
+             v a l u e :   8 8 . 0 
+         -   t y p e :   m r r _ a t _ 1 0 
+             v a l u e :   9 3 . 0 6 7 
+         -   t y p e :   m r r _ a t _ 1 0 0 
+             v a l u e :   9 3 . 0 6 7 
+         -   t y p e :   m r r _ a t _ 1 0 0 0 
+             v a l u e :   9 3 . 0 6 7 
+         -   t y p e :   m r r _ a t _ 3 
+             v a l u e :   9 2 . 6 6 7 
+         -   t y p e :   m r r _ a t _ 5 
+             v a l u e :   9 3 . 0 6 7 
+         -   t y p e :   n d c g _ a t _ 1 
+             v a l u e :   8 2 . 0 
+         -   t y p e :   n d c g _ a t _ 1 0 
+             v a l u e :   7 5 . 8 9 9 
+         -   t y p e :   n d c g _ a t _ 1 0 0 
+             v a l u e :   5 5 . 1 1 5 
+         -   t y p e :   n d c g _ a t _ 1 0 0 0 
+             v a l u e :   4 8 . 3 6 8 
+         -   t y p e :   n d c g _ a t _ 3 
+             v a l u e :   7 9 . 7 0 4 
+         -   t y p e :   n d c g _ a t _ 5 
+             v a l u e :   7 8 . 3 9 6 9 9 9 9 9 9 9 9 9 9 9 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 
+             v a l u e :   8 8 . 0 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 0 
+             v a l u e :   7 9 . 6 0 0 0 0 0 0 0 0 0 0 0 0 1 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 0 0 
+             v a l u e :   5 6 . 0 6 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 0 0 0 
+             v a l u e :   2 1 . 2 0 6 
+         -   t y p e :   p r e c i s i o n _ a t _ 3 
+             v a l u e :   8 4 . 6 6 7 
+         -   t y p e :   p r e c i s i o n _ a t _ 5 
+             v a l u e :   8 3 . 2 
+         -   t y p e :   r e c a l l _ a t _ 1 
+             v a l u e :   0 . 2 2 
+         -   t y p e :   r e c a l l _ a t _ 1 0 
+             v a l u e :   2 . 0 7 8 
+         -   t y p e :   r e c a l l _ a t _ 1 0 0 
+             v a l u e :   1 3 . 2 9 7 
+         -   t y p e :   r e c a l l _ a t _ 1 0 0 0 
+             v a l u e :   4 4 . 9 7 9 
+         -   t y p e :   r e c a l l _ a t _ 3 
+             v a l u e :   0 . 6 6 8 9 9 9 9 9 9 9 9 9 9 9 9 9 
+         -   t y p e :   r e c a l l _ a t _ 5 
+             v a l u e :   1 . 1 0 6 
+     -   t a s k : 
+             t y p e :   R e t r i e v a l 
+         d a t a s e t : 
+             t y p e :   w e b i s - t o u c h e 2 0 2 0 
+             n a m e :   M T E B   T o u c h e 2 0 2 0 
+             c o n f i g :   d e f a u l t 
+             s p l i t :   t e s t 
+             r e v i s i o n :   N o n e 
+         m e t r i c s : 
+         -   t y p e :   m a p _ a t _ 1 
+             v a l u e :   2 . 2 5 8 
+         -   t y p e :   m a p _ a t _ 1 0 
+             v a l u e :   1 0 . 4 3 9 
+         -   t y p e :   m a p _ a t _ 1 0 0 
+             v a l u e :   1 6 . 8 9 
+         -   t y p e :   m a p _ a t _ 1 0 0 0 
+             v a l u e :   1 8 . 4 0 7 9 9 9 9 9 9 9 9 9 9 9 8 
+         -   t y p e :   m a p _ a t _ 3 
+             v a l u e :   5 . 6 6 8 
+         -   t y p e :   m a p _ a t _ 5 
+             v a l u e :   7 . 7 1 8 
+         -   t y p e :   m r r _ a t _ 1 
+             v a l u e :   3 2 . 6 5 3 
+         -   t y p e :   m r r _ a t _ 1 0 
+             v a l u e :   5 1 . 1 5 9 
+         -   t y p e :   m r r _ a t _ 1 0 0 
+             v a l u e :   5 1 . 7 1 4 0 0 0 0 0 0 0 0 0 0 0 6 
+         -   t y p e :   m r r _ a t _ 1 0 0 0 
+             v a l u e :   5 1 . 7 1 4 0 0 0 0 0 0 0 0 0 0 0 6 
+         -   t y p e :   m r r _ a t _ 3 
+             v a l u e :   4 7 . 9 5 9 
+         -   t y p e :   m r r _ a t _ 5 
+             v a l u e :   5 0 . 4 0 7 9 9 9 9 9 9 9 9 9 9 9 4 
+         -   t y p e :   n d c g _ a t _ 1 
+             v a l u e :   2 9 . 5 9 2 0 0 0 0 0 0 0 0 0 0 0 2 
+         -   t y p e :   n d c g _ a t _ 1 0 
+             v a l u e :   2 6 . 0 3 7 
+         -   t y p e :   n d c g _ a t _ 1 0 0 
+             v a l u e :   3 7 . 9 2 4 
+         -   t y p e :   n d c g _ a t _ 1 0 0 0 
+             v a l u e :   4 9 . 1 2 6 9 9 9 9 9 9 9 9 9 9 9 5 
+         -   t y p e :   n d c g _ a t _ 3 
+             v a l u e :   3 0 . 6 3 1 9 9 9 9 9 9 9 9 9 9 9 8 
+         -   t y p e :   n d c g _ a t _ 5 
+             v a l u e :   2 8 . 5 7 1 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 
+             v a l u e :   3 2 . 6 5 3 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 0 
+             v a l u e :   2 2 . 8 5 7 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 0 0 
+             v a l u e :   7 . 7 5 4 9 9 9 9 9 9 9 9 9 9 9 9 
+         -   t y p e :   p r e c i s i o n _ a t _ 1 0 0 0 
+             v a l u e :   1 . 5 2 9 
+         -   t y p e :   p r e c i s i o n _ a t _ 3 
+             v a l u e :   3 4 . 0 1 4 
+         -   t y p e :   p r e c i s i o n _ a t _ 5 
+             v a l u e :   2 9 . 7 9 6 
+         -   t y p e :   r e c a l l _ a t _ 1 
+             v a l u e :   2 . 2 5 8 
+         -   t y p e :   r e c a l l _ a t _ 1 0 
+             v a l u e :   1 6 . 5 5 4 
+         -   t y p e :   r e c a l l _ a t _ 1 0 0 
+             v a l u e :   4 8 . 4 3 9 
+         -   t y p e :   r e c a l l _ a t _ 1 0 0 0 
+             v a l u e :   8 2 . 8 0 4 9 9 9 9 9 9 9 9 9 9 9 
+         -   t y p e :   r e c a l l _ a t _ 3 
+             v a l u e :   7 . 2 8 3 
+         -   t y p e :   r e c a l l _ a t _ 5 
+             v a l u e :   1 0 . 7 3 2 
+     -   t a s k : 
+             t y p e :   C l a s s i f i c a t i o n 
+         d a t a s e t : 
+             t y p e :   m t e b / t o x i c _ c o n v e r s a t i o n s _ 5 0 k 
+             n a m e :   M T E B   T o x i c C o n v e r s a t i o n s C l a s s i f i c a t i o n 
+             c o n f i g :   d e f a u l t 
+             s p l i t :   t e s t 
+             r e v i s i o n :   d 7 c 0 d e 2 7 7 7 d a 3 5 d 6 a a e 2 2 0 0 a 6 2 c 6 e 0 e 5 a f 3 9 7 c 4 c 
+         m e t r i c s : 
+         -   t y p e :   a c c u r a c y 
+             v a l u e :   6 9 . 8 8 5 8 
+         -   t y p e :   a p 
+             v a l u e :   1 3 . 8 3 5 6 8 4 1 4 4 3 6 2 1 0 9 
+         -   t y p e :   f 1 
+             v a l u e :   5 3 . 8 0 3 3 5 1 6 9 3 2 4 4 5 8 6 
+     -   t a s k : 
+             t y p e :   C l a s s i f i c a t i o n 
+         d a t a s e t : 
+             t y p e :   m t e b / t w e e t _ s e n t i m e n t _ e x t r a c t i o n 
+             n a m e :   M T E B   T w e e t S e n t i m e n t E x t r a c t i o n C l a s s i f i c a t i o n 
+             c o n f i g :   d e f a u l t 
+             s p l i t :   t e s t 
+             r e v i s i o n :   d 6 0 4 5 1 7 c 8 1 c a 9 1 f e 1 6 a 2 4 4 d 1 2 4 8 f c 0 2 1 f 9 e c e e 7 a 
+         m e t r i c s : 
+         -   t y p e :   a c c u r a c y 
+       

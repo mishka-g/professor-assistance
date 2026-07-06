@@ -1,0 +1,2 @@
+[console_scripts]
+profa = professor_assistant.cli:app
