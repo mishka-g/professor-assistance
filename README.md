@@ -63,7 +63,10 @@ profa ingest            # parse + chunk + embed into local Chroma
 # 2. (optional but recommended) build the style card
 profa style             # writes config/style_card.md
 
-# 3. Review a student draft
+# 3. (for a quick test) generate a throwaway student draft
+python scripts/make_sample_draft.py   # -> data/drafts/sample_draft.docx
+
+# 4. Review a student draft
 profa review data/drafts/sample_draft.docx
 #    -> output/sample_draft/reviewed.docx
 #    -> output/sample_draft/suggestions.md
@@ -71,8 +74,11 @@ profa review data/drafts/sample_draft.docx
 profa info              # show config + corpus status
 ```
 
-The repo ships with a synthetic corpus and a sample draft so it runs out of the box.
-Replace them with the professor's real papers when ready.
+Nothing under `data/` is committed to the repo — it is git-ignored to keep research
+private. To try it out, add papers to `data/corpus/` (for local testing we used real
+open-access arXiv preprints of the professor's work) and generate a throwaway student
+draft with `python scripts/make_sample_draft.py`. Swap in the professor's real papers
+and student drafts when ready.
 
 ## Project layout
 

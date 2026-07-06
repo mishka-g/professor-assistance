@@ -7,5 +7,5 @@ These are used only to *ground* the reviewer (terminology, phrasing, conventions
 - This folder is git-ignored — private research stays on the machine.
 - After adding files, run: `profa ingest`
 
-> Sample synthetic papers (`sample_*.txt`) are included so the PoC runs out of the box.
-> Delete them once you add the real corpus.
+> For local testing we used real open-access arXiv preprints of the professor's papers
+> (kept out of git). Replace them with his full published set when ready.
