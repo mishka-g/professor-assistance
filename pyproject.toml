@@ -1,0 +1,31 @@
+[project]
+name = "professor-assistant"
+version = "0.1.0"
+description = "A grounded scientific-writing reviewer for a professor, built on his own published corpus (RAG)."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "typer>=0.12",
+    "pydantic>=2.7",
+    "pydantic-settings>=2.3",
+    "python-dotenv>=1.0",
+    "chromadb>=0.5.5",
+    "sentence-transformers>=3.0",
+    "pymupdf>=1.24",
+    "python-docx>=1.1.2",
+    "requests>=2.31",
+    "openai>=1.40",
+]
+
+[project.optional-dependencies]
+anthropic = ["anthropic>=0.34"]
+
+[project.scripts]
+profa = "professor_assistant.cli:app"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]

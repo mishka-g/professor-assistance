@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# Environment / secrets
+.env
+
+# Private research data (NEVER commit the professor's papers or student drafts)
+data/corpus/*
+data/drafts/*
+data/examples/*
+!data/**/.gitkeep
+!data/**/README.md
+
+# Generated artifacts
+storage/
+output/
+config/style_card.md
+
+# OS
+.DS_Store
