@@ -146,7 +146,12 @@ Return the JSON object described in the system prompt."""
 # Orchestration
 # --------------------------------------------------------------------------- #
 
-def review_draft(draft_path: Path) -> dict:
+def analyze_draft(draft_path: Path) -> dict:
+    """Review a draft and return structured results (no files written).
+
+    Each suggestion is given a stable `id` ("<section>-<n>") so a UI can track
+    per-suggestion accept/skip decisions.
+    """
     settings = get_settings()
     draft_path = Path(draft_path)
     if not draft_path.exists():
@@ -161,6 +166,7 @@ def review_draft(draft_path: Path) -> dict:
     section_reviews: list[dict] = []
     suggestions_by_index: dict[int, list[dict]] = {}
     context_used = 0
+    section_i = 0
 
     for section in sections:
         if section.stype in SKIP_TYPES or not section.paras:
@@ -175,13 +181,33 @@ def review_draft(draft_path: Path) -> dict:
         else:
             suggestions = llm_review_section(section, context, style_card)
 
-        for s in suggestions:
+        for n, s in enumerate(suggestions):
+            s["id"] = f"{section_i}-{n}"
             idx = int(s.get("para_index", section.paras[0][0] if section.paras else 0))
             suggestions_by_index.setdefault(idx, []).append(s)
 
         section_reviews.append(
             {"title": section.title, "stype": section.stype, "suggestions": suggestions}
         )
+        section_i += 1
+
+    return {
+        "draft_path": draft_path,
+        "backend": backend,
+        "context_used": context_used,
+        "section_reviews": section_reviews,
+        "suggestions_by_index": suggestions_by_index,
+    }
+
+
+def review_draft(draft_path: Path) -> dict:
+    settings = get_settings()
+    result = analyze_draft(draft_path)
+    draft_path = result["draft_path"]
+    section_reviews = result["section_reviews"]
+    suggestions_by_index = result["suggestions_by_index"]
+    backend = result["backend"]
+    context_used = result["context_used"]
 
     stem = draft_path.stem
     out_dir = settings.output_dir / stem

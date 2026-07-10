@@ -6,6 +6,8 @@ generation backend is selected.
 
 from __future__ import annotations
 
+from functools import lru_cache
+
 import chromadb
 from chromadb.api.models.Collection import Collection
 from chromadb.utils import embedding_functions
@@ -13,20 +15,25 @@ from chromadb.utils import embedding_functions
 from .config import get_settings
 
 
+@lru_cache
 def get_embedding_function():
-    """Local embedding function. Prefer the configured sentence-transformers model;
-    fall back to Chroma's bundled ONNX model if it can't be loaded (e.g. no torch)."""
+    """Local embedding function (cached once per process).
+
+    Default: Chroma's built-in ONNX model (all-MiniLM) — no torch, quiet, works everywhere.
+    Opt in to sentence-transformers (EMBEDDING_MODEL) with USE_ST_EMBEDDER=1 where torch works.
+    """
     settings = get_settings()
-    try:
-        return embedding_functions.SentenceTransformerEmbeddingFunction(
-            model_name=settings.embedding_model
-        )
-    except Exception as exc:  # pragma: no cover - environment dependent
-        print(
-            f"[store] Could not load '{settings.embedding_model}' "
-            f"({exc}); falling back to Chroma default embeddings."
-        )
-        return embedding_functions.DefaultEmbeddingFunction()
+    if settings.use_st_embedder:
+        try:
+            return embedding_functions.SentenceTransformerEmbeddingFunction(
+                model_name=settings.embedding_model
+            )
+        except Exception as exc:  # pragma: no cover - environment dependent
+            print(
+                f"[store] Could not load '{settings.embedding_model}' "
+                f"({exc}); using Chroma's built-in embeddings instead."
+            )
+    return embedding_functions.DefaultEmbeddingFunction()
 
 
 def get_client() -> chromadb.ClientAPI:

@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>professor-assistant</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink:   { 950: "#0b0a08", 900: "#12100c", 850: "#1a1611", 800: "#231d16", 700: "#332a20" },
+            paper: "#ece4d6",
+            muted: "#8f8676",
+            amber: "#e0a13c",
+            pen:   "#ff5f56",
+          },
+          fontFamily: {
+            display: ['Fraunces', 'Georgia', 'serif'],
+            sans: ['"Instrument Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.26.4/babel.min.js"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: #0b0a08;
+      /* banker's-lamp glow, warm, top-left */
+      background-image:
+        radial-gradient(60rem 40rem at 15% -10%, rgba(224,161,60,0.14), transparent 60%),
+        radial-gradient(50rem 40rem at 100% 0%, rgba(224,161,60,0.05), transparent 55%);
+      background-attachment: fixed;
+    }
+    /* subtle film grain over everything */
+    body::before {
+      content: "";
+      position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      opacity: 0.05; mix-blend-mode: soft-light;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+    #root { position: relative; z-index: 1; }
+    .fade-in { animation: fade 0.35s ease both; }
+    @keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+    .amber-glow { box-shadow: 0 0 0 1px rgba(224,161,60,0.35), 0 12px 40px -12px rgba(224,161,60,0.45); }
+    ::selection { background: rgba(224,161,60,0.3); }
+  </style>
+</head>
+<body class="h-full font-sans text-paper antialiased">
+  <div id="root" class="min-h-full"></div>
+
+  <script type="text/babel" data-presets="react">
+const { useState, useEffect, useCallback, useRef } = React;
+
+const SEVERITY = {
+  content:     { dot: "#ff5f56", text: "#ff8b84", label: "content" },
+  terminology: { dot: "#e0a13c", text: "#efc478", label: "terminology" },
+  structure:   { dot: "#5ec8c8", text: "#8fe0e0", label: "structure" },
+  clarity:     { dot: "#8fd694", text: "#a9e2ad", label: "clarity" },
+  language:    { dot: "#8f8676", text: "#b3aa9c", label: "language" },
+};
+const sev = (s) => SEVERITY[s] || SEVERITY.language;
+
+async function getStatus() {
+  const r = await fetch("/api/status");
+  return r.json();
+}
+async function postFile(url, file) {
+  const fd = new FormData();
+  fd.append("file", file);
+  const r = await fetch(url, { method: "POST", body: fd });
+  if (!r.ok) throw new Error((await r.json().catch(() => ({}))).detail || `Request failed (${r.status})`);
+  return r.json();
+}
+async function getJSON(url) {
+  const r = await fetch(url);
+  return r.json();
+}
+async function delJSON(url) {
+  const r = await fetch(url, { method: "DELETE" });
+  if (!r.ok) throw new Error((await r.json().catch(() => ({}))).detail || `Request failed (${r.status})`);
+  return r.json();
+}
+
+// ---------------------------------------------------------------- StatusBar
+function Pill({ children, on }) {
+  return (
+    <span className={`inline-flex items-center gap-2 rounded-full border px-3 py-1 font-mono text-[11px] tracking-tight
+      ${on ? "border-amber/40 bg-amber/10 text-amber" : "border-ink-700 bg-ink-850 text-muted"}`}>
+      {children}
+    </span>
+  );
+}
+
+function StatusBar({ status }) {
+  if (!status) return null;
+  return (
+    <div className="flex flex-wrap items-center gap-2">
+      <Pill on={!!status.corpus_files}>
+        <span className="h-1.5 w-1.5 rounded-full bg-current" />
+        {status.corpus_files} paper{status.corpus_files === 1 ? "" : "s"} · {status.corpus_chunks} chunks
+      </Pill>
+      <Pill on={status.style_card}>{status.style_card ? "style card ✓" : "no style card"}</Pill>
+      <Pill on={status.backend !== "mock"}>backend: {status.backend}</Pill>
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------- UploadZone
+function UploadZone({ accept, hint, busy, onFile }) {
+  const [over, setOver] = useState(false);
+  const inputRef = useRef();
+  const pick = (files) => { if (files && files[0]) onFile(files[0]); };
+  return (
+    <div
+      onDragOver={(e) => { e.preventDefault(); setOver(true); }}
+      onDragLeave={() => setOver(false)}
+      onDrop={(e) => { e.preventDefault(); setOver(false); pick(e.dataTransfer.files); }}
+      onClick={() => !busy && inputRef.current.click()}
+      className={`group cursor-pointer rounded-2xl border border-dashed p-12 text-center transition-all
+        ${over ? "border-amber bg-amber/[0.06]" : "border-ink-700 bg-ink-900/60 hover:border-amber/60 hover:bg-ink-850"}
+        ${busy ? "pointer-events-none opacity-60" : ""}`}
+    >
+      <input ref={inputRef} type="file" accept={accept} className="hidden" onChange={(e) => pick(e.target.files)} />
+      <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full border border-amber/30 bg-amber/10 text-amber transition group-hover:scale-105">
+        {busy ? <Spinner /> : <ArrowUp />}
+      </div>
+      <p className="font-display text-lg text-paper">{busy ? "Working…" : "Drop it here, or click to browse"}</p>
+      <p className="mt-1 font-mono text-xs text-muted">{hint}</p>
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------- Review flow
+function SuggestionCard({ s, decision, onDecide }) {
+  const c = sev(s.severity);
+  const accepted = decision === "accept";
+  return (
+    <div className={`fade-in rounded-xl border bg-ink-850 p-4 transition-colors
+      ${accepted ? "border-amber/50" : decision === "skip" ? "border-ink-800 opacity-55" : "border-ink-700 hover:border-ink-700/80"}`}>
+      <div className="flex items-start gap-3">
+        <span className="mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full" style={{ backgroundColor: c.dot, boxShadow: `0 0 10px ${c.dot}66` }} />
+        <div className="min-w-0 flex-1">
+          <span className="font-mono text-[10px] uppercase tracking-[0.15em]" style={{ color: c.text }}>{c.label}</span>
+          <p className="mt-1 text-sm text-paper/80">{s.reason}</p>
+          {(s.original || s.suggestion) && (
+            <div className="mt-2.5 space-y-1.5 text-sm">
+              {s.original && (
+                <p className="font-mono text-[13px] text-pen/80 line-through decoration-pen/60 decoration-2">{s.original}</p>
+              )}
+              {s.suggestion
+                ? <p className="font-mono text-[13px] text-amber">{s.suggestion}</p>
+                : <p className="text-xs italic text-muted">flag only — nothing to auto-apply</p>}
+            </div>
+          )}
+        </div>
+        <div className="flex shrink-0 flex-col gap-1.5">
+          <button
+            onClick={() => onDecide(accepted ? null : "accept")}
+            disabled={!s.suggestion}
+            title={!s.suggestion ? "No rewrite to apply" : ""}
+            className={`rounded-lg px-3 py-1.5 font-mono text-[11px] font-medium transition disabled:cursor-not-allowed disabled:opacity-30
+              ${accepted ? "bg-amber text-ink-950" : "border border-amber/40 text-amber hover:bg-amber/10"}`}
+          >accept</button>
+          <button
+            onClick={() => onDecide(decision === "skip" ? null : "skip")}
+            className={`rounded-lg px-3 py-1.5 font-mono text-[11px] font-medium transition
+              ${decision === "skip" ? "bg-ink-700 text-paper" : "border border-ink-700 text-muted hover:text-paper hover:border-ink-700"}`}
+          >skip</button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ReviewPanel() {
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState(null);
+  const [result, setResult] = useState(null);
+  const [decisions, setDecisions] = useState({});
+  const [exporting, setExporting] = useState(false);
+
+  const review = async (file) => {
+    setBusy(true); setError(null); setResult(null); setDecisions({});
+    try { setResult(await postFile("/api/review", file)); }
+    catch (e) { setError(e.message); }
+    finally { setBusy(false); }
+  };
+
+  const accepted = Object.entries(decisions).filter(([, d]) => d === "accept").map(([id]) => id);
+  const total = result ? result.sections.reduce((n, s) => n + s.suggestions.length, 0) : 0;
+
+  const exportDoc = async () => {
+    setExporting(true);
+    try {
+      const r = await fetch(`/api/review/${result.review_id}/export`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ accepted_ids: accepted }),
+      });
+      if (!r.ok) throw new Error("Export failed");
+      const blob = await r.blob();
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = `${result.draft.replace(/\.docx$/, "")}-accepted.docx`;
+      a.click();
+      URL.revokeObjectURL(a.href);
+    } catch (e) { setError(e.message); }
+    finally { setExporting(false); }
+  };
+
+  return (
+    <div className="space-y-6">
+      <UploadZone accept=".docx" hint="student draft · .docx only" busy={busy} onFile={review} />
+      {error && <Banner tone="error">{error}</Banner>}
+
+      {result && (
+        <div className="space-y-7 fade-in">
+          <p className="font-mono text-xs text-muted">
+            <span className="text-paper">{result.draft}</span> — {total} suggestion{total === 1 ? "" : "s"} · {result.sections.length} sections · {result.meta.context_used} corpus passages
+          </p>
+
+          {total === 0 && <Banner tone="ok">No changes suggested — the draft reads clean.</Banner>}
+
+          {result.sections.map((section) => (
+            <section key={section.title}>
+              <h3 className="mb-3 flex items-baseline gap-3 border-b border-ink-800 pb-2">
+                <span className="font-display text-xl text-paper">{section.title}</span>
+                <span className="font-mono text-[11px] text-muted">{section.stype} · {section.suggestions.length}</span>
+              </h3>
+              <div className="space-y-2">
+                {section.suggestions.map((s) => (
+                  <SuggestionCard key={s.id} s={s} decision={decisions[s.id] || null}
+                    onDecide={(d) => setDecisions((prev) => ({ ...prev, [s.id]: d }))} />
+                ))}
+                {section.suggestions.length === 0 && <p className="font-mono text-xs italic text-muted">no changes suggested</p>}
+              </div>
+            </section>
+          ))}
+        </div>
+      )}
+
+      {result && total > 0 && (
+        <div className="sticky bottom-4 flex items-center justify-between gap-4 rounded-2xl border border-ink-700 bg-ink-900/80 px-5 py-3 backdrop-blur amber-glow">
+          <span className="font-mono text-sm text-paper">
+            <span className="text-amber">{accepted.length}</span> / {total} accepted
+          </span>
+          <button onClick={exportDoc} disabled={exporting}
+            className="inline-flex items-center gap-2 rounded-xl bg-amber px-5 py-2.5 text-sm font-semibold text-ink-950 transition hover:brightness-110 disabled:opacity-60">
+            {exporting ? <Spinner dark /> : <Download />} Export accepted .docx
+          </button>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------- Corpus flow
+function PaperRow({ paper, removing, onRemove }) {
+  const [open, setOpen] = useState(false);
+  const [chunks, setChunks] = useState(null);
+
+  const toggle = async () => {
+    const next = !open;
+    setOpen(next);
+    if (next && chunks === null) {
+      try {
+        const r = await getJSON(`/api/corpus/${encodeURIComponent(paper.name)}/chunks`);
+        setChunks(r.chunks);
+      } catch { setChunks([]); }
+    }
+  };
+
+  return (
+    <div className="rounded-xl border border-ink-700 bg-ink-850">
+      <div className="flex items-center gap-3 px-4 py-3">
+        <button onClick={toggle} className="flex min-w-0 flex-1 items-center gap-3 text-left">
+          <Chevron open={open} />
+          <FileIcon />
+          <div className="min-w-0">
+            <p className="truncate font-mono text-sm text-paper">{paper.name}</p>
+            <p className="font-mono text-[11px] text-muted">{paper.chunks} chunks · {paper.size_kb} KB</p>
+          </div>
+        </button>
+        <button
+          onClick={onRemove}
+          disabled={removing}
+          title="Remove from corpus"
+          className="shrink-0 rounded-lg border border-ink-700 px-2.5 py-1 font-mono text-[11px] text-muted transition hover:border-pen/50 hover:text-pen disabled:opacity-40"
+        >{removing ? "…" : "remove"}</button>
+      </div>
+      {open && (
+        <div className="space-y-2 border-t border-ink-800 px-4 py-3">
+          {chunks === null && <p className="font-mono text-[11px] text-muted">loading chunks…</p>}
+          {chunks && chunks.length === 0 && <p className="font-mono text-[11px] text-muted">no chunks indexed</p>}
+          {(chunks || []).map((c) => (
+            <div key={c.index} className="rounded-lg bg-ink-900 p-3">
+              <p className="mb-1 font-mono text-[10px] uppercase tracking-[0.12em] text-amber">chunk {c.index} · {c.chars} chars</p>
+              <p className="text-[13px] leading-relaxed text-paper/70">{c.text}</p>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function RagInspector() {
+  const [q, setQ] = useState("");
+  const [busy, setBusy] = useState(false);
+  const [res, setRes] = useState(null);
+
+  const run = async (e) => {
+    if (e) e.preventDefault();
+    if (!q.trim()) return;
+    setBusy(true);
+    try { setRes(await getJSON(`/api/search?q=${encodeURIComponent(q)}&k=5`)); }
+    catch { setRes({ passages: [] }); }
+    finally { setBusy(false); }
+  };
+
+  return (
+    <section>
+      <h3 className="mb-3 flex items-baseline gap-3 border-b border-ink-800 pb-2">
+        <span className="font-display text-xl text-paper">Preview retrieval</span>
+        <span className="font-mono text-[11px] text-muted">see what the reviewer pulls, live</span>
+      </h3>
+      <form onSubmit={run} className="flex gap-2">
+        <input
+          value={q}
+          onChange={(e) => setQ(e.target.value)}
+          placeholder="type a sentence or topic…"
+          className="min-w-0 flex-1 rounded-xl border border-ink-700 bg-ink-900 px-4 py-2.5 font-mono text-sm text-paper placeholder:text-muted focus:border-amber/60 focus:outline-none"
+        />
+        <button type="submit" disabled={busy || !q.trim()}
+          className="inline-flex items-center gap-2 rounded-xl bg-amber px-4 py-2.5 text-sm font-semibold text-ink-950 transition hover:brightness-110 disabled:opacity-50">
+          {busy ? <Spinner dark /> : <SearchIcon />} search
+        </button>
+      </form>
+
+      {res && (
+        <div className="mt-4 space-y-2 fade-in">
+          {res.passages.length === 0 && (
+            <p className="font-mono text-xs italic text-muted">no matches — is the corpus empty?</p>
+          )}
+          {res.passages.map((p, i) => (
+            <div key={i} className="rounded-xl border border-ink-700 bg-ink-850 p-4">
+              <div className="mb-2 flex items-center gap-3">
+                <span className="font-mono text-[11px] text-amber">{p.source}</span>
+                <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-ink-800">
+                  <div className="h-full rounded-full bg-amber" style={{ width: `${Math.max(4, p.score * 100)}%` }} />
+                </div>
+                <span className="font-mono text-[11px] text-muted">{(p.score * 100).toFixed(0)}%</span>
+              </div>
+              <p className="text-[13px] leading-relaxed text-paper/70">{p.text.slice(0, 320)}{p.text.length > 320 ? "…" : ""}</p>
+            </div>
+          ))}
+        </div>
+      )}
+    </section>
+  );
+}
+
+function CorpusPanel({ onStatus }) {
+  const [busy, setBusy] = useState(false);
+  const [msg, setMsg] = useState(null);
+  const [error, setError] = useState(null);
+  const [papers, setPapers] = useState(null);
+  const [removing, setRemoving] = useState(null);
+
+  useEffect(() => { getJSON("/api/corpus").then((r) => setPapers(r.papers)).catch(() => setPapers([])); }, []);
+
+  const add = async (file) => {
+    setBusy(true); setError(null); setMsg(null);
+    try {
+      const res = await postFile("/api/corpus", file);
+      setMsg(`Added “${res.added}”. Corpus now holds ${res.status.corpus_files} paper(s), ${res.status.corpus_chunks} chunks.`);
+      setPapers(res.papers);
+      onStatus(res.status);
+    } catch (e) { setError(e.message); }
+    finally { setBusy(false); }
+  };
+
+  const remove = async (name) => {
+    setRemoving(name); setError(null); setMsg(null);
+    try {
+      const res = await delJSON(`/api/corpus/${encodeURIComponent(name)}`);
+      setPapers(res.papers);
+      onStatus(res.status);
+    } catch (e) { setError(e.message); }
+    finally { setRemoving(null); }
+  };
+
+  return (
+    <div className="space-y-6">
+      <UploadZone accept=".pdf,.docx,.txt,.md" hint="one of your papers · pdf · docx · txt · md" busy={busy} onFile={add} />
+      {error && <Banner tone="error">{error}</Banner>}
+      {msg && <Banner tone="ok">{msg}</Banner>}
+
+      <section>
+        <h3 className="mb-3 flex items-baseline gap-3 border-b border-ink-800 pb-2">
+          <span className="font-display text-xl text-paper">Your corpus</span>
+          <span className="font-mono text-[11px] text-muted">
+            {papers === null ? "loading…" : `${papers.length} paper${papers.length === 1 ? "" : "s"}`}
+          </span>
+        </h3>
+        {papers && papers.length === 0 && (
+          <p className="font-mono text-xs italic text-muted">No papers yet — add one above.</p>
+        )}
+        <div className="space-y-2">
+          {(papers || []).map((p) => (
+            <PaperRow key={p.name} paper={p} removing={removing === p.name} onRemove={() => remove(p.name)} />
+          ))}
+        </div>
+      </section>
+
+      <RagInspector />
+
+      <p className="text-sm leading-relaxed text-muted">
+        Every paper you add becomes reference material. Future reviews borrow your terminology and phrasing from it — never inventing.
+      </p>
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------- Shell
+function Banner({ tone, children }) {
+  const tones = {
+    error: "border-pen/40 bg-pen/10 text-pen",
+    ok: "border-amber/40 bg-amber/10 text-amber",
+  };
+  return <div className={`fade-in rounded-xl border px-4 py-3 text-sm ${tones[tone]}`}>{children}</div>;
+}
+
+function Tab({ active, onClick, index, title, subtitle }) {
+  return (
+    <button onClick={onClick}
+      className={`flex-1 rounded-2xl border p-5 text-left transition-all
+        ${active ? "border-amber/60 bg-ink-850 amber-glow" : "border-ink-800 bg-ink-900/40 hover:border-ink-700"}`}>
+      <span className={`font-mono text-[11px] ${active ? "text-amber" : "text-muted"}`}>0{index}</span>
+      <p className={`mt-1 font-display text-lg ${active ? "text-paper" : "text-paper/70"}`}>{title}</p>
+      <p className="mt-0.5 text-sm text-muted">{subtitle}</p>
+    </button>
+  );
+}
+
+function App() {
+  const [status, setStatus] = useState(null);
+  const [mode, setMode] = useState("review");
+
+  useEffect(() => { getStatus().then(setStatus).catch(() => {}); }, []);
+  const refreshStatus = useCallback((s) => setStatus(s), []);
+
+  return (
+    <div className="mx-auto max-w-3xl px-5 py-12">
+      <header className="mb-10">
+        <p className="font-mono text-xs tracking-[0.25em] text-amber">// GROUNDED REVIEWER</p>
+        <h1 className="mt-2 font-display text-5xl font-semibold leading-none tracking-tight text-paper">
+          professor<span className="text-amber">.</span>assistant
+        </h1>
+        <p className="mt-3 max-w-md font-display text-lg italic text-muted">
+          It marks up a student's draft in <span className="text-paper">your</span> voice — and never touches the science.
+        </p>
+        <div className="mt-5"><StatusBar status={status} /></div>
+      </header>
+
+      <div className="mb-9 flex gap-3">
+        <Tab active={mode === "review"} index={1} onClick={() => setMode("review")}
+             title="Improve a draft" subtitle="review, accept, export a clean .docx" />
+        <Tab active={mode === "corpus"} index={2} onClick={() => setMode("corpus")}
+             title="Add my paper" subtitle="teach it more of your voice" />
+      </div>
+
+      {mode === "review" ? <ReviewPanel /> : <CorpusPanel onStatus={refreshStatus} />}
+
+      <footer className="mt-20 border-t border-ink-800 pt-5 text-center font-mono text-[11px] text-muted">
+        embeddings &amp; vector store run locally · suggestions grounded in your corpus
+      </footer>
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------- Icons
+function ArrowUp() { return <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>; }
+function Download() { return <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>; }
+function FileIcon() { return <svg className="shrink-0 text-amber/70" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>; }
+function Chevron({ open }) { return <svg className={`shrink-0 text-muted transition-transform ${open ? "rotate-90" : ""}`} width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6"/></svg>; }
+function SearchIcon() { return <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>; }
+function Spinner({ dark }) { return <svg className="animate-spin" width="18" height="18" viewBox="0 0 24 24" fill="none" style={{ color: dark ? "#0b0a08" : "#e0a13c" }}><circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="3" opacity="0.25"/><path d="M12 2a10 10 0 0 1 10 10" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/></svg>; }
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+  </script>
+</body>
+</html>
