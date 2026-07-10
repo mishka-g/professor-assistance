@@ -18,12 +18,16 @@ class Settings(BaseSettings):
         extra="ignore",
     )
 
-    # Generation backend: mock | local | api
+    # Generation backend: mock | local | gemini | api
     model_backend: str = "mock"
 
     # Local (Ollama)
     local_llm: str = "qwen2.5:14b-instruct"
     ollama_host: str = "http://localhost:11434"
+
+    # Gemini (free cloud — Google AI Studio)
+    gemini_api_key: str | None = None
+    gemini_model: str = "gemini-2.0-flash"
 
     # API path
     api_provider: str = "openai"  # openai | anthropic

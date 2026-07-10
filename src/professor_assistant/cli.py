@@ -20,6 +20,7 @@ def info() -> None:
     s = get_settings()
     typer.echo(f"Backend        : {s.model_backend}")
     typer.echo(f"Local LLM      : {s.local_llm}  (host: {s.ollama_host})")
+    typer.echo(f"Gemini         : {s.gemini_model}")
     typer.echo(f"API            : {s.api_provider} / {s.api_model}")
     typer.echo(f"Embeddings     : {s.embedding_model}")
     typer.echo(f"Corpus dir     : {s.corpus_dir}")
@@ -89,7 +90,7 @@ def review(
     typer.echo(f"  - {result['suggestions_md']}")
     if result["backend"] == "mock":
         typer.secho(
-            "Note: mock backend uses heuristics only. Set MODEL_BACKEND=local or api "
+            "Note: mock backend uses heuristics only. Set MODEL_BACKEND=local, gemini, or api "
             "for full LLM-quality, corpus-grounded review.",
             fg=typer.colors.YELLOW,
         )

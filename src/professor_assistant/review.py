@@ -75,7 +75,7 @@ def heuristic_review(section: Section) -> list[dict]:
 
 
 # --------------------------------------------------------------------------- #
-# LLM reviewer (used when MODEL_BACKEND=local|api)
+# LLM reviewer (used when MODEL_BACKEND=local|gemini|api)
 # --------------------------------------------------------------------------- #
 
 def _extract_json(text: str) -> dict:
