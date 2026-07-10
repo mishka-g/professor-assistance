@@ -160,6 +160,39 @@ def write_reviewed_docx(
     doc.save(str(out_path))
 
 
+def write_accepted_docx(
+    draft_path: Path,
+    accepted_by_index: dict[int, list[dict]],
+    out_path: Path,
+) -> None:
+    """Write a clean copy of the draft with only the accepted rewrites applied in place.
+
+    A suggestion is applied only when it has a concrete `suggestion` text whose `original`
+    is found in the target paragraph. Anything else is left out — no notes are inserted.
+    """
+    doc = Document(str(draft_path))
+    paragraphs = list(doc.paragraphs)
+
+    for idx, suggestions in accepted_by_index.items():
+        if idx >= len(paragraphs):
+            continue
+        para = paragraphs[idx]
+        text = para.text
+        for s in suggestions:
+            original = (s.get("original") or "").strip()
+            suggestion = (s.get("suggestion") or "").strip()
+            if not suggestion or not original or original not in text:
+                continue
+            text = text.replace(original, suggestion, 1)
+        if text != para.text:
+            for run in list(para.runs):
+                run._element.getparent().remove(run._element)
+            para.add_run(text)
+
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    doc.save(str(out_path))
+
+
 def write_suggestions_md(
     draft_name: str,
     section_reviews: list[dict],

@@ -32,6 +32,10 @@ class Settings(BaseSettings):
     anthropic_api_key: str | None = None
 
     # Retrieval / embeddings
+    # By default we use Chroma's built-in ONNX embedder: no torch, quiet, works everywhere.
+    # Set USE_ST_EMBEDDER=1 to use sentence-transformers with EMBEDDING_MODEL instead
+    # (better model, but needs a working torch — e.g. Apple Silicon).
+    use_st_embedder: bool = False
     embedding_model: str = "BAAI/bge-small-en-v1.5"
     retrieval_top_k: int = 5
     chunk_size: int = 1200
