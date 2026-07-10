@@ -24,7 +24,7 @@ Confirm these quickly, then use defaults for anything unspecified.
 
 | Option | Values | Default | Effect |
 |---|---|---|---|
-| `backend` | `mock` \| `local` \| `api` | value in `.env` (currently `local`) | Reviewer engine: `mock`=free heuristics, `local`=Ollama (free, private), `api`=paid (best) |
+| `backend` | `mock` \| `local` \| `gemini` \| `api` | value in `.env` (currently `local`) | Reviewer engine: `mock`=free heuristics, `local`=Ollama (free, private), `gemini`=Google AI free tier, `api`=paid (best) |
 | `rebuild-corpus` | yes \| no | no | Re-run `profa ingest` first (only after adding/removing papers in `data/corpus/`) |
 | `rebuild-style` | yes \| no | no | Re-run `profa style` first to refresh `config/style_card.md` |
 
@@ -57,9 +57,11 @@ MODEL_BACKEND=<backend> profa style
 MODEL_BACKEND=<backend> profa review "<source-document.docx>"
 ```
 
-- `local`/`api` runs call an LLM and can take ~1–2 min per 5 sections on the local 14B model.
+- `local`/`gemini`/`api` runs call an LLM and can take ~1–2 min per 5 sections on the local 14B model.
 - If `backend=local` fails to reach Ollama, tell the user to run `ollama serve` and
-  `ollama pull qwen2.5:14b-instruct`, or fall back to `backend=mock`.
+  `ollama pull qwen2.5:14b-instruct`, or fall back to `backend=gemini` or `backend=mock`.
+- If `backend=gemini` fails, check that `GEMINI_API_KEY` is set (free key from
+  https://aistudio.google.com/apikey) and that free-tier quota is available.
 
 4. **Present the result.** Read `output/<name>/suggestions.md` and summarize:
    - total suggestions + counts per severity,
@@ -70,5 +72,6 @@ MODEL_BACKEND=<backend> profa review "<source-document.docx>"
 ## Notes
 
 - `content` severity = flagged for human review; nothing was changed.
-- For unpublished drafts prefer `local` (fully private) or `mock`; use `api` for best quality.
+- For unpublished drafts prefer `local` (fully private) or `mock`; use `gemini` on Intel Macs
+  without Ollama; use `api` for best quality.
 - See the repo `README.md` for setup and backend configuration.

@@ -22,7 +22,8 @@ text generation has a choice of backend (set `MODEL_BACKEND` in `.env`):
 | Backend | Quality | Cost | Privacy | Use for |
 |---|---|---|---|---|
 | `mock`  | heuristic only | free | fully local | testing the pipeline (default) |
-| `local` | good | free | fully local (Ollama) | iterating |
+| `local` | good | free | fully local (Ollama) | iterating on Apple Silicon |
+| `gemini`| good | free tier | draft sent to Google | Intel Macs / machines without Ollama |
 | `api`   | best | paid | sent to provider | the real drafts |
 
 ## Setup (M1/M2 Mac, Python 3.11+)
@@ -31,16 +32,27 @@ text generation has a choice of backend (set `MODEL_BACKEND` in `.env`):
 python3.13 -m venv .venv
 source .venv/bin/activate
 pip install -e .
-cp .env.example .env            # edit if using local/api backend
+cp .env.example .env            # edit if using local/gemini/api backend
 ```
 
-### Optional: local LLM (free, private)
+### Optional: local LLM (free, private — Apple Silicon recommended)
 
 ```bash
 brew install ollama
 ollama serve &
 ollama pull qwen2.5:14b-instruct
 # then set MODEL_BACKEND=local in .env
+```
+
+### Optional: Gemini (free cloud — good for Intel Macs without Ollama)
+
+Embeddings and RAG still run locally; only the final text generation uses Google's API.
+Get a free API key at [Google AI Studio](https://aistudio.google.com/apikey), then set in `.env`:
+
+```
+MODEL_BACKEND=gemini
+GEMINI_API_KEY=your-key-here
+# GEMINI_MODEL=gemini-2.0-flash   # optional, this is the default
 ```
 
 ### Optional: API (best quality, for the real drafts)
@@ -128,9 +140,9 @@ uploads); these are already declared, so no extra install step is needed.
 ### Review quality
 
 The default `mock` backend uses regex heuristics only (free, fully local). For real,
-corpus-grounded suggestions, set `MODEL_BACKEND=local` (Ollama) or `api` in `.env` — see
-[Privacy & cost](#privacy--cost--pluggable-backend) above. The active backend is shown in the
-app's status bar.
+corpus-grounded suggestions, set `MODEL_BACKEND=local` (Ollama), `gemini` (free Google AI),
+or `api` in `.env` — see [Privacy & cost](#privacy--cost--pluggable-backend) above. The active
+backend is shown in the app's status bar.
 
 ### Troubleshooting
 
@@ -144,13 +156,13 @@ app's status bar.
 This repo ships a Cursor **skill** and **command** that wrap the CLI for easy demos:
 
 - Command: type `/review-paper` in Cursor, give it a `.docx` source document, pick a
-  backend (`mock` / `local` / `api`), and it runs the review and summarizes the results.
+  backend (`mock` / `local` / `gemini` / `api`), and it runs the review and summarizes the results.
 - Skill: `.cursor/skills/review-paper/` — requires a source document and exposes the
   `backend`, `rebuild-corpus`, and `rebuild-style` options.
 
 ## Roadmap
 
-- v1 (this): inline review notes + redline, mock/local/api backends, web UI.
+- v1 (this): inline review notes + redline, mock/local/gemini/api backends, web UI.
 - v2: native Word tracked-changes / margin comments; Google Docs API; before/after learning.
 - v3: Optional hosted vector store: opt-in `.env` flag to swap the local Chroma store in
   `store.py` for a hosted vector DB (e.g. Chroma Cloud / Qdrant Cloud), keeping local as the

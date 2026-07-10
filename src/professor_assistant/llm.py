@@ -1,7 +1,8 @@
-"""Unified LLM interface with a pluggable backend: api | local | mock.
+"""Unified LLM interface with a pluggable backend: api | local | gemini | mock.
 
 - api   : the professor's paid subscription (OpenAI or Anthropic) - best quality.
 - local : Ollama on this Mac - free, private.
+- gemini: Google AI Studio free tier - free cloud, good for Intel Macs without Ollama.
 - mock  : no model; callers fall back to heuristics. `complete()` is unavailable.
 """
 
@@ -25,9 +26,12 @@ def complete(system: str, user: str, *, temperature: float = 0.2, max_tokens: in
         return _complete_api(system, user, temperature, max_tokens)
     if b == "local":
         return _complete_ollama(system, user, temperature, max_tokens)
+    if b == "gemini":
+        return _complete_gemini(system, user, temperature, max_tokens)
     raise BackendUnavailable(
-        "MODEL_BACKEND=mock has no text model. Set MODEL_BACKEND=local (Ollama) "
-        "or MODEL_BACKEND=api (with an API key) for LLM-quality output."
+        "MODEL_BACKEND=mock has no text model. Set MODEL_BACKEND=local (Ollama), "
+        "MODEL_BACKEND=gemini (free Google AI), or MODEL_BACKEND=api (with an API key) "
+        "for LLM-quality output."
     )
 
 
@@ -68,6 +72,38 @@ def _complete_api(system: str, user: str, temperature: float, max_tokens: int) -
         return "".join(block.text for block in resp.content if block.type == "text")
 
     raise BackendUnavailable(f"Unknown API_PROVIDER: {provider}")
+
+
+def _complete_gemini(system: str, user: str, temperature: float, max_tokens: int) -> str:
+    settings = get_settings()
+    if not settings.gemini_api_key:
+        raise BackendUnavailable(
+            "GEMINI_API_KEY is not set. Get a free key at https://aistudio.google.com/apikey"
+        )
+    from google import genai
+    from google.genai import types
+
+    client = genai.Client(api_key=settings.gemini_api_key)
+    try:
+        resp = client.models.generate_content(
+            model=settings.gemini_model,
+            contents=user,
+            config=types.GenerateContentConfig(
+                system_instruction=system,
+                temperature=temperature,
+                max_output_tokens=max_tokens,
+            ),
+        )
+    except Exception as exc:
+        msg = str(exc)
+        hint = (
+            "Check your free-tier quota at https://aistudio.google.com/apikey "
+            "or try again later."
+        )
+        if "429" in msg or "RESOURCE_EXHAUSTED" in msg.upper():
+            raise BackendUnavailable(f"Gemini rate limit exceeded. {hint}") from exc
+        raise BackendUnavailable(f"Gemini request failed ({exc}). {hint}") from exc
+    return resp.text or ""
 
 
 def _complete_ollama(system: str, user: str, temperature: float, max_tokens: int) -> str:
