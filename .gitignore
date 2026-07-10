@@ -9,8 +9,7 @@ venv/
 # Environment / secrets
 .env
 
-# Private research data (NEVER commit the professor's papers or student drafts)
-data/corpus/*
+# Private research data (student drafts stay local)
 data/drafts/*
 data/examples/*
 !data/**/.gitkeep
@@ -19,7 +18,6 @@ data/examples/*
 # Generated artifacts
 storage/
 output/
-config/style_card.md
 
 # OS
 .DS_Store

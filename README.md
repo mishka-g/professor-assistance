@@ -74,17 +74,15 @@ profa review data/drafts/sample_draft.docx
 profa info              # show config + corpus status
 ```
 
-Nothing under `data/` is committed to the repo — it is git-ignored to keep research
-private. To try it out, add papers to `data/corpus/` (for local testing we used real
-open-access arXiv preprints of the professor's work) and generate a throwaway student
-draft with `python scripts/make_sample_draft.py`. Swap in the professor's real papers
-and student drafts when ready.
+Student drafts and before/after examples under `data/drafts/` and `data/examples/` stay
+git-ignored. The corpus ships with public arXiv preprints so you can run `profa ingest`
+right away; add more of the professor's published work as needed.
 
 ## Project layout
 
 ```
 config/style_card.md          # extracted "how he writes" guide (generated)
-data/corpus/                  # his published papers (private, git-ignored)
+data/corpus/                  # published papers (public arXiv preprints included)
 data/drafts/                  # student drafts to review (private)
 data/examples/                # before/after edited pairs (optional, high value)
 prompts/                      # reviewer + section + style prompts
