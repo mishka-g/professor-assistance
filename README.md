@@ -162,8 +162,11 @@ This repo ships a Cursor **skill** and **command** that wrap the CLI for easy de
 
 ## Roadmap
 
-- v1 (this): inline review notes + redline, mock/local/gemini/api backends, web UI.
-- v2: native Word tracked-changes / margin comments; Google Docs API; before/after learning.
-- v3: Optional hosted vector store: opt-in `.env` flag to swap the local Chroma store in
-  `store.py` for a hosted vector DB (e.g. Chroma Cloud / Qdrant Cloud), keeping local as the
-  private default. Trade-off: convenience vs. sending the corpus to a third party.
+Full product roadmap for contributors: **[docs/roadmap.md](docs/roadmap.md)**.
+
+Summary:
+
+- **v1 (this):** inline review notes + redline, mock/local/gemini/api backends, web UI.
+- **Next (quality):** demo polish, before/after learning, style grounding, content guards.
+- **Later (parked):** Word tracked-changes / comments, Google Docs, optional hosted vector store,
+  multi-user / SaaS — only after review quality is credible.
