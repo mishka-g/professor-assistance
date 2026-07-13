@@ -23,6 +23,7 @@ dependencies = [
 
 [project.optional-dependencies]
 anthropic = ["anthropic>=0.34"]
+test = ["pytest>=8", "httpx>=0.27"]  # httpx is needed by FastAPI's TestClient
 
 [project.scripts]
 profa = "professor_assistant.cli:app"
