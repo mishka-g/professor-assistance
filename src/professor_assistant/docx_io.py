@@ -165,10 +165,11 @@ def write_accepted_docx(
     accepted_by_index: dict[int, list[dict]],
     out_path: Path,
 ) -> None:
-    """Write a clean copy of the draft with only the accepted rewrites applied in place.
+    """Write a clean copy of the draft with only the accepted edits applied in place.
 
-    A suggestion is applied only when it has a concrete `suggestion` text whose `original`
-    is found in the target paragraph. Anything else is left out — no notes are inserted.
+    Applies a suggestion only when it is `applicable` and its `original` is found in the
+    target paragraph. A non-empty `suggestion` replaces the phrase; an empty one deletes it
+    (tidying an adjacent space). Non-applicable flags are left out — no notes are inserted.
     """
     doc = Document(str(draft_path))
     paragraphs = list(doc.paragraphs)
@@ -179,11 +180,20 @@ def write_accepted_docx(
         para = paragraphs[idx]
         text = para.text
         for s in suggestions:
+            if not s.get("applicable"):
+                continue
             original = (s.get("original") or "").strip()
             suggestion = (s.get("suggestion") or "").strip()
-            if not suggestion or not original or original not in text:
+            if not original or original not in text:
                 continue
-            text = text.replace(original, suggestion, 1)
+            if suggestion:
+                text = text.replace(original, suggestion, 1)
+            else:
+                # deletion: remove the phrase plus one adjacent space where present
+                for variant in (original + " ", " " + original, original):
+                    if variant in text:
+                        text = text.replace(variant, "", 1)
+                        break
         if text != para.text:
             for run in list(para.runs):
                 run._element.getparent().remove(run._element)

@@ -141,9 +141,35 @@ function UploadZone({ accept, hint, busy, onFile }) {
 }
 
 // ---------------------------------------------------------------- Review flow
-function SuggestionCard({ s, decision, onDecide }) {
+// Show the flagged phrase inside its full paragraph. Editable cards strike the phrase
+// (the replacement lives in the input below); read-only flags mark it with a dotted underline.
+function Redline({ paragraph, original, canEdit }) {
+  const mark = original && (canEdit
+    ? <span className="text-pen/90 line-through decoration-pen/60 decoration-2">{original}</span>
+    : <span className="text-amber/90 underline decoration-dotted decoration-amber/50 underline-offset-2">{original}</span>);
+
+  const at = paragraph && original ? paragraph.indexOf(original) : -1;
+  if (at !== -1) {
+    return (
+      <p className="font-mono text-[13px] leading-relaxed text-muted">
+        {paragraph.slice(0, at)}{mark}{paragraph.slice(at + original.length)}
+      </p>
+    );
+  }
+  // Fallback: phrase not locatable verbatim (truncated/paraphrased).
+  return (
+    <div className="space-y-1.5">
+      {paragraph && <p className="font-mono text-[13px] leading-relaxed text-muted">{paragraph}</p>}
+      {original && <p className="font-mono text-[13px]">{mark}</p>}
+    </div>
+  );
+}
+
+function SuggestionCard({ s, decision, onDecide, editValue, onEdit }) {
   const c = sev(s.severity);
   const accepted = decision === "accept";
+  // Editable when the phrase can be spliced back into its paragraph.
+  const canEdit = !!(s.original && s.paragraph && s.paragraph.includes(s.original));
   return (
     <div className={`fade-in rounded-xl border bg-ink-850 p-4 transition-colors
       ${accepted ? "border-amber/50" : decision === "skip" ? "border-ink-800 opacity-55" : "border-ink-700 hover:border-ink-700/80"}`}>
@@ -152,30 +178,44 @@ function SuggestionCard({ s, decision, onDecide }) {
         <div className="min-w-0 flex-1">
           <span className="font-mono text-[10px] uppercase tracking-[0.15em]" style={{ color: c.text }}>{c.label}</span>
           <p className="mt-1 text-sm text-paper/80">{s.reason}</p>
-          {(s.original || s.suggestion) && (
-            <div className="mt-2.5 space-y-1.5 text-sm">
-              {s.original && (
-                <p className="font-mono text-[13px] text-pen/80 line-through decoration-pen/60 decoration-2">{s.original}</p>
-              )}
-              {s.suggestion
-                ? <p className="font-mono text-[13px] text-amber">{s.suggestion}</p>
-                : <p className="text-xs italic text-muted">flag only — nothing to auto-apply</p>}
+          {(s.original || s.paragraph) && (
+            <div className="mt-2.5 text-sm">
+              <Redline paragraph={s.paragraph} original={s.original} canEdit={canEdit} />
+            </div>
+          )}
+          {canEdit && (
+            <div className="mt-2 flex items-center gap-2">
+              <span className="font-mono text-[10px] uppercase tracking-wide text-muted">→</span>
+              <input
+                value={editValue}
+                onChange={(e) => onEdit(e.target.value)}
+                placeholder="replacement — leave empty to delete"
+                className="min-w-0 flex-1 rounded-lg border border-ink-700 bg-ink-900 px-3 py-1.5 font-mono text-[13px] text-amber placeholder:text-muted/70 focus:border-amber/60 focus:outline-none"
+              />
+              {!editValue && <span className="shrink-0 font-mono text-[10px] text-muted">removes “{s.original}”</span>}
             </div>
           )}
         </div>
-        <div className="flex shrink-0 flex-col gap-1.5">
-          <button
-            onClick={() => onDecide(accepted ? null : "accept")}
-            disabled={!s.suggestion}
-            title={!s.suggestion ? "No rewrite to apply" : ""}
-            className={`rounded-lg px-3 py-1.5 font-mono text-[11px] font-medium transition disabled:cursor-not-allowed disabled:opacity-30
-              ${accepted ? "bg-amber text-ink-950" : "border border-amber/40 text-amber hover:bg-amber/10"}`}
-          >accept</button>
-          <button
-            onClick={() => onDecide(decision === "skip" ? null : "skip")}
-            className={`rounded-lg px-3 py-1.5 font-mono text-[11px] font-medium transition
-              ${decision === "skip" ? "bg-ink-700 text-paper" : "border border-ink-700 text-muted hover:text-paper hover:border-ink-700"}`}
-          >skip</button>
+        <div className="flex shrink-0 flex-col items-end gap-1.5">
+          {canEdit ? (
+            <>
+              <button
+                onClick={() => onDecide(accepted ? null : "accept")}
+                className={`rounded-lg px-3 py-1.5 font-mono text-[11px] font-medium transition
+                  ${accepted ? "bg-amber text-ink-950" : "border border-amber/40 text-amber hover:bg-amber/10"}`}
+              >accept</button>
+              <button
+                onClick={() => onDecide(decision === "skip" ? null : "skip")}
+                className={`rounded-lg px-3 py-1.5 font-mono text-[11px] font-medium transition
+                  ${decision === "skip" ? "bg-ink-700 text-paper" : "border border-ink-700 text-muted hover:text-paper hover:border-ink-700"}`}
+              >skip</button>
+            </>
+          ) : (
+            <span title="No auto-fix — a whole-sentence rewrite; edit it in Word"
+              className="rounded-lg border border-ink-700 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wide text-muted whitespace-nowrap">
+              review
+            </span>
+          )}
         </div>
       </div>
     </div>
@@ -187,10 +227,11 @@ function ReviewPanel() {
   const [error, setError] = useState(null);
   const [result, setResult] = useState(null);
   const [decisions, setDecisions] = useState({});
+  const [edits, setEdits] = useState({});   // {id: replacement text}
   const [exporting, setExporting] = useState(false);
 
   const review = async (file) => {
-    setBusy(true); setError(null); setResult(null); setDecisions({});
+    setBusy(true); setError(null); setResult(null); setDecisions({}); setEdits({});
     try { setResult(await postFile("/api/review", file)); }
     catch (e) { setError(e.message); }
     finally { setBusy(false); }
@@ -202,10 +243,17 @@ function ReviewPanel() {
   const exportDoc = async () => {
     setExporting(true);
     try {
+      // The professor's final text per accepted suggestion (edited, or the default suggestion).
+      const suggById = {};
+      result.sections.forEach((sec) => sec.suggestions.forEach((s) => { suggById[s.id] = s; }));
+      const editsPayload = accepted.map((id) => ({
+        id,
+        replacement: id in edits ? edits[id] : (suggById[id]?.suggestion || ""),
+      }));
       const r = await fetch(`/api/review/${result.review_id}/export`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ accepted_ids: accepted }),
+        body: JSON.stringify({ edits: editsPayload }),
       });
       if (!r.ok) throw new Error("Export failed");
       const blob = await r.blob();
@@ -240,7 +288,9 @@ function ReviewPanel() {
               <div className="space-y-2">
                 {section.suggestions.map((s) => (
                   <SuggestionCard key={s.id} s={s} decision={decisions[s.id] || null}
-                    onDecide={(d) => setDecisions((prev) => ({ ...prev, [s.id]: d }))} />
+                    onDecide={(d) => setDecisions((prev) => ({ ...prev, [s.id]: d }))}
+                    editValue={s.id in edits ? edits[s.id] : (s.suggestion || "")}
+                    onEdit={(v) => setEdits((prev) => ({ ...prev, [s.id]: v }))} />
                 ))}
                 {section.suggestions.length === 0 && <p className="font-mono text-xs italic text-muted">no changes suggested</p>}
               </div>

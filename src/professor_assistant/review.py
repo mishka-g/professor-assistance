@@ -43,10 +43,9 @@ def heuristic_review(section: Section) -> list[dict]:
             for m in re.finditer(pattern, text, flags=re.IGNORECASE):
                 original = m.group(0).strip() or text[max(0, m.start() - 15): m.end() + 15]
                 replacement = fix(m)
-                if replacement is None:
-                    suggestion = ""  # flag only, no automatic rewrite
-                else:
-                    suggestion = replacement.strip()
+                # replacement is None -> flag only (verify manually, not auto-applied).
+                # replacement "" -> delete the phrase; non-empty -> replace it. Both applicable.
+                suggestion = "" if replacement is None else replacement.strip()
                 suggestions.append(
                     {
                         "para_index": idx,
@@ -54,6 +53,7 @@ def heuristic_review(section: Section) -> list[dict]:
                         "suggestion": suggestion,
                         "reason": reason,
                         "severity": severity,
+                        "applicable": replacement is not None,
                     }
                 )
                 break  # one hit per pattern per paragraph is enough
@@ -68,6 +68,7 @@ def heuristic_review(section: Section) -> list[dict]:
                         "suggestion": "",
                         "reason": f"Long sentence (~{len(sentence.split())} words); consider splitting.",
                         "severity": "clarity",
+                        "applicable": False,
                     }
                 )
                 break
@@ -137,6 +138,8 @@ Return the JSON object described in the system prompt."""
         s.setdefault("suggestion", "")
         s.setdefault("reason", "")
         s.setdefault("original", "")
+        # A non-empty suggestion is an applicable rewrite; an empty one is a flag to verify.
+        s["applicable"] = bool((s.get("suggestion") or "").strip())
         s["para_index"] = _map_index(section, s.get("original", ""))
         out.append(s)
     return out
@@ -181,9 +184,11 @@ def analyze_draft(draft_path: Path) -> dict:
         else:
             suggestions = llm_review_section(section, context, style_card)
 
+        para_by_idx = dict(section.paras)  # {global_index: paragraph text}
         for n, s in enumerate(suggestions):
             s["id"] = f"{section_i}-{n}"
             idx = int(s.get("para_index", section.paras[0][0] if section.paras else 0))
+            s["paragraph"] = para_by_idx.get(idx, "")
             suggestions_by_index.setdefault(idx, []).append(s)
 
         section_reviews.append(

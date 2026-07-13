@@ -202,6 +202,8 @@ def review(file: UploadFile = File(...)) -> dict:
                     "reason": s.get("reason", ""),
                     "original": s.get("original", ""),
                     "suggestion": s.get("suggestion", ""),
+                    "paragraph": s.get("paragraph", ""),
+                    "applicable": bool(s.get("applicable")),
                 }
                 for s in sr["suggestions"]
             ],
@@ -217,8 +219,13 @@ def review(file: UploadFile = File(...)) -> dict:
     }
 
 
+class Edit(BaseModel):
+    id: str
+    replacement: str = ""  # the final text to substitute for the phrase; "" deletes it
+
+
 class ExportRequest(BaseModel):
-    accepted_ids: list[str]
+    edits: list[Edit]
 
 
 @app.post("/api/review/{review_id}/export")
@@ -227,10 +234,14 @@ def export(review_id: str, req: ExportRequest) -> FileResponse:
     if review is None:
         raise HTTPException(404, "Unknown review id (server may have restarted).")
 
-    accepted = set(req.accepted_ids)
+    # Each accepted edit carries the professor's final replacement text (possibly edited).
+    repl_by_id = {e.id: e.replacement for e in req.edits}
     accepted_by_index: dict[int, list[dict]] = {}
     for idx, suggestions in review["suggestions_by_index"].items():
-        kept = [s for s in suggestions if s.get("id") in accepted]
+        kept = []
+        for s in suggestions:
+            if s.get("id") in repl_by_id:
+                kept.append({**s, "suggestion": repl_by_id[s["id"]], "applicable": True})
         if kept:
             accepted_by_index[idx] = kept
 
