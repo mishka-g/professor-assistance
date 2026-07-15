@@ -239,10 +239,13 @@ def write_suggestions_md(
             lines.append(f"- **[{s.get('severity','language')}]** {s.get('reason','')}")
             orig = s.get("original", "").strip()
             sug = s.get("suggestion", "").strip()
+            grounded = [g for g in (s.get("grounded_in") or []) if g]
             if orig:
                 lines.append(f"  - original: `{orig}`")
             if sug:
                 lines.append(f"  - suggested: `{sug}`")
+            if grounded:
+                lines.append(f"  - grounded in: {', '.join(grounded)}")
         lines.append("")
 
     out_path.parent.mkdir(parents=True, exist_ok=True)

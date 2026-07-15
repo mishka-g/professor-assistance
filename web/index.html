@@ -101,16 +101,36 @@ function Pill({ children, on }) {
   );
 }
 
+function backendHint(backend, recommended) {
+  const rec = recommended || "gemini";
+  if (backend === "mock") {
+    return `heuristic only — set MODEL_BACKEND=${rec} in .env for quality demos`;
+  }
+  if (backend === rec) return "recommended for quality demos (free tier)";
+  if (backend === "local") return "Ollama — free & private (offline alternative)";
+  if (backend === "api") return "paid API — best quality";
+  return null;
+}
+
 function StatusBar({ status }) {
   if (!status) return null;
+  const quality = status.backend && status.backend !== "mock";
+  const hint = backendHint(status.backend, status.recommended_demo_backend);
   return (
-    <div className="flex flex-wrap items-center gap-2">
-      <Pill on={!!status.corpus_files}>
-        <span className="h-1.5 w-1.5 rounded-full bg-current" />
-        {status.corpus_files} paper{status.corpus_files === 1 ? "" : "s"} · {status.corpus_chunks} chunks
-      </Pill>
-      <Pill on={status.style_card}>{status.style_card ? "style card ✓" : "no style card"}</Pill>
-      <Pill on={status.backend !== "mock"}>backend: {status.backend}</Pill>
+    <div className="space-y-2">
+      <div className="flex flex-wrap items-center gap-2">
+        <Pill on={!!status.corpus_files}>
+          <span className="h-1.5 w-1.5 rounded-full bg-current" />
+          {status.corpus_files} paper{status.corpus_files === 1 ? "" : "s"} · {status.corpus_chunks} chunks
+        </Pill>
+        <Pill on={status.style_card}>{status.style_card ? "style card ✓" : "no style card"}</Pill>
+        <Pill on={quality}>backend: {status.backend}</Pill>
+      </div>
+      {hint && (
+        <p className={`font-mono text-[11px] ${quality ? "text-muted" : "text-amber/90"}`}>
+          {hint}
+        </p>
+      )}
     </div>
   );
 }
@@ -170,6 +190,7 @@ function SuggestionCard({ s, decision, onDecide, editValue, onEdit }) {
   const accepted = decision === "accept";
   // Editable when the phrase can be spliced back into its paragraph.
   const canEdit = !!(s.original && s.paragraph && s.paragraph.includes(s.original));
+  const groundedIn = (s.grounded_in || []).filter(Boolean);
   return (
     <div className={`fade-in rounded-xl border bg-ink-850 p-4 transition-colors
       ${accepted ? "border-amber/50" : decision === "skip" ? "border-ink-800 opacity-55" : "border-ink-700 hover:border-ink-700/80"}`}>
@@ -182,6 +203,11 @@ function SuggestionCard({ s, decision, onDecide, editValue, onEdit }) {
             <div className="mt-2.5 text-sm">
               <Redline paragraph={s.paragraph} original={s.original} canEdit={canEdit} />
             </div>
+          )}
+          {groundedIn.length > 0 && (
+            <p className="mt-2 truncate font-mono text-[11px] text-muted" title={groundedIn.join(" · ")}>
+              <span className="text-amber/80">grounded in:</span> {groundedIn.join(" · ")}
+            </p>
           )}
           {canEdit && (
             <div className="mt-2 flex items-center gap-2">
@@ -274,8 +300,16 @@ function ReviewPanel() {
       {result && (
         <div className="space-y-7 fade-in">
           <p className="font-mono text-xs text-muted">
-            <span className="text-paper">{result.draft}</span> — {total} suggestion{total === 1 ? "" : "s"} · {result.sections.length} sections · {result.meta.context_used} corpus passages
+            <span className="text-paper">{result.draft}</span> — {total} suggestion{total === 1 ? "" : "s"} · {result.sections.length} sections · {result.meta.context_used} corpus passages · backend: {result.meta.backend}
           </p>
+
+          {result.meta.backend === "mock" && (
+            <Banner tone="error">
+              Running on <span className="font-mono">mock</span> (heuristics only). For corpus-grounded
+              terminology demos, set <span className="font-mono">MODEL_BACKEND=gemini</span> in{" "}
+              <span className="font-mono">.env</span> and restart the server.
+            </Banner>
+          )}
 
           {total === 0 && <Banner tone="ok">No changes suggested — the draft reads clean.</Banner>}
 
@@ -533,7 +567,7 @@ function App() {
       {mode === "review" ? <ReviewPanel /> : <CorpusPanel onStatus={refreshStatus} />}
 
       <footer className="mt-20 border-t border-ink-800 pt-5 text-center font-mono text-[11px] text-muted">
-        embeddings &amp; vector store run locally · suggestions grounded in your corpus
+        embeddings &amp; vector store run locally · for quality demos use MODEL_BACKEND=gemini
       </footer>
     </div>
   );

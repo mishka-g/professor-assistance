@@ -51,10 +51,15 @@ class Settings(BaseSettings):
     examples_dir: Path = PROJECT_ROOT / "data" / "examples"
     output_dir: Path = PROJECT_ROOT / "output"
     chroma_dir: Path = PROJECT_ROOT / "storage" / "chroma"
+    reviews_dir: Path = PROJECT_ROOT / "storage" / "reviews"
+    feedback_path: Path = PROJECT_ROOT / "storage" / "feedback" / "accept_skip.jsonl"
     style_card_path: Path = PROJECT_ROOT / "config" / "style_card.md"
     prompts_dir: Path = PROJECT_ROOT / "prompts"
 
     collection_name: str = "corpus"
+    # Separate collection for before/after edit patterns (data/examples/), used for
+    # few-shot retrieval at review time and folded into the style card.
+    examples_collection_name: str = "examples"
 
     def prompt(self, name: str) -> str:
         """Load a prompt file from prompts/ by stem name."""

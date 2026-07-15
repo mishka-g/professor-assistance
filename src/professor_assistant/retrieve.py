@@ -47,13 +47,19 @@ def retrieve(query: str, top_k: int | None = None) -> list[Passage]:
     return passages
 
 
-def format_context(passages: list[Passage], max_chars: int = 3000) -> str:
-    """Render retrieved passages as a context block for the LLM prompt."""
+def format_context(passages: list[Passage], max_chars: int = 3000, prefix: str = "") -> str:
+    """Render retrieved passages as a context block for the LLM prompt.
+
+    `prefix` (e.g. "C") disambiguates these reference labels from other context blocks
+    (e.g. before/after examples use "E") so a reviewer can cite exactly which passage
+    grounded a suggestion (see `review.py`'s `grounded_in`).
+    """
     out: list[str] = []
     used = 0
     for i, p in enumerate(passages, 1):
+        label = f"{prefix}{i}" if prefix else str(i)
         snippet = p.text.strip()
-        block = f"[{i}] (source: {p.source}, sim={p.score:.2f})\n{snippet}\n"
+        block = f"[{label}] (source: {p.source}, sim={p.score:.2f})\n{snippet}\n"
         if used + len(block) > max_chars:
             break
         out.append(block)

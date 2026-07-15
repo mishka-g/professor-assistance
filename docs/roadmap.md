@@ -2,6 +2,19 @@
 
 Demo-first, quality-led plan for contributors. Distribution and SaaS stay deferred until review quality is credible.
 
+## Status as of July 15, 2026
+
+**Horizons 0–2 are done and QA-cleared** (GO after blocker fixes). The demo-credibility, professor-voice, and measurable-quality foundations below have all shipped. Horizon 3 (workflow & distribution) is still parked by design — it unlocks once quality is demo-credible, and that quality foundation is now in place.
+
+| Horizon | Status |
+|---|---|
+| 0 — Demo credibility | ✅ Done |
+| 1 — Professor voice | ✅ Done |
+| 2 — Measurable quality | ✅ Done |
+| 3 — Workflow & distribution | ⏸ Parked (not started) |
+
+**What's next:** revisit Horizon 3 (Word tracked changes, Google Docs, hosted vector opt-in, multi-user) now that the quality bar for a credible demo has been met.
+
 | Decision | Choice |
 |---|---|
 | Distribution (6–12 mo) | **Demo / portfolio / research artifact** — polish the story; defer multi-user and SaaS |
@@ -43,11 +56,11 @@ Ships today:
 - Cursor skill/command: `/review-paper`
 - Backends: `mock` / `local` / `gemini` / `api`
 
-**Highest-leverage gap:** [`data/examples/`](../data/examples/README.md) documents before/after pairs that teach editing decisions, but nothing in the review path reads those pairs yet (`examples_dir` is config-only).
+**Formerly the highest-leverage gap, now closed:** [`data/examples/`](../data/examples/README.md) before/after pairs are now read into the review path (`examples.py`, `profa examples` / `style --examples`) — see Horizon 1.
 
 ---
 
-## Horizon 0 — Demo credibility (1–2 weeks)
+## Horizon 0 — Demo credibility (1–2 weeks) ✅ Done
 
 Goal: a 5-minute path that looks and sounds like a real professor review.
 
@@ -62,7 +75,7 @@ Goal: a 5-minute path that looks and sounds like a real professor review.
 
 ---
 
-## Horizon 1 — Professor voice (4–8 weeks) — priority build
+## Horizon 1 — Professor voice (4–8 weeks) — priority build ✅ Done
 
 Goal: suggestions measurably closer to how *this* professor edits.
 
@@ -95,7 +108,7 @@ Primary code: `src/professor_assistant/style.py`, `review.py`, `config.py`, `pro
 
 ---
 
-## Horizon 2 — Measurable quality + durable demos
+## Horizon 2 — Measurable quality + durable demos ✅ Done
 
 Once voice learning exists, make quality provable and demos repeatable.
 
@@ -110,7 +123,7 @@ Once voice learning exists, make quality provable and demos repeatable.
 
 ---
 
-## Horizon 3 — Workflow & distribution (parked)
+## Horizon 3 — Workflow & distribution (parked) ⏸ Parked
 
 Only after quality is demo-credible:
 
@@ -123,11 +136,11 @@ Only after quality is demo-credible:
 
 ## Build order
 
-1. **Demo pack + backend honesty** (Horizon 0) — unblocks storytelling now
-2. **Before/after learning + style card** (Horizon 1.1–1.2) — main quality bet
-3. **Content guards** (Horizon 1.3) — protects the “never invent science” brand
-4. **Eval harness + review persistence** (Horizon 2) — makes iteration safe
-5. **Word comments** (Horizon 3) — only when Accept/Skip is the bottleneck
+1. ✅ **Demo pack + backend honesty** (Horizon 0) — unblocks storytelling now — Done
+2. ✅ **Before/after learning + style card** (Horizon 1.1–1.2) — main quality bet — Done
+3. ✅ **Content guards** (Horizon 1.3) — protects the “never invent science” brand — Done
+4. ✅ **Eval harness + review persistence** (Horizon 2) — makes iteration safe — Done
+5. ⏸ **Word comments** (Horizon 3) — only when Accept/Skip is the bottleneck — Parked, not started
 
 ---
 
@@ -141,6 +154,6 @@ Only after quality is demo-credible:
 
 ## How to contribute against this roadmap
 
-Prefer PRs that advance the current horizon (0 → 1 → 2). If you propose Horizon 3 work, say why quality is already good enough that workflow is the bottleneck.
+Horizons 0–2 are done; the current frontier is Horizon 3. If you propose Horizon 3 work, say why quality is already good enough that workflow is the bottleneck.
 
 Questions or proposals: open an issue and link the horizon item you are targeting.

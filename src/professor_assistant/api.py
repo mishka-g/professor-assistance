@@ -23,6 +23,7 @@ from .ingest import ingest_corpus
 from .readers import SUPPORTED, iter_corpus_files
 from .retrieve import retrieve
 from .review import analyze_draft
+from .review_cache import load_review, log_accept_skip, save_review
 from .store import get_collection
 from .style import build_style_card
 
@@ -34,9 +35,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-# In-memory cache of active reviews (single local user; drafts also persist on disk).
-_REVIEWS: dict[str, dict] = {}
 
 # Serializes corpus rebuilds so two concurrent uploads can't race and empty the collection.
 _INGEST_LOCK = threading.Lock()
@@ -54,6 +52,7 @@ def _status() -> dict:
         "corpus_files": len(files),
         "corpus_chunks": chunks,
         "style_card": settings.style_card_path.exists(),
+        "recommended_demo_backend": "gemini",
     }
 
 
@@ -186,10 +185,15 @@ def review(file: UploadFile = File(...)) -> dict:
     result = analyze_draft(saved)
 
     review_id = uuid.uuid4().hex[:12]
-    _REVIEWS[review_id] = {
-        "draft_path": result["draft_path"],
-        "suggestions_by_index": result["suggestions_by_index"],
-    }
+    save_review(
+        review_id,
+        {
+            "draft_path": result["draft_path"],
+            "suggestions_by_index": result["suggestions_by_index"],
+            "section_reviews": result["section_reviews"],
+            "backend": result["backend"],
+        },
+    )
 
     sections = [
         {
@@ -204,6 +208,7 @@ def review(file: UploadFile = File(...)) -> dict:
                     "suggestion": s.get("suggestion", ""),
                     "paragraph": s.get("paragraph", ""),
                     "applicable": bool(s.get("applicable")),
+                    "grounded_in": s.get("grounded_in", []),
                 }
                 for s in sr["suggestions"]
             ],
@@ -230,22 +235,33 @@ class ExportRequest(BaseModel):
 
 @app.post("/api/review/{review_id}/export")
 def export(review_id: str, req: ExportRequest) -> FileResponse:
-    review = _REVIEWS.get(review_id)
+    review = load_review(review_id)
     if review is None:
         raise HTTPException(404, "Unknown review id (server may have restarted).")
 
     # Each accepted edit carries the professor's final replacement text (possibly edited).
     repl_by_id = {e.id: e.replacement for e in req.edits}
     accepted_by_index: dict[int, list[dict]] = {}
+    all_ids: list[str] = []
     for idx, suggestions in review["suggestions_by_index"].items():
         kept = []
         for s in suggestions:
-            if s.get("id") in repl_by_id:
-                kept.append({**s, "suggestion": repl_by_id[s["id"]], "applicable": True})
+            sid = s.get("id")
+            if sid:
+                all_ids.append(sid)
+            if sid in repl_by_id:
+                kept.append({**s, "suggestion": repl_by_id[sid], "applicable": True})
         if kept:
             accepted_by_index[idx] = kept
 
     draft_path: Path = review["draft_path"]
+    log_accept_skip(
+        review_id,
+        accepted_ids=list(repl_by_id.keys()),
+        all_suggestion_ids=all_ids,
+        draft_name=draft_path.name,
+    )
+
     out_dir = get_settings().output_dir / draft_path.stem
     out_path = out_dir / "accepted.docx"
     write_accepted_docx(draft_path, accepted_by_index, out_path)
