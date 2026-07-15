@@ -1,0 +1,63 @@
+{
+  "description": "Tiny fixed-draft eval set for professor-assistant. Themes are expectation hooks — not full gold annotations.",
+  "style_card": null,
+  "cases": [
+    {
+      "id": "weak_graphene",
+      "fixture": "fixtures/weak_graphene.docx",
+      "description": "Deliberately rough graphene-sensor draft with known language/content issues.",
+      "expect_themes": [
+        {
+          "id": "wordy_in_order_to",
+          "match_any": ["in order to"],
+          "where": "original"
+        },
+        {
+          "id": "vague_intensifier",
+          "match_any": ["very", "really", "a lot of"],
+          "where": "original"
+        },
+        {
+          "id": "content_significant_or_belief",
+          "match_any": ["significant", "we believe", "we think"],
+          "where": "original",
+          "severity": "content"
+        }
+      ],
+      "expect_severity_mix": {
+        "min_suggestions": 3,
+        "min_non_content": 1,
+        "min_content": 1,
+        "max_content_fraction": 0.85
+      },
+      "expect_no_invented_facts": true,
+      "expect_retrieval_hit": false
+    },
+    {
+      "id": "claims_heavy",
+      "fixture": "fixtures/claims_heavy.docx",
+      "description": "Short draft heavy on unsupported claims; content flags should dominate language polish.",
+      "expect_themes": [
+        {
+          "id": "well_known_framing",
+          "match_any": ["well known", "obviously", "clearly"],
+          "where": "original_or_reason"
+        },
+        {
+          "id": "belief_or_significant",
+          "match_any": ["we believe", "significant"],
+          "where": "original",
+          "severity": "content"
+        }
+      ],
+      "expect_severity_mix": {
+        "min_suggestions": 2,
+        "min_non_content": 0,
+        "min_content": 1,
+        "max_content_fraction": 1.0
+      },
+      "expect_no_invented_facts": true,
+      "expect_retrieval_hit": false
+    }
+  ]
+}

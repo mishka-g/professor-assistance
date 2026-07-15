@@ -18,6 +18,7 @@ data/examples/*
 # Generated artifacts
 storage/
 output/
+evals/fixtures/
 
 # OS
 .DS_Store

@@ -42,16 +42,18 @@ def get_client() -> chromadb.ClientAPI:
     return chromadb.PersistentClient(path=str(settings.chroma_dir))
 
 
-def get_collection(create: bool = True) -> Collection:
+def get_collection(create: bool = True, name: str | None = None) -> Collection:
+    """Get (or create) a named Chroma collection. Defaults to the main corpus collection;
+    pass `name=settings.examples_collection_name` for the before/after edit-pattern index.
+    """
     settings = get_settings()
     client = get_client()
     ef = get_embedding_function()
+    collection_name = name or settings.collection_name
     if create:
         return client.get_or_create_collection(
-            name=settings.collection_name,
+            name=collection_name,
             embedding_function=ef,
             metadata={"hnsw:space": "cosine"},
         )
-    return client.get_collection(
-        name=settings.collection_name, embedding_function=ef
-    )
+    return client.get_collection(name=collection_name, embedding_function=ef)

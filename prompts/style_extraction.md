@@ -1,8 +1,12 @@
 You are analyzing a set of excerpts from a professor's published scientific papers in
-nanoscience/nanotechnology. Produce a concise, reusable STYLE CARD that captures HOW he
-writes, so another tool can align student drafts to his style.
+nanoscience/nanotechnology, and optionally a set of BEFORE/AFTER EDIT PATTERNS extracted
+from drafts he has personally edited. Produce a concise, reusable STYLE CARD that captures
+HOW he writes and, when edit patterns are provided, HOW HE ACTUALLY EDITS, so another tool
+can align student drafts to his voice.
 
-Base every observation ONLY on the provided excerpts. Do not invent preferences.
+Base every observation ONLY on the provided excerpts and edit patterns. Do not invent
+preferences. If a excerpt-derived habit and an edit-pattern-derived habit conflict, trust
+the edit patterns — they show real editing decisions, not just his own writing.
 
 Return the style card as Markdown with these sections:
 
@@ -23,4 +27,10 @@ Return the style card as Markdown with these sections:
 ## Formatting conventions
 - (units, abbreviations, citation phrasing, number formatting)
 
-Keep it under ~400 words. Be concrete and quote short examples where useful.
+## Edit habits (from before/after pairs)
+- Only include this section if BEFORE/AFTER EDIT PATTERNS were provided below. Summarize
+  the phrase swaps, hedging/claim calibration, and trimmed filler he consistently applies
+  when editing student drafts — these are his real editing decisions, be concrete and cite
+  the actual before → after pairs.
+
+Keep it under ~500 words total. Be concrete and quote short examples where useful.
